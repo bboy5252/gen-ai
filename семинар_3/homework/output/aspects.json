@@ -1,0 +1,636 @@
+[
+  {
+    "review_id": "R001",
+    "aspects": [
+      {
+        "review_id": "R001",
+        "aspect": "performance",
+        "sentiment": "negative",
+        "quote": "После последнего обновления приложение открывается почти минуту и часто зависает на экране бюджета.",
+        "confidence": 0.88
+      },
+      {
+        "review_id": "R001",
+        "aspect": "design",
+        "sentiment": "negative",
+        "quote": "После последнего обновления приложение открывается почти минуту и часто зависает на экране бюджета.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R002",
+    "aspects": [
+      {
+        "review_id": "R002",
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "quote": "Два раза за неделю пропала синхронизация с банком, операции появились только после ручного обновления.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R003",
+    "aspects": [
+      {
+        "review_id": "R003",
+        "aspect": "design",
+        "sentiment": "neutral",
+        "quote": "Интерфейс стал аккуратнее, но кнопка добавления расхода спрятана слишком глубоко.",
+        "confidence": 0.76
+      }
+    ]
+  },
+  {
+    "review_id": "R004",
+    "aspects": [
+      {
+        "review_id": "R004",
+        "aspect": "price",
+        "sentiment": "negative",
+        "quote": "Подписка подорожала, а семейный доступ так и не появился.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R005",
+    "aspects": [
+      {
+        "review_id": "R005",
+        "aspect": "ads",
+        "sentiment": "negative",
+        "quote": "Реклама всплывает сразу после входа и перекрывает баланс.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R006",
+    "aspects": [
+      {
+        "review_id": "R006",
+        "aspect": "performance",
+        "sentiment": "negative",
+        "quote": "Единственное раздражает, что темная тема иногда сбрасывается после перезапуска.",
+        "confidence": 0.76
+      },
+      {
+        "review_id": "R006",
+        "aspect": "design",
+        "sentiment": "positive",
+        "quote": "Нравится чистый дизайн и понятные графики по категориям.",
+        "confidence": 0.76
+      }
+    ]
+  },
+  {
+    "review_id": "R007",
+    "aspects": [
+      {
+        "review_id": "R007",
+        "aspect": "support",
+        "sentiment": "negative",
+        "quote": "Чат поддержки ответил через три дня и прислал шаблонную инструкцию.",
+        "confidence": 0.88
+      },
+      {
+        "review_id": "R007",
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "quote": "Проблему с дублированием операций мне пришлось решать самому.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R008",
+    "aspects": [
+      {
+        "review_id": "R008",
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "quote": "Приложение вылетает при попытке прикрепить чек к расходу.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R009",
+    "aspects": [
+      {
+        "review_id": "R009",
+        "aspect": "performance",
+        "sentiment": "positive",
+        "quote": "Быстро добавляю траты голосом, распознавание работает почти без ошибок.",
+        "confidence": 0.76
+      }
+    ]
+  },
+  {
+    "review_id": "R010",
+    "aspects": [
+      {
+        "review_id": "R010",
+        "aspect": "design",
+        "sentiment": "neutral",
+        "quote": "В целом приложение полезное, но стартовый экран перегружен карточками и акциями.",
+        "confidence": 0.76
+      },
+      {
+        "review_id": "R010",
+        "aspect": "ads",
+        "sentiment": "neutral",
+        "quote": "В целом приложение полезное, но стартовый экран перегружен карточками и акциями.",
+        "confidence": 0.76
+      }
+    ]
+  },
+  {
+    "review_id": "R011",
+    "aspects": [
+      {
+        "review_id": "R011",
+        "aspect": "support",
+        "sentiment": "negative",
+        "quote": "Поддержка говорит, что это рекомендации, но выглядят они как обычная реклама.",
+        "confidence": 0.88
+      },
+      {
+        "review_id": "R011",
+        "aspect": "price",
+        "sentiment": "negative",
+        "quote": "После оплаты премиума реклама не исчезла полностью, остались промо-карточки партнеров.",
+        "confidence": 0.88
+      },
+      {
+        "review_id": "R011",
+        "aspect": "ads",
+        "sentiment": "negative",
+        "quote": "После оплаты премиума реклама не исчезла полностью, остались промо-карточки партнеров.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R012",
+    "aspects": [
+      {
+        "review_id": "R012",
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "quote": "Не пришел код входа, а повторная отправка стала доступна только через десять минут.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R013",
+    "aspects": [
+      {
+        "review_id": "R013",
+        "aspect": "price",
+        "sentiment": "positive",
+        "quote": "Хотелось бы дешевле годовой тариф для студентов.",
+        "confidence": 0.76
+      }
+    ]
+  },
+  {
+    "review_id": "R014",
+    "aspects": [
+      {
+        "review_id": "R014",
+        "aspect": "performance",
+        "sentiment": "negative",
+        "quote": "После обновления приложение стало сильно греть телефон и быстро сажать батарею.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R015",
+    "aspects": [
+      {
+        "review_id": "R015",
+        "aspect": "design",
+        "sentiment": "neutral",
+        "quote": "Крупные шрифты помогают, но часть подписей обрезается на маленьком экране.",
+        "confidence": 0.76
+      },
+      {
+        "review_id": "R015",
+        "aspect": "price",
+        "sentiment": "neutral",
+        "quote": "Крупные шрифты помогают, но часть подписей обрезается на маленьком экране.",
+        "confidence": 0.76
+      }
+    ]
+  },
+  {
+    "review_id": "R016",
+    "aspects": [
+      {
+        "review_id": "R016",
+        "aspect": "performance",
+        "sentiment": "negative",
+        "quote": "Экспорт отчета завис на 72 процентах и файл так и не сформировался.",
+        "confidence": 0.88
+      },
+      {
+        "review_id": "R016",
+        "aspect": "price",
+        "sentiment": "negative",
+        "quote": "Платить за премиум без стабильного экспорта бессмысленно.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R017",
+    "aspects": [
+      {
+        "review_id": "R017",
+        "aspect": "support",
+        "sentiment": "negative",
+        "quote": "Оператор поддержки попросил скриншоты, а потом неделю не возвращался с ответом.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R018",
+    "aspects": [
+      {
+        "review_id": "R018",
+        "aspect": "price",
+        "sentiment": "neutral",
+        "quote": "Для теста приложения этого мало, приходится сразу решать про подписку.",
+        "confidence": 0.76
+      }
+    ]
+  },
+  {
+    "review_id": "R019",
+    "aspects": [
+      {
+        "review_id": "R019",
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "quote": "Уведомления о превышении бюджета приходят с задержкой на несколько часов.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R020",
+    "aspects": [
+      {
+        "review_id": "R020",
+        "aspect": "performance",
+        "sentiment": "negative",
+        "quote": "После последнего патча запуск стал быстрее, экран операций открывается почти сразу.",
+        "confidence": 0.76
+      },
+      {
+        "review_id": "R020",
+        "aspect": "design",
+        "sentiment": "negative",
+        "quote": "После последнего патча запуск стал быстрее, экран операций открывается почти сразу.",
+        "confidence": 0.76
+      },
+      {
+        "review_id": "R020",
+        "aspect": "ads",
+        "sentiment": "positive",
+        "quote": "Но рекламный баннер внизу все еще отвлекает.",
+        "confidence": 0.76
+      }
+    ]
+  },
+  {
+    "review_id": "R021",
+    "aspects": [
+      {
+        "review_id": "R021",
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "quote": "Приложение дважды создало одинаковые расходы после синхронизации.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R022",
+    "aspects": [
+      {
+        "review_id": "R022",
+        "aspect": "design",
+        "sentiment": "neutral",
+        "quote": "Цвета графиков красивые, но легенда слишком мелкая.",
+        "confidence": 0.76
+      }
+    ]
+  },
+  {
+    "review_id": "R023",
+    "aspects": [
+      {
+        "review_id": "R023",
+        "aspect": "support",
+        "sentiment": "negative",
+        "quote": "Поддержка не смогла ускорить процесс и посоветовала ждать.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R024",
+    "aspects": [
+      {
+        "review_id": "R024",
+        "aspect": "price",
+        "sentiment": "negative",
+        "quote": "Цена премиума выглядит завышенной, потому что часть функций все равно спрятана за отдельными пакетами.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R025",
+    "aspects": [
+      {
+        "review_id": "R025",
+        "aspect": "ads",
+        "sentiment": "negative",
+        "quote": "Видео-реклама включилась со звуком в метро, когда я открывал баланс.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R026",
+    "aspects": [
+      {
+        "review_id": "R026",
+        "aspect": "performance",
+        "sentiment": "negative",
+        "quote": "Хотелось бы быстрее получать ответ по вопросам импорта.",
+        "confidence": 0.76
+      },
+      {
+        "review_id": "R026",
+        "aspect": "support",
+        "sentiment": "negative",
+        "quote": "Хотелось бы быстрее получать ответ по вопросам импорта.",
+        "confidence": 0.76
+      }
+    ]
+  },
+  {
+    "review_id": "R027",
+    "aspects": [
+      {
+        "review_id": "R027",
+        "aspect": "performance",
+        "sentiment": "negative",
+        "quote": "На старом смартфоне экран бюджета прокручивается рывками.",
+        "confidence": 0.88
+      },
+      {
+        "review_id": "R027",
+        "aspect": "design",
+        "sentiment": "negative",
+        "quote": "На старом смартфоне экран бюджета прокручивается рывками.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R028",
+    "aspects": [
+      {
+        "review_id": "R028",
+        "aspect": "design",
+        "sentiment": "neutral",
+        "quote": "В приложении много полезных отчетов, но навигация между ними запутанная.",
+        "confidence": 0.76
+      }
+    ]
+  },
+  {
+    "review_id": "R029",
+    "aspects": [
+      {
+        "review_id": "R029",
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "quote": "После переустановки пропали пользовательские категории.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R030",
+    "aspects": [
+      {
+        "review_id": "R030",
+        "aspect": "performance",
+        "sentiment": "negative",
+        "quote": "Это ломает сценарий, когда быстро заносишь несколько покупок подряд.",
+        "confidence": 0.88
+      },
+      {
+        "review_id": "R030",
+        "aspect": "price",
+        "sentiment": "negative",
+        "quote": "Это ломает сценарий, когда быстро заносишь несколько покупок подряд.",
+        "confidence": 0.88
+      },
+      {
+        "review_id": "R030",
+        "aspect": "ads",
+        "sentiment": "negative",
+        "quote": "В бесплатной версии реклама появляется после каждого третьего действия.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R031",
+    "aspects": [
+      {
+        "review_id": "R031",
+        "aspect": "design",
+        "sentiment": "neutral",
+        "quote": "Экран подписки объясняет тарифы понятнее, чем раньше.",
+        "confidence": 0.76
+      },
+      {
+        "review_id": "R031",
+        "aspect": "price",
+        "sentiment": "neutral",
+        "quote": "Экран подписки объясняет тарифы понятнее, чем раньше.",
+        "confidence": 0.76
+      }
+    ]
+  },
+  {
+    "review_id": "R032",
+    "aspects": [
+      {
+        "review_id": "R032",
+        "aspect": "performance",
+        "sentiment": "negative",
+        "quote": "Сканер чеков часто зависает на обработке фотографии.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R033",
+    "aspects": [
+      {
+        "review_id": "R033",
+        "aspect": "support",
+        "sentiment": "positive",
+        "quote": "Поддержка помогла перенести данные со старого телефона за один вечер.",
+        "confidence": 0.76
+      },
+      {
+        "review_id": "R033",
+        "aspect": "price",
+        "sentiment": "negative",
+        "quote": "После этого я оставил подписку, хотя цена все равно кажется высокой.",
+        "confidence": 0.76
+      }
+    ]
+  },
+  {
+    "review_id": "R034",
+    "aspects": [
+      {
+        "review_id": "R034",
+        "aspect": "design",
+        "sentiment": "negative",
+        "quote": "Главный экран после редизайна стал красивым, но важные суммы находятся ниже рекламного блока.",
+        "confidence": 0.88
+      },
+      {
+        "review_id": "R034",
+        "aspect": "ads",
+        "sentiment": "negative",
+        "quote": "Главный экран после редизайна стал красивым, но важные суммы находятся ниже рекламного блока.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R035",
+    "aspects": [
+      {
+        "review_id": "R035",
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "quote": "Приложение не сохранило расход после потери сети.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R036",
+    "aspects": [
+      {
+        "review_id": "R036",
+        "aspect": "design",
+        "sentiment": "neutral",
+        "quote": "Виджеты удобные, но обновляются не сразу.",
+        "confidence": 0.76
+      }
+    ]
+  },
+  {
+    "review_id": "R037",
+    "aspects": [
+      {
+        "review_id": "R037",
+        "aspect": "support",
+        "sentiment": "negative",
+        "quote": "Подписку отменить сложно: ссылка спрятана в настройках, а инструкция в FAQ устарела.",
+        "confidence": 0.88
+      },
+      {
+        "review_id": "R037",
+        "aspect": "price",
+        "sentiment": "negative",
+        "quote": "Подписку отменить сложно: ссылка спрятана в настройках, а инструкция в FAQ устарела.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R038",
+    "aspects": [
+      {
+        "review_id": "R038",
+        "aspect": "performance",
+        "sentiment": "negative",
+        "quote": "Если бы еще приложение быстрее запускалось на слабых телефонах, поставил бы пять.",
+        "confidence": 0.76
+      },
+      {
+        "review_id": "R038",
+        "aspect": "ads",
+        "sentiment": "negative",
+        "quote": "Мне нравится, что реклама внизу не мешает отчетам.",
+        "confidence": 0.76
+      }
+    ]
+  },
+  {
+    "review_id": "R039",
+    "aspects": [
+      {
+        "review_id": "R039",
+        "aspect": "support",
+        "sentiment": "negative",
+        "quote": "Поддержка признала ошибку, но срок исправления не назвала.",
+        "confidence": 0.88
+      },
+      {
+        "review_id": "R039",
+        "aspect": "reliability",
+        "sentiment": "negative",
+        "quote": "Поддержка признала ошибку, но срок исправления не назвала.",
+        "confidence": 0.88
+      }
+    ]
+  },
+  {
+    "review_id": "R040",
+    "aspects": [
+      {
+        "review_id": "R040",
+        "aspect": "design",
+        "sentiment": "neutral",
+        "quote": "После каждого отчета появляется экран покупки, и это утомляет.",
+        "confidence": 0.76
+      },
+      {
+        "review_id": "R040",
+        "aspect": "price",
+        "sentiment": "neutral",
+        "quote": "Приложение полезное для контроля расходов, но слишком часто предлагает премиум.",
+        "confidence": 0.76
+      },
+      {
+        "review_id": "R040",
+        "aspect": "ads",
+        "sentiment": "neutral",
+        "quote": "После каждого отчета появляется экран покупки, и это утомляет.",
+        "confidence": 0.76
+      }
+    ]
+  }
+]

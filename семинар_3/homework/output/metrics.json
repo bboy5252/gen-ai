@@ -1,0 +1,11 @@
+{
+  "input_objects": 40,
+  "valid_objects": 40,
+  "validation_errors": 0,
+  "ghost_quotes": 0,
+  "total_quotes_checked": 189,
+  "ghost_quote_rate": 0.0,
+  "overall_score": 0.9199999999999999,
+  "elapsed_seconds": 0.035482168197631836,
+  "estimated_cost_usd": 0.0
+}
