@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "type": "прямой",
+    "question": "Что делать, если операции появились только после ручного обновления?",
+    "gold_sources": ["sync_and_accounts"]
+  },
+  {
+    "id": 2,
+    "type": "синоним",
+    "question": "Почему приложение лагает на экране бюджета и что с этим делать?",
+    "gold_sources": ["mobile_performance"]
+  },
+  {
+    "id": 3,
+    "type": "точный артикул",
+    "question": "Что означает статус local_pending?",
+    "gold_sources": ["sync_and_accounts", "backup_and_restore"]
+  },
+  {
+    "id": 4,
+    "type": "multi-hop",
+    "question": "Почему сканер чеков может зависнуть и почему при этом важно сохранить черновик?",
+    "gold_sources": ["receipts_and_ocr", "mobile_performance"]
+  },
+  {
+    "id": 5,
+    "type": "прямой",
+    "question": "Какие ограничения есть в бесплатном тарифе?",
+    "gold_sources": ["pricing_and_subscription"]
+  },
+  {
+    "id": 6,
+    "type": "перефраз",
+    "question": "Как отключать мешающие промо-карточки и рекламные рекомендации?",
+    "gold_sources": ["ads_and_recommendations", "pricing_and_subscription"]
+  },
+  {
+    "id": 7,
+    "type": "прямой",
+    "question": "Какие SLA у поддержки для P1, P2 и P3?",
+    "gold_sources": ["support_playbook"]
+  },
+  {
+    "id": 8,
+    "type": "multi-hop",
+    "question": "Что проверять, если после переустановки пропали пользовательские категории?",
+    "gold_sources": ["backup_and_restore", "support_playbook", "security_and_privacy"]
+  },
+  {
+    "id": 9,
+    "type": "точный артикул",
+    "question": "Что такое spendwise_csv_v3?",
+    "gold_sources": ["export_and_reports"]
+  },
+  {
+    "id": 10,
+    "type": "синоним",
+    "question": "Когда обращение считается инцидентом безопасности?",
+    "gold_sources": ["security_and_privacy"]
+  },
+  {
+    "id": 11,
+    "type": "перефраз",
+    "question": "Чем экспорт отличается от резервной копии?",
+    "gold_sources": ["export_and_reports", "backup_and_restore"]
+  },
+  {
+    "id": 12,
+    "type": "multi-hop",
+    "question": "Почему реклама не должна появляться во время быстрого ввода расходов на слабом телефоне?",
+    "gold_sources": ["ads_and_recommendations", "mobile_performance"]
+  },
+  {
+    "id": 13,
+    "type": "multi-hop с термином",
+    "question": "Почему сканер чеков может зависнуть и почему при этом важен UI-поток?",
+    "gold_sources": ["receipts_and_ocr", "mobile_performance"]
+  }
+]

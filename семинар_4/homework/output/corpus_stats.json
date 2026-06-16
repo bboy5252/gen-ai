@@ -1,0 +1,55 @@
+{
+  "documents": 9,
+  "total_chars": 36175,
+  "items": [
+    {
+      "source": "ads_and_recommendations",
+      "chars": 4239,
+      "words": 542
+    },
+    {
+      "source": "backup_and_restore",
+      "chars": 3904,
+      "words": 509
+    },
+    {
+      "source": "export_and_reports",
+      "chars": 4073,
+      "words": 541
+    },
+    {
+      "source": "mobile_performance",
+      "chars": 4011,
+      "words": 520
+    },
+    {
+      "source": "pricing_and_subscription",
+      "chars": 3971,
+      "words": 528
+    },
+    {
+      "source": "receipts_and_ocr",
+      "chars": 3964,
+      "words": 534
+    },
+    {
+      "source": "security_and_privacy",
+      "chars": 4133,
+      "words": 546
+    },
+    {
+      "source": "support_playbook",
+      "chars": 3784,
+      "words": 503
+    },
+    {
+      "source": "sync_and_accounts",
+      "chars": 4096,
+      "words": 540
+    }
+  ],
+  "chunks": {
+    "fixed": 23,
+    "smart": 53
+  }
+}

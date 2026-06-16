@@ -1,0 +1,635 @@
+{
+  "metric": "hit-rate@5",
+  "summary": {
+    "fixed": 0.8846153846153846,
+    "smart": 0.9615384615384616
+  },
+  "reports": [
+    {
+      "strategy": "fixed",
+      "hit_rate_at_5": 0.8846153846153846,
+      "items": [
+        {
+          "id": 1,
+          "type": "прямой",
+          "question": "Что делать, если операции появились только после ручного обновления?",
+          "gold_sources": [
+            "sync_and_accounts"
+          ],
+          "retrieved_sources": [
+            "sync_and_accounts",
+            "mobile_performance",
+            "receipts_and_ocr",
+            "ads_and_recommendations",
+            "security_and_privacy"
+          ],
+          "retrieved_chunks": [
+            "sync_and_accounts__fixed_0",
+            "mobile_performance__fixed_1",
+            "receipts_and_ocr__fixed_0",
+            "ads_and_recommendations__fixed_1",
+            "security_and_privacy__fixed_0"
+          ],
+          "hit_rate_at_5": 1.0
+        },
+        {
+          "id": 2,
+          "type": "синоним",
+          "question": "Почему приложение лагает на экране бюджета и что с этим делать?",
+          "gold_sources": [
+            "mobile_performance"
+          ],
+          "retrieved_sources": [
+            "mobile_performance",
+            "mobile_performance",
+            "sync_and_accounts",
+            "ads_and_recommendations",
+            "receipts_and_ocr"
+          ],
+          "retrieved_chunks": [
+            "mobile_performance__fixed_1",
+            "mobile_performance__fixed_0",
+            "sync_and_accounts__fixed_0",
+            "ads_and_recommendations__fixed_0",
+            "receipts_and_ocr__fixed_1"
+          ],
+          "hit_rate_at_5": 1.0
+        },
+        {
+          "id": 3,
+          "type": "точный артикул",
+          "question": "Что означает статус local_pending?",
+          "gold_sources": [
+            "sync_and_accounts",
+            "backup_and_restore"
+          ],
+          "retrieved_sources": [
+            "sync_and_accounts",
+            "export_and_reports",
+            "backup_and_restore",
+            "security_and_privacy",
+            "support_playbook"
+          ],
+          "retrieved_chunks": [
+            "sync_and_accounts__fixed_1",
+            "export_and_reports__fixed_0",
+            "backup_and_restore__fixed_1",
+            "security_and_privacy__fixed_0",
+            "support_playbook__fixed_0"
+          ],
+          "hit_rate_at_5": 1.0
+        },
+        {
+          "id": 4,
+          "type": "multi-hop",
+          "question": "Почему сканер чеков может зависнуть и почему при этом важно сохранить черновик?",
+          "gold_sources": [
+            "receipts_and_ocr",
+            "mobile_performance"
+          ],
+          "retrieved_sources": [
+            "receipts_and_ocr",
+            "receipts_and_ocr",
+            "pricing_and_subscription",
+            "export_and_reports",
+            "backup_and_restore"
+          ],
+          "retrieved_chunks": [
+            "receipts_and_ocr__fixed_0",
+            "receipts_and_ocr__fixed_1",
+            "pricing_and_subscription__fixed_0",
+            "export_and_reports__fixed_1",
+            "backup_and_restore__fixed_0"
+          ],
+          "hit_rate_at_5": 0.5
+        },
+        {
+          "id": 5,
+          "type": "прямой",
+          "question": "Какие ограничения есть в бесплатном тарифе?",
+          "gold_sources": [
+            "pricing_and_subscription"
+          ],
+          "retrieved_sources": [
+            "export_and_reports",
+            "pricing_and_subscription",
+            "ads_and_recommendations",
+            "receipts_and_ocr",
+            "pricing_and_subscription"
+          ],
+          "retrieved_chunks": [
+            "export_and_reports__fixed_0",
+            "pricing_and_subscription__fixed_0",
+            "ads_and_recommendations__fixed_0",
+            "receipts_and_ocr__fixed_0",
+            "pricing_and_subscription__fixed_1"
+          ],
+          "hit_rate_at_5": 1.0
+        },
+        {
+          "id": 6,
+          "type": "перефраз",
+          "question": "Как отключать мешающие промо-карточки и рекламные рекомендации?",
+          "gold_sources": [
+            "ads_and_recommendations",
+            "pricing_and_subscription"
+          ],
+          "retrieved_sources": [
+            "ads_and_recommendations",
+            "pricing_and_subscription",
+            "ads_and_recommendations",
+            "mobile_performance",
+            "sync_and_accounts"
+          ],
+          "retrieved_chunks": [
+            "ads_and_recommendations__fixed_0",
+            "pricing_and_subscription__fixed_0",
+            "ads_and_recommendations__fixed_1",
+            "mobile_performance__fixed_1",
+            "sync_and_accounts__fixed_0"
+          ],
+          "hit_rate_at_5": 1.0
+        },
+        {
+          "id": 7,
+          "type": "прямой",
+          "question": "Какие SLA у поддержки для P1, P2 и P3?",
+          "gold_sources": [
+            "support_playbook"
+          ],
+          "retrieved_sources": [
+            "support_playbook",
+            "sync_and_accounts",
+            "security_and_privacy",
+            "export_and_reports",
+            "backup_and_restore"
+          ],
+          "retrieved_chunks": [
+            "support_playbook__fixed_0",
+            "sync_and_accounts__fixed_1",
+            "security_and_privacy__fixed_0",
+            "export_and_reports__fixed_1",
+            "backup_and_restore__fixed_1"
+          ],
+          "hit_rate_at_5": 1.0
+        },
+        {
+          "id": 8,
+          "type": "multi-hop",
+          "question": "Что проверять, если после переустановки пропали пользовательские категории?",
+          "gold_sources": [
+            "backup_and_restore",
+            "support_playbook",
+            "security_and_privacy"
+          ],
+          "retrieved_sources": [
+            "backup_and_restore",
+            "security_and_privacy",
+            "backup_and_restore",
+            "support_playbook",
+            "security_and_privacy"
+          ],
+          "retrieved_chunks": [
+            "backup_and_restore__fixed_0",
+            "security_and_privacy__fixed_0",
+            "backup_and_restore__fixed_1",
+            "support_playbook__fixed_1",
+            "security_and_privacy__fixed_1"
+          ],
+          "hit_rate_at_5": 1.0
+        },
+        {
+          "id": 9,
+          "type": "точный артикул",
+          "question": "Что такое spendwise_csv_v3?",
+          "gold_sources": [
+            "export_and_reports"
+          ],
+          "retrieved_sources": [
+            "export_and_reports",
+            "sync_and_accounts",
+            "sync_and_accounts",
+            "sync_and_accounts",
+            "support_playbook"
+          ],
+          "retrieved_chunks": [
+            "export_and_reports__fixed_1",
+            "sync_and_accounts__fixed_1",
+            "sync_and_accounts__fixed_0",
+            "sync_and_accounts__fixed_2",
+            "support_playbook__fixed_1"
+          ],
+          "hit_rate_at_5": 1.0
+        },
+        {
+          "id": 10,
+          "type": "синоним",
+          "question": "Когда обращение считается инцидентом безопасности?",
+          "gold_sources": [
+            "security_and_privacy"
+          ],
+          "retrieved_sources": [
+            "security_and_privacy",
+            "mobile_performance",
+            "ads_and_recommendations",
+            "support_playbook",
+            "security_and_privacy"
+          ],
+          "retrieved_chunks": [
+            "security_and_privacy__fixed_1",
+            "mobile_performance__fixed_0",
+            "ads_and_recommendations__fixed_0",
+            "support_playbook__fixed_0",
+            "security_and_privacy__fixed_0"
+          ],
+          "hit_rate_at_5": 1.0
+        },
+        {
+          "id": 11,
+          "type": "перефраз",
+          "question": "Чем экспорт отличается от резервной копии?",
+          "gold_sources": [
+            "export_and_reports",
+            "backup_and_restore"
+          ],
+          "retrieved_sources": [
+            "security_and_privacy",
+            "backup_and_restore",
+            "support_playbook",
+            "backup_and_restore",
+            "export_and_reports"
+          ],
+          "retrieved_chunks": [
+            "security_and_privacy__fixed_0",
+            "backup_and_restore__fixed_0",
+            "support_playbook__fixed_1",
+            "backup_and_restore__fixed_1",
+            "export_and_reports__fixed_2"
+          ],
+          "hit_rate_at_5": 1.0
+        },
+        {
+          "id": 12,
+          "type": "multi-hop",
+          "question": "Почему реклама не должна появляться во время быстрого ввода расходов на слабом телефоне?",
+          "gold_sources": [
+            "ads_and_recommendations",
+            "mobile_performance"
+          ],
+          "retrieved_sources": [
+            "ads_and_recommendations",
+            "mobile_performance",
+            "mobile_performance",
+            "pricing_and_subscription",
+            "receipts_and_ocr"
+          ],
+          "retrieved_chunks": [
+            "ads_and_recommendations__fixed_1",
+            "mobile_performance__fixed_0",
+            "mobile_performance__fixed_1",
+            "pricing_and_subscription__fixed_1",
+            "receipts_and_ocr__fixed_0"
+          ],
+          "hit_rate_at_5": 1.0
+        },
+        {
+          "id": 13,
+          "type": "multi-hop с термином",
+          "question": "Почему сканер чеков может зависнуть и почему при этом важен UI-поток?",
+          "gold_sources": [
+            "receipts_and_ocr",
+            "mobile_performance"
+          ],
+          "retrieved_sources": [
+            "pricing_and_subscription",
+            "security_and_privacy",
+            "export_and_reports",
+            "security_and_privacy",
+            "backup_and_restore"
+          ],
+          "retrieved_chunks": [
+            "pricing_and_subscription__fixed_0",
+            "security_and_privacy__fixed_1",
+            "export_and_reports__fixed_2",
+            "security_and_privacy__fixed_0",
+            "backup_and_restore__fixed_0"
+          ],
+          "hit_rate_at_5": 0.0
+        }
+      ]
+    },
+    {
+      "strategy": "smart",
+      "hit_rate_at_5": 0.9615384615384616,
+      "items": [
+        {
+          "id": 1,
+          "type": "прямой",
+          "question": "Что делать, если операции появились только после ручного обновления?",
+          "gold_sources": [
+            "sync_and_accounts"
+          ],
+          "retrieved_sources": [
+            "sync_and_accounts",
+            "mobile_performance",
+            "ads_and_recommendations",
+            "sync_and_accounts",
+            "sync_and_accounts"
+          ],
+          "retrieved_chunks": [
+            "sync_and_accounts__smart_2",
+            "mobile_performance__smart_2",
+            "ads_and_recommendations__smart_3",
+            "sync_and_accounts__smart_6",
+            "sync_and_accounts__smart_0"
+          ],
+          "hit_rate_at_5": 1.0
+        },
+        {
+          "id": 2,
+          "type": "синоним",
+          "question": "Почему приложение лагает на экране бюджета и что с этим делать?",
+          "gold_sources": [
+            "mobile_performance"
+          ],
+          "retrieved_sources": [
+            "mobile_performance",
+            "mobile_performance",
+            "mobile_performance",
+            "sync_and_accounts",
+            "mobile_performance"
+          ],
+          "retrieved_chunks": [
+            "mobile_performance__smart_4",
+            "mobile_performance__smart_1",
+            "mobile_performance__smart_0",
+            "sync_and_accounts__smart_0",
+            "mobile_performance__smart_2"
+          ],
+          "hit_rate_at_5": 1.0
+        },
+        {
+          "id": 3,
+          "type": "точный артикул",
+          "question": "Что означает статус local_pending?",
+          "gold_sources": [
+            "sync_and_accounts",
+            "backup_and_restore"
+          ],
+          "retrieved_sources": [
+            "sync_and_accounts",
+            "export_and_reports",
+            "backup_and_restore",
+            "sync_and_accounts",
+            "security_and_privacy"
+          ],
+          "retrieved_chunks": [
+            "sync_and_accounts__smart_4",
+            "export_and_reports__smart_0",
+            "backup_and_restore__smart_2",
+            "sync_and_accounts__smart_6",
+            "security_and_privacy__smart_1"
+          ],
+          "hit_rate_at_5": 1.0
+        },
+        {
+          "id": 4,
+          "type": "multi-hop",
+          "question": "Почему сканер чеков может зависнуть и почему при этом важно сохранить черновик?",
+          "gold_sources": [
+            "receipts_and_ocr",
+            "mobile_performance"
+          ],
+          "retrieved_sources": [
+            "receipts_and_ocr",
+            "security_and_privacy",
+            "receipts_and_ocr",
+            "pricing_and_subscription",
+            "mobile_performance"
+          ],
+          "retrieved_chunks": [
+            "receipts_and_ocr__smart_1",
+            "security_and_privacy__smart_5",
+            "receipts_and_ocr__smart_3",
+            "pricing_and_subscription__smart_1",
+            "mobile_performance__smart_2"
+          ],
+          "hit_rate_at_5": 1.0
+        },
+        {
+          "id": 5,
+          "type": "прямой",
+          "question": "Какие ограничения есть в бесплатном тарифе?",
+          "gold_sources": [
+            "pricing_and_subscription"
+          ],
+          "retrieved_sources": [
+            "export_and_reports",
+            "receipts_and_ocr",
+            "ads_and_recommendations",
+            "export_and_reports",
+            "pricing_and_subscription"
+          ],
+          "retrieved_chunks": [
+            "export_and_reports__smart_2",
+            "receipts_and_ocr__smart_2",
+            "ads_and_recommendations__smart_2",
+            "export_and_reports__smart_0",
+            "pricing_and_subscription__smart_0"
+          ],
+          "hit_rate_at_5": 1.0
+        },
+        {
+          "id": 6,
+          "type": "перефраз",
+          "question": "Как отключать мешающие промо-карточки и рекламные рекомендации?",
+          "gold_sources": [
+            "ads_and_recommendations",
+            "pricing_and_subscription"
+          ],
+          "retrieved_sources": [
+            "ads_and_recommendations",
+            "pricing_and_subscription",
+            "ads_and_recommendations",
+            "ads_and_recommendations",
+            "ads_and_recommendations"
+          ],
+          "retrieved_chunks": [
+            "ads_and_recommendations__smart_2",
+            "pricing_and_subscription__smart_1",
+            "ads_and_recommendations__smart_1",
+            "ads_and_recommendations__smart_3",
+            "ads_and_recommendations__smart_4"
+          ],
+          "hit_rate_at_5": 1.0
+        },
+        {
+          "id": 7,
+          "type": "прямой",
+          "question": "Какие SLA у поддержки для P1, P2 и P3?",
+          "gold_sources": [
+            "support_playbook"
+          ],
+          "retrieved_sources": [
+            "support_playbook",
+            "support_playbook",
+            "sync_and_accounts",
+            "sync_and_accounts",
+            "security_and_privacy"
+          ],
+          "retrieved_chunks": [
+            "support_playbook__smart_1",
+            "support_playbook__smart_5",
+            "sync_and_accounts__smart_6",
+            "sync_and_accounts__smart_3",
+            "security_and_privacy__smart_0"
+          ],
+          "hit_rate_at_5": 1.0
+        },
+        {
+          "id": 8,
+          "type": "multi-hop",
+          "question": "Что проверять, если после переустановки пропали пользовательские категории?",
+          "gold_sources": [
+            "backup_and_restore",
+            "support_playbook",
+            "security_and_privacy"
+          ],
+          "retrieved_sources": [
+            "security_and_privacy",
+            "backup_and_restore",
+            "backup_and_restore",
+            "backup_and_restore",
+            "support_playbook"
+          ],
+          "retrieved_chunks": [
+            "security_and_privacy__smart_1",
+            "backup_and_restore__smart_1",
+            "backup_and_restore__smart_0",
+            "backup_and_restore__smart_4",
+            "support_playbook__smart_4"
+          ],
+          "hit_rate_at_5": 1.0
+        },
+        {
+          "id": 9,
+          "type": "точный артикул",
+          "question": "Что такое spendwise_csv_v3?",
+          "gold_sources": [
+            "export_and_reports"
+          ],
+          "retrieved_sources": [
+            "export_and_reports",
+            "pricing_and_subscription",
+            "sync_and_accounts",
+            "sync_and_accounts",
+            "sync_and_accounts"
+          ],
+          "retrieved_chunks": [
+            "export_and_reports__smart_3",
+            "pricing_and_subscription__smart_4",
+            "sync_and_accounts__smart_2",
+            "sync_and_accounts__smart_5",
+            "sync_and_accounts__smart_0"
+          ],
+          "hit_rate_at_5": 1.0
+        },
+        {
+          "id": 10,
+          "type": "синоним",
+          "question": "Когда обращение считается инцидентом безопасности?",
+          "gold_sources": [
+            "security_and_privacy"
+          ],
+          "retrieved_sources": [
+            "security_and_privacy",
+            "mobile_performance",
+            "ads_and_recommendations",
+            "security_and_privacy",
+            "support_playbook"
+          ],
+          "retrieved_chunks": [
+            "security_and_privacy__smart_4",
+            "mobile_performance__smart_0",
+            "ads_and_recommendations__smart_2",
+            "security_and_privacy__smart_5",
+            "support_playbook__smart_2"
+          ],
+          "hit_rate_at_5": 1.0
+        },
+        {
+          "id": 11,
+          "type": "перефраз",
+          "question": "Чем экспорт отличается от резервной копии?",
+          "gold_sources": [
+            "export_and_reports",
+            "backup_and_restore"
+          ],
+          "retrieved_sources": [
+            "security_and_privacy",
+            "backup_and_restore",
+            "support_playbook",
+            "backup_and_restore",
+            "backup_and_restore"
+          ],
+          "retrieved_chunks": [
+            "security_and_privacy__smart_1",
+            "backup_and_restore__smart_4",
+            "support_playbook__smart_4",
+            "backup_and_restore__smart_0",
+            "backup_and_restore__smart_3"
+          ],
+          "hit_rate_at_5": 0.5
+        },
+        {
+          "id": 12,
+          "type": "multi-hop",
+          "question": "Почему реклама не должна появляться во время быстрого ввода расходов на слабом телефоне?",
+          "gold_sources": [
+            "ads_and_recommendations",
+            "mobile_performance"
+          ],
+          "retrieved_sources": [
+            "ads_and_recommendations",
+            "mobile_performance",
+            "mobile_performance",
+            "pricing_and_subscription",
+            "mobile_performance"
+          ],
+          "retrieved_chunks": [
+            "ads_and_recommendations__smart_4",
+            "mobile_performance__smart_3",
+            "mobile_performance__smart_0",
+            "pricing_and_subscription__smart_6",
+            "mobile_performance__smart_4"
+          ],
+          "hit_rate_at_5": 1.0
+        },
+        {
+          "id": 13,
+          "type": "multi-hop с термином",
+          "question": "Почему сканер чеков может зависнуть и почему при этом важен UI-поток?",
+          "gold_sources": [
+            "receipts_and_ocr",
+            "mobile_performance"
+          ],
+          "retrieved_sources": [
+            "security_and_privacy",
+            "pricing_and_subscription",
+            "mobile_performance",
+            "receipts_and_ocr",
+            "security_and_privacy"
+          ],
+          "retrieved_chunks": [
+            "security_and_privacy__smart_5",
+            "pricing_and_subscription__smart_1",
+            "mobile_performance__smart_2",
+            "receipts_and_ocr__smart_1",
+            "security_and_privacy__smart_0"
+          ],
+          "hit_rate_at_5": 1.0
+        }
+      ]
+    }
+  ]
+}
