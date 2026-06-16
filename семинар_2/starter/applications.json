@@ -1,0 +1,602 @@
+[
+  {
+    "full_name": "Александра Сергеевна Смирнова",
+    "age": 58,
+    "address": {
+      "city": "Нижний Новгород",
+      "district": "Нижегородский"
+    },
+    "speciality": "медицинская сестра",
+    "desired_course": "медицинская документация и стандарты качества",
+    "years_of_experience": 40,
+    "graduation_year": 2000
+  },
+  {
+    "full_name": "Иванов Сергей Александрович",
+    "age": 58,
+    "address": {
+      "city": "Екатеринбург",
+      "district": "Ленинский"
+    },
+    "speciality": "врач-терапевт",
+    "desired_course": "медицинская документация и стандарты качества",
+    "years_of_experience": 40,
+    "graduation_year": 1998
+  },
+  {
+    "full_name": "Иван Иванович Иванов",
+    "age": 57,
+    "address": {
+      "city": "Воронеж",
+      "district": "Центральный"
+    },
+    "speciality": "инженер-проектировщик",
+    "desired_course": "охрана труда и техника безопасности",
+    "years_of_experience": 39,
+    "graduation_year": 2002
+  },
+  {
+    "full_name": "Иванова Наталья Ивановна",
+    "age": 45,
+    "address": {
+      "city": "Санкт-Петербург",
+      "district": "Приморский"
+    },
+    "speciality": "учитель русского языка",
+    "desired_course": "современные педагогические технологии",
+    "years_of_experience": 20,
+    "graduation_year": 2002
+  },
+  {
+    "full_name": "Александр Иванович Смирнов",
+    "age": 42,
+    "address": {
+      "city": "Казань",
+      "district": "Вахитовский"
+    },
+    "speciality": "учитель русского языка",
+    "desired_course": "современные педагогические технологии",
+    "years_of_experience": 20,
+    "graduation_year": 2002
+  },
+  {
+    "full_name": "Федорова Татьяна Сергеевич",
+    "age": 59,
+    "address": {
+      "city": "Нижний Новгород",
+      "district": "Советский"
+    },
+    "speciality": "учитель математики",
+    "desired_course": "современные педагогические технологии",
+    "years_of_experience": 8,
+    "graduation_year": 1992
+  },
+  {
+    "full_name": "Ирина Сергеевна Кузнецова",
+    "age": 58,
+    "address": {
+      "city": "Самара",
+      "district": "Ленинский"
+    },
+    "speciality": "медицинская сестра",
+    "desired_course": "медицинская документация и стандарты качества",
+    "years_of_experience": 30,
+    "graduation_year": 1990
+  },
+  {
+    "full_name": "Иванов Иван Иванович",
+    "age": 62,
+    "address": {
+      "city": "Воронеж",
+      "district": "Ленинский"
+    },
+    "speciality": "специалист по охране труда",
+    "desired_course": "охрана труда и техника безопасности",
+    "years_of_experience": 39,
+    "graduation_year": 2001
+  },
+  {
+    "full_name": "Ирина Сергеевна Кузнецова",
+    "age": 57,
+    "address": {
+      "city": "Воронеж",
+      "district": "Ленинский"
+    },
+    "speciality": "медицинская сестра",
+    "desired_course": "медицинская документация и стандарты качества",
+    "years_of_experience": 37,
+    "graduation_year": 2000
+  },
+  {
+    "full_name": "Иванова Ирина Сергеевна",
+    "age": 43,
+    "address": {
+      "city": "Самара",
+      "district": "Ленинский"
+    },
+    "speciality": "инженер-проектировщик",
+    "desired_course": "цифровые технологии в профессиональной деятельности",
+    "years_of_experience": 25,
+    "graduation_year": 2001
+  },
+  {
+    "full_name": "Иванов Иван Иванович",
+    "age": 57,
+    "address": {
+      "city": "Санкт-Петербург",
+      "district": "Центральный"
+    },
+    "speciality": "HR-специалист",
+    "desired_course": "управление персоналом",
+    "years_of_experience": 39,
+    "graduation_year": 2006
+  },
+  {
+    "full_name": "Иванов Сергей Иванович",
+    "age": 52,
+    "address": {
+      "city": "Санкт-Петербург",
+      "district": "Приморский"
+    },
+    "speciality": "врач-терапевт",
+    "desired_course": "медицинская документация и стандарты качества",
+    "years_of_experience": 34,
+    "graduation_year": 2000
+  },
+  {
+    "full_name": "Иванов Иван Алексеевич",
+    "age": 47,
+    "address": {
+      "city": "Новосибирск",
+      "district": "Ленинский"
+    },
+    "speciality": "врач-терапевт",
+    "desired_course": "медицинская документация и стандарты качества",
+    "years_of_experience": 29,
+    "graduation_year": 1998
+  },
+  {
+    "full_name": "Иванова Елена Петровна",
+    "age": 57,
+    "address": {
+      "city": "Екатеринбург",
+      "district": "Ленинский"
+    },
+    "speciality": "медицинская сестра",
+    "desired_course": "медицинская документация и стандарты качества",
+    "years_of_experience": 39,
+    "graduation_year": 2000
+  },
+  {
+    "full_name": "Валерий Николаевич Иванов",
+    "age": 42,
+    "address": {
+      "city": "Воронеж",
+      "district": "Ленинский"
+    },
+    "speciality": "учитель русского языка",
+    "desired_course": "современные педагогические технологии",
+    "years_of_experience": 22,
+    "graduation_year": 2002
+  },
+  {
+    "full_name": "Александр Иванович Сидоров",
+    "age": 57,
+    "address": {
+      "city": "Ростов-на-Дону",
+      "district": "Кировский"
+    },
+    "speciality": "учитель русского языка",
+    "desired_course": "современные педагогические технологии",
+    "years_of_experience": 39,
+    "graduation_year": 1999
+  },
+  {
+    "full_name": "Антон Александрович Иванов",
+    "age": 52,
+    "address": {
+      "city": "Москва",
+      "district": "ЦАО"
+    },
+    "speciality": "специалист по охране труда",
+    "desired_course": "охрана труда и техника безопасности",
+    "years_of_experience": 25,
+    "graduation_year": 2002
+  },
+  {
+    "full_name": "Алексей Васильевич Иванов",
+    "age": 42,
+    "address": {
+      "city": "Казань",
+      "district": "Вахитовский"
+    },
+    "speciality": "IT-администратор",
+    "desired_course": "цифровые технологии в профессиональной деятельности",
+    "years_of_experience": 20,
+    "graduation_year": 2002
+  },
+  {
+    "full_name": "Александр Иванович Сергеев",
+    "age": 55,
+    "address": {
+      "city": "Нижний Новгород",
+      "district": "Нижегородский"
+    },
+    "speciality": "врач-терапевт",
+    "desired_course": "медицинская документация и стандарты качества",
+    "years_of_experience": 37,
+    "graduation_year": 1992
+  },
+  {
+    "full_name": "Кузнецов Ольга Викторович",
+    "age": 60,
+    "address": {
+      "city": "Москва",
+      "district": "ЮАО"
+    },
+    "speciality": "специалист по охране труда",
+    "desired_course": "охрана труда и техника безопасности",
+    "years_of_experience": 4,
+    "graduation_year": 1988
+  },
+  {
+    "full_name": "Смирнов Михаил Андреевич",
+    "age": 52,
+    "address": {
+      "city": "Екатеринбург",
+      "district": "Чкаловский"
+    },
+    "speciality": "учитель русского языка",
+    "desired_course": "современные педагогические технологии",
+    "years_of_experience": 9,
+    "graduation_year": 2001
+  },
+  {
+    "full_name": "Федорова Михаил Андреевна",
+    "age": 54,
+    "address": {
+      "city": "Ростов-на-Дону",
+      "district": "Ленинский"
+    },
+    "speciality": "специалист по охране труда",
+    "desired_course": "охрана труда и техника безопасности",
+    "years_of_experience": 25,
+    "graduation_year": 1993
+  },
+  {
+    "full_name": "Федорова Андрей Михайловна",
+    "age": 50,
+    "address": {
+      "city": "Екатеринбург",
+      "district": "Чкаловский"
+    },
+    "speciality": "HR-специалист",
+    "desired_course": "управление персоналом",
+    "years_of_experience": 9,
+    "graduation_year": 2000
+  },
+  {
+    "full_name": "Смирнов Ольга Викторович",
+    "age": 28,
+    "address": {
+      "city": "Ростов-на-Дону",
+      "district": "Советский"
+    },
+    "speciality": "учитель русского языка",
+    "desired_course": "современные педагогические технологии",
+    "years_of_experience": 3,
+    "graduation_year": 2020
+  },
+  {
+    "full_name": "Новикова Дмитрий Андреевич",
+    "age": 28,
+    "address": {
+      "city": "Санкт-Петербург",
+      "district": "Калининский"
+    },
+    "speciality": "юрист",
+    "desired_course": "цифровые технологии в профессиональной деятельности",
+    "years_of_experience": 6,
+    "graduation_year": 2018
+  },
+  {
+    "full_name": "Попова Игорь Михайловна",
+    "age": 53,
+    "address": {
+      "city": "Москва",
+      "district": "ЗАО"
+    },
+    "speciality": "IT-администратор",
+    "desired_course": "аналитика данных",
+    "years_of_experience": 3,
+    "graduation_year": 2001
+  },
+  {
+    "full_name": "Соколова Мария Игоревич",
+    "age": 26,
+    "address": {
+      "city": "Ростов-на-Дону",
+      "district": "Советский"
+    },
+    "speciality": "инженер-проектировщик",
+    "desired_course": "проектное управление",
+    "years_of_experience": 6,
+    "graduation_year": 2020
+  },
+  {
+    "full_name": "Новикова Елена Дмитриевич",
+    "age": 31,
+    "address": {
+      "city": "Москва",
+      "district": "ЦАО"
+    },
+    "speciality": "врач-терапевт",
+    "desired_course": "медицинская документация и стандарты качества",
+    "years_of_experience": 7,
+    "graduation_year": 2019
+  },
+  {
+    "full_name": "Смирнова Елена Викторовна",
+    "age": 44,
+    "address": {
+      "city": "Новосибирск",
+      "district": "Ленинский"
+    },
+    "speciality": "учитель математики",
+    "desired_course": "современные педагогические технологии",
+    "years_of_experience": 0,
+    "graduation_year": 2010
+  },
+  {
+    "full_name": "Петров Елена Игоревич",
+    "age": 28,
+    "address": {
+      "city": "Новосибирск",
+      "district": "Ленинский"
+    },
+    "speciality": "HR-специалист",
+    "desired_course": "управление персоналом",
+    "years_of_experience": 2,
+    "graduation_year": 2024
+  },
+  {
+    "full_name": "Новикова Игорь Александровна",
+    "age": 41,
+    "address": {
+      "city": "Самара",
+      "district": "Октябрьский"
+    },
+    "speciality": "бухгалтер",
+    "desired_course": "бухгалтерский учет и налоговое планирование",
+    "years_of_experience": 16,
+    "graduation_year": 2006
+  },
+  {
+    "full_name": "Петрова Виктория Сергеевич",
+    "age": 56,
+    "address": {
+      "city": "Самара",
+      "district": "Самарский"
+    },
+    "speciality": "инженер-проектировщик",
+    "desired_course": "проектное управление",
+    "years_of_experience": 20,
+    "graduation_year": 1991
+  },
+  {
+    "full_name": "Иванова Татьяна Михайлович",
+    "age": 52,
+    "address": {
+      "city": "Новосибирск",
+      "district": "Ленинский"
+    },
+    "speciality": "учитель математики",
+    "desired_course": "современные педагогические технологии",
+    "years_of_experience": 14,
+    "graduation_year": 2000
+  },
+  {
+    "full_name": "Кузнецова Михаил Сергеевич",
+    "age": 47,
+    "address": {
+      "city": "Казань",
+      "district": "Вахитовский"
+    },
+    "speciality": "учитель русского языка",
+    "desired_course": "современные педагогические технологии",
+    "years_of_experience": 12,
+    "graduation_year": 2006
+  },
+  {
+    "full_name": "Кузнецова Ольга Игоревна",
+    "age": 40,
+    "address": {
+      "city": "Екатеринбург",
+      "district": "Верх-Исетский"
+    },
+    "speciality": "бухгалтер",
+    "desired_course": "бухгалтерский учет и налоговое планирование",
+    "years_of_experience": 6,
+    "graduation_year": 2011
+  },
+  {
+    "full_name": "Смирнов Наталья Андреевич",
+    "age": 36,
+    "address": {
+      "city": "Воронеж",
+      "district": "Коминтерновский"
+    },
+    "speciality": "медицинская сестра",
+    "desired_course": "медицинская документация и стандарты качества",
+    "years_of_experience": 9,
+    "graduation_year": 2011
+  },
+  {
+    "full_name": "Попова Елена Михайловна",
+    "age": 33,
+    "address": {
+      "city": "Краснодар",
+      "district": "Западный"
+    },
+    "speciality": "медицинская сестра",
+    "desired_course": "медицинская документация и стандарты качества",
+    "years_of_experience": 2,
+    "graduation_year": 2020
+  },
+  {
+    "full_name": "Волкова Алексей Павлович",
+    "age": 41,
+    "address": {
+      "city": "Новосибирск",
+      "district": "Ленинский"
+    },
+    "speciality": "HR-специалист",
+    "desired_course": "управление персоналом",
+    "years_of_experience": 13,
+    "graduation_year": 2011
+  },
+  {
+    "full_name": "Федорова Павел Павлович",
+    "age": 56,
+    "address": {
+      "city": "Краснодар",
+      "district": "Карасунский"
+    },
+    "speciality": "медицинская сестра",
+    "desired_course": "медицинская документация и стандарты качества",
+    "years_of_experience": 10,
+    "graduation_year": 1997
+  },
+  {
+    "full_name": "Смирнова Андрей Александровна",
+    "age": 33,
+    "address": {
+      "city": "Краснодар",
+      "district": "Западный"
+    },
+    "speciality": "бухгалтер",
+    "desired_course": "бухгалтерский учет и налоговое планирование",
+    "years_of_experience": 4,
+    "graduation_year": 2020
+  },
+  {
+    "full_name": "Соколова Дмитрий Сергеевна",
+    "age": 55,
+    "address": {
+      "city": "Нижний Новгород",
+      "district": "Нижегородский"
+    },
+    "speciality": "бухгалтер",
+    "desired_course": "бухгалтерский учет и налоговое планирование",
+    "years_of_experience": 2,
+    "graduation_year": 1998
+  },
+  {
+    "full_name": "Иванова Павел Дмитриевич",
+    "age": 42,
+    "address": {
+      "city": "Казань",
+      "district": "Советский"
+    },
+    "speciality": "IT-администратор",
+    "desired_course": "аналитика данных",
+    "years_of_experience": 15,
+    "graduation_year": 2004
+  },
+  {
+    "full_name": "Смирнов Ольга Михайловна",
+    "age": 36,
+    "address": {
+      "city": "Самара",
+      "district": "Октябрьский"
+    },
+    "speciality": "инженер-проектировщик",
+    "desired_course": "проектное управление",
+    "years_of_experience": 10,
+    "graduation_year": 2011
+  },
+  {
+    "full_name": "Соколов Мария Сергеевич",
+    "age": 25,
+    "address": {
+      "city": "Ростов-на-Дону",
+      "district": "Ворошиловский"
+    },
+    "speciality": "врач-терапевт",
+    "desired_course": "медицинская документация и стандарты качества",
+    "years_of_experience": 0,
+    "graduation_year": 2023
+  },
+  {
+    "full_name": "Петрова Ирина Дмитриевич",
+    "age": 33,
+    "address": {
+      "city": "Казань",
+      "district": "Приволжский"
+    },
+    "speciality": "юрист",
+    "desired_course": "цифровые технологии в профессиональной деятельности",
+    "years_of_experience": 8,
+    "graduation_year": 2016
+  },
+  {
+    "full_name": "Смирнов Елена Андреевна",
+    "age": 49,
+    "address": {
+      "city": "Нижний Новгород",
+      "district": "Нижегородский"
+    },
+    "speciality": "специалист по охране труда",
+    "desired_course": "охрана труда и техника безопасности",
+    "years_of_experience": 10,
+    "graduation_year": 2000
+  },
+  {
+    "full_name": "Волкова Андрей Дмитриевна",
+    "age": 29,
+    "address": {
+      "city": "Краснодар",
+      "district": "Западный"
+    },
+    "speciality": "медицинская сестра",
+    "desired_course": "медицинская документация и стандарты качества",
+    "years_of_experience": 1,
+    "graduation_year": 2021
+  },
+  {
+    "full_name": "Иванов Игорь Сергеевич",
+    "age": 37,
+    "address": {
+      "city": "Санкт-Петербург",
+      "district": "Приморский"
+    },
+    "speciality": "HR-специалист",
+    "desired_course": "управление персоналом",
+    "years_of_experience": 15,
+    "graduation_year": 2010
+  },
+  {
+    "full_name": "Морозова Сергей Викторович",
+    "age": 29,
+    "address": {
+      "city": "Краснодар",
+      "district": "Карасунский"
+    },
+    "speciality": "медицинская сестра",
+    "desired_course": "медицинская документация и стандарты качества",
+    "years_of_experience": 2,
+    "graduation_year": 2019
+  },
+  {
+    "full_name": "Федорова Павел Андреевич",
+    "age": 50,
+    "address": {
+      "city": "Москва",
+      "district": "ЦАО"
+    },
+    "speciality": "специалист по охране труда",
+    "desired_course": "охрана труда и техника безопасности",
+    "years_of_experience": 18,
+    "graduation_year": 2004
+  }
+]
