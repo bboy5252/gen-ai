@@ -8,8 +8,11 @@
 from __future__ import annotations
 
 import json
+import os
 import sys
 from pathlib import Path
+
+os.environ.setdefault("LLM_TIMEOUT", "45")
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
@@ -44,6 +47,48 @@ CASES = [
         "must_have": ["год"],
         "comment": "Вычисление с формулой: 72 / ставка = годы.",
     },
+    {
+        "id": 5,
+        "query": "Во сколько раз вырос курс USD с января 2022 по апрель 2026?",
+        "expected_tools": ["compare_periods"],
+        "must_have": [],
+        "comment": "Новый инструмент: сравнение валюты между двумя месяцами.",
+    },
+    {
+        "id": 6,
+        "query": "На сколько процентных пунктов изменилась ключевая ставка с января 2022 по апрель 2026?",
+        "expected_tools": ["compare_periods"],
+        "must_have": [],
+        "comment": "Новый инструмент: delta по key_rate.",
+    },
+    {
+        "id": 7,
+        "query": "Что сильнее изменилось с марта 2022 по март 2026: инфляция или безработица?",
+        "expected_tools": ["compare_periods"],
+        "must_have": [],
+        "comment": "Трудный: две метрики, два сравнения, легко сравнить ratio вместо delta.",
+    },
+    {
+        "id": 8,
+        "query": "Сколько юаней за доллар по кросс-курсу ЦБ сегодня?",
+        "expected_tools": ["get_fx_rate", "calculate"],
+        "must_have": [],
+        "comment": "Трудный: нужно делить USD/RUB на CNY/RUB, а не наоборот.",
+    },
+    {
+        "id": 9,
+        "query": "Что сейчас выше: ключевая ставка или индекс нищеты (инфляция плюс безработица)?",
+        "expected_tools": ["get_key_rate", "get_inflation", "get_unemployment", "calculate"],
+        "must_have": [],
+        "comment": "Реальный макро-вопрос: сравнение ставки и суммы двух индикаторов.",
+    },
+    {
+        "id": 10,
+        "query": "Какова реальная доходность годового вклада под текущую ключевую ставку с поправкой на последнюю инфляцию?",
+        "expected_tools": ["get_key_rate", "get_inflation", "calculate"],
+        "must_have": [],
+        "comment": "Реальный макро-вопрос: формула Фишера, не просто ставка минус инфляция.",
+    },
 ]
 
 
@@ -51,17 +96,18 @@ def run_case(case: dict, *, use_cache: bool = False, track_cost: bool = False) -
     print(f"\n{'=' * 70}\n[Q{case['id']}] {case['query']}\n{'-' * 70}")
     res = run_agent(
         case["query"],
-        max_iter=8,
+        max_iter=5,
         verbose=True,
         use_cache=use_cache,
         track_cost=track_cost,
     )
     used_tools = [e["call"] for e in res["trace"] if "call" in e]
-    answer = res.get("answer") or ""
+    answer = res.get("answer") or res.get("error") or ""
 
     tool_match = all(t in used_tools for t in case["expected_tools"])
     text_match = all(s.lower() in answer.lower() for s in case["must_have"])
-    ok = bool(answer) and tool_match and text_match
+    no_runtime_error = not res.get("error")
+    ok = bool(answer) and no_runtime_error and tool_match and text_match
 
     print(f"\n  tools used : {used_tools}")
     print(
@@ -78,6 +124,9 @@ def run_case(case: dict, *, use_cache: bool = False, track_cost: bool = False) -
         "tools_used": used_tools,
         "steps": res["steps"],
         "answer": answer,
+        "error": res.get("error"),
+        "comment": case.get("comment", ""),
+        "run_id": res.get("run_id"),
     }
 
 

@@ -1,0 +1,156 @@
+[
+  {
+    "id": 1,
+    "query": "Какая сегодня ключевая ставка ЦБ?",
+    "ok": true,
+    "tools_used": [
+      "get_key_rate",
+      "get_key_rate",
+      "get_key_rate"
+    ],
+    "steps": 4,
+    "answer": "Ключевая ставка ЦБ России на сегодня составляет 16,0% годовых.",
+    "error": null,
+    "comment": "Базовый тест — один инструмент, одно число.",
+    "run_id": "a95a9375-fd07-446e-a886-2a67c51a0f21"
+  },
+  {
+    "id": 2,
+    "query": "Сколько стоит доллар сегодня и сколько стоил 1 января 2022?",
+    "ok": false,
+    "tools_used": [],
+    "steps": 1,
+    "answer": "BadRequestError: Error code: 400 - {'error': {'message': \"Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '<function=get_fx_rate>{\"currency\": \"USD\", \"on_date\": \"2026-06-16\"}<function=get_fx_rate>{\"currency\": \"USD\", \"on_date\": \"2022-01-01\"}'}}",
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '<function=get_fx_rate>{\"currency\": \"USD\", \"on_date\": \"2026-06-16\"}<function=get_fx_rate>{\"currency\": \"USD\", \"on_date\": \"2022-01-01\"}'}}",
+    "comment": "Два вызова одного инструмента с разными аргументами.",
+    "run_id": "6d049b73-4c1f-406f-a890-3ca22b537265"
+  },
+  {
+    "id": 3,
+    "query": "Какая сейчас реальная ключевая ставка? (номинальная минус инфляция г/г)",
+    "ok": true,
+    "tools_used": [
+      "get_key_rate",
+      "get_inflation",
+      "calculate",
+      "get_key_rate",
+      "get_inflation",
+      "calculate",
+      "get_key_rate",
+      "get_inflation",
+      "calculate"
+    ],
+    "steps": 4,
+    "answer": "Реальная ключевая ставка сейчас составляет 10.2%.",
+    "error": null,
+    "comment": "Три разных инструмента + арифметика. Классический многостадийный кейс.",
+    "run_id": "9fa5e361-327d-4579-85f9-18a832ce42fe"
+  },
+  {
+    "id": 4,
+    "query": "Посчитай, за сколько лет удвоится вклад 100 тыс руб при текущей ключевой ставке (формула 72).",
+    "ok": false,
+    "tools_used": [],
+    "steps": 1,
+    "answer": "BadRequestError: Error code: 400 - {'error': {'message': \"Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '<function=calculate>{\"72 / (get_key_rate{on_date: \\'2026-06-16\\'} / 100)\"}</function>'}}",
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '<function=calculate>{\"72 / (get_key_rate{on_date: \\'2026-06-16\\'} / 100)\"}</function>'}}",
+    "comment": "Вычисление с формулой: 72 / ставка = годы.",
+    "run_id": "9860b734-a070-473b-a207-09653624914e"
+  },
+  {
+    "id": 5,
+    "query": "Во сколько раз вырос курс USD с января 2022 по апрель 2026?",
+    "ok": true,
+    "tools_used": [
+      "compare_periods",
+      "calculate"
+    ],
+    "steps": 3,
+    "answer": "Курс USD вырос в 1.00114 раза с января 2022 по апрель 2026.",
+    "error": null,
+    "comment": "Новый инструмент: сравнение валюты между двумя месяцами.",
+    "run_id": "8e6cffe2-70c5-45af-a624-793493bb0b72"
+  },
+  {
+    "id": 6,
+    "query": "На сколько процентных пунктов изменилась ключевая ставка с января 2022 по апрель 2026?",
+    "ok": true,
+    "tools_used": [
+      "compare_periods",
+      "calculate"
+    ],
+    "steps": 3,
+    "answer": "Ключевая ставка изменилась на -11,76% с января 2022 по апрель 2026.",
+    "error": null,
+    "comment": "Новый инструмент: delta по key_rate.",
+    "run_id": "83bf21f6-c084-44a2-ae9d-3c7d67d42a71"
+  },
+  {
+    "id": 7,
+    "query": "Что сильнее изменилось с марта 2022 по март 2026: инфляция или безработица?",
+    "ok": true,
+    "tools_used": [
+      "compare_periods",
+      "compare_periods"
+    ],
+    "steps": 2,
+    "answer": "С марта 2022 года инфляция сильнее изменилась, чем безработица.",
+    "error": null,
+    "comment": "Трудный: две метрики, два сравнения, легко сравнить ratio вместо delta.",
+    "run_id": "b8ae0e43-af8f-42c4-a4b9-5b38ca492495"
+  },
+  {
+    "id": 8,
+    "query": "Сколько юаней за доллар по кросс-курсу ЦБ сегодня?",
+    "ok": false,
+    "tools_used": [],
+    "steps": 1,
+    "answer": "BadRequestError: Error code: 400 - {'error': {'message': \"Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '<function=get_fx_rate>{\"currency\": \"CNY\", \"on_date\": \"2026-06-16\"}<function=get_fx_rate>{\"currency\": \"USD\", \"on_date\": \"2026-06-16\"}<function=calculate>{\"expression\": \"get_fx_rate(currency=CNY, on_date=2026-06-16) / get_fx_rate(currency=USD, on_date=2026-06-16)\"}'}}",
+    "error": "BadRequestError: Error code: 400 - {'error': {'message': \"Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': '<function=get_fx_rate>{\"currency\": \"CNY\", \"on_date\": \"2026-06-16\"}<function=get_fx_rate>{\"currency\": \"USD\", \"on_date\": \"2026-06-16\"}<function=calculate>{\"expression\": \"get_fx_rate(currency=CNY, on_date=2026-06-16) / get_fx_rate(currency=USD, on_date=2026-06-16)\"}'}}",
+    "comment": "Трудный: нужно делить USD/RUB на CNY/RUB, а не наоборот.",
+    "run_id": "6c5a7312-f318-4180-87ea-78bd2eb059ba"
+  },
+  {
+    "id": 9,
+    "query": "Что сейчас выше: ключевая ставка или индекс нищеты (инфляция плюс безработица)?",
+    "ok": true,
+    "tools_used": [
+      "get_key_rate",
+      "get_inflation",
+      "get_unemployment",
+      "calculate"
+    ],
+    "steps": 2,
+    "answer": "Ключевая ставка выше индекса нищеты.",
+    "error": null,
+    "comment": "Реальный макро-вопрос: сравнение ставки и суммы двух индикаторов.",
+    "run_id": "1fb810c6-8c3b-4b38-9c29-e90875abaaf6"
+  },
+  {
+    "id": 10,
+    "query": "Какова реальная доходность годового вклада под текущую ключевую ставку с поправкой на последнюю инфляцию?",
+    "ok": false,
+    "tools_used": [
+      "get_key_rate",
+      "get_inflation",
+      "calculate",
+      "get_key_rate",
+      "get_inflation",
+      "calculate",
+      "get_key_rate",
+      "get_inflation",
+      "calculate",
+      "get_key_rate",
+      "get_inflation",
+      "calculate",
+      "get_key_rate",
+      "get_inflation",
+      "calculate"
+    ],
+    "steps": 5,
+    "answer": "исчерпан лимит шагов max_iter=5",
+    "error": "исчерпан лимит шагов max_iter=5",
+    "comment": "Реальный макро-вопрос: формула Фишера, не просто ставка минус инфляция.",
+    "run_id": "44d42ab5-52c7-4664-9b04-b23d45108ad3"
+  }
+]

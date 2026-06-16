@@ -13,6 +13,9 @@
 from __future__ import annotations
 
 import csv
+import ast
+import math
+import operator
 import re
 import urllib.error
 import urllib.parse
@@ -21,8 +24,6 @@ import xml.etree.ElementTree as ET
 from datetime import date as _date
 from datetime import datetime
 from pathlib import Path
-
-import sympy  # noqa: F401  (пригодится в calculate)
 
 DATA_DIR = Path(__file__).resolve().parent / "data"
 
@@ -45,6 +46,16 @@ def _parse_date(s: str | None) -> _date:
     if isinstance(s, _date):
         return s
     return datetime.strptime(s, "%Y-%m-%d").date()
+
+
+def _parse_period(s: str) -> tuple[_date, int | None, int | None]:
+    if re.fullmatch(r"\d{4}-\d{2}", s):
+        year, month = map(int, s.split("-"))
+        if not (1 <= month <= 12):
+            raise ValueError(f"месяц вне диапазона 1..12: {s}")
+        return _date(year, month, 15), year, month
+    d = _parse_date(s)
+    return d, d.year, d.month
 
 
 # ===========================================================================
@@ -261,6 +272,84 @@ def get_unemployment(year: int, month: int) -> dict:
 
 
 # ===========================================================================
+# 3c. Сравнение периодов
+# ===========================================================================
+
+
+def compare_periods(metric: str, period_a: str, period_b: str) -> dict:
+    """
+    Сравнить значение макро-метрики в двух периодах.
+
+    Args:
+        metric: key_rate | fx_USD | fx_EUR | fx_CNY | cpi | unemployment.
+        period_a: YYYY-MM или YYYY-MM-DD.
+        period_b: YYYY-MM или YYYY-MM-DD.
+
+    Returns:
+        {
+          "metric": ...,
+          "a": {"date": ..., "value": ...},
+          "b": {"date": ..., "value": ...},
+          "delta": b.value - a.value,
+          "ratio": b.value / a.value,
+          "source": "..."
+        }
+    """
+    try:
+        date_a, year_a, month_a = _parse_period(period_a)
+        date_b, year_b, month_b = _parse_period(period_b)
+    except ValueError as e:
+        return {"error": str(e)}
+
+    metric = metric.strip()
+
+    def read_value(period_date: _date, year: int, month: int) -> dict:
+        if metric == "key_rate":
+            obs = get_key_rate(period_date.isoformat())
+            value = obs.get("rate")
+        elif metric.startswith("fx_"):
+            currency = metric.split("_", 1)[1].upper()
+            obs = get_fx_rate(currency, period_date.isoformat())
+            value = obs.get("rate")
+        elif metric == "cpi":
+            obs = get_inflation(year, month)
+            value = obs.get("cpi_yoy")
+        elif metric == "unemployment":
+            obs = get_unemployment(year, month)
+            value = obs.get("unemployment")
+        else:
+            return {
+                "error": (
+                    "metric должен быть одним из key_rate, fx_USD, fx_EUR, "
+                    "fx_CNY, cpi, unemployment"
+                )
+            }
+        if "error" in obs:
+            return obs
+        if value is None:
+            return {"error": f"инструмент не вернул значение для {metric}: {obs}"}
+        return {"date": obs.get("date") or f"{year}-{month:02d}", "value": float(value), "source": obs.get("source", "unknown")}
+
+    a = read_value(date_a, year_a, month_a)
+    if "error" in a:
+        return {"metric": metric, "error": f"period_a: {a['error']}"}
+    b = read_value(date_b, year_b, month_b)
+    if "error" in b:
+        return {"metric": metric, "error": f"period_b: {b['error']}"}
+
+    ratio = None if a["value"] == 0 else b["value"] / a["value"]
+    sources = sorted({a.get("source", "unknown"), b.get("source", "unknown")})
+    return {
+        "metric": metric,
+        "a": {"date": a["date"], "value": round(a["value"], 6)},
+        "b": {"date": b["date"], "value": round(b["value"], 6)},
+        "delta": round(b["value"] - a["value"], 6),
+        "ratio": None if ratio is None else round(ratio, 6),
+        "source": "+".join(sources),
+    }
+
+
+# ===========================================================================
 # 4. Калькулятор
 # ===========================================================================
 
@@ -285,7 +374,50 @@ def calculate(expression: str) -> dict:
         return {"error": "пустое выражение"}
 
     try:
-        val = float(sympy.sympify(expression.replace("^", "**")))
+        expr = expression.replace("^", "**")
+        val = float(_safe_eval(expr))
         return {"expression": expression, "result": round(val, 6)}
     except Exception as e:
         return {"error": f"{type(e).__name__}: {e}"}
+
+
+_BIN_OPS = {
+    ast.Add: operator.add,
+    ast.Sub: operator.sub,
+    ast.Mult: operator.mul,
+    ast.Div: operator.truediv,
+    ast.Pow: operator.pow,
+}
+_UNARY_OPS = {ast.UAdd: operator.pos, ast.USub: operator.neg}
+_FUNCS = {
+    "sqrt": math.sqrt,
+    "ln": math.log,
+    "log": math.log,
+    "exp": math.exp,
+    "sin": math.sin,
+    "cos": math.cos,
+    "tan": math.tan,
+    "abs": abs,
+}
+_CONSTS = {"pi": math.pi, "e": math.e}
+
+
+def _safe_eval(expression: str) -> float:
+    node = ast.parse(expression, mode="eval")
+
+    def walk(n):
+        if isinstance(n, ast.Expression):
+            return walk(n.body)
+        if isinstance(n, ast.Constant) and isinstance(n.value, (int, float)):
+            return n.value
+        if isinstance(n, ast.BinOp) and type(n.op) in _BIN_OPS:
+            return _BIN_OPS[type(n.op)](walk(n.left), walk(n.right))
+        if isinstance(n, ast.UnaryOp) and type(n.op) in _UNARY_OPS:
+            return _UNARY_OPS[type(n.op)](walk(n.operand))
+        if isinstance(n, ast.Name) and n.id in _CONSTS:
+            return _CONSTS[n.id]
+        if isinstance(n, ast.Call) and isinstance(n.func, ast.Name) and n.func.id in _FUNCS:
+            return _FUNCS[n.func.id](*(walk(arg) for arg in n.args))
+        raise ValueError(f"запрещённый фрагмент выражения: {ast.dump(n)}")
+
+    return float(walk(node))

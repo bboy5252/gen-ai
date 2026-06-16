@@ -21,6 +21,7 @@ import argparse
 import datetime
 import json
 import sys
+import uuid
 from concurrent.futures import ThreadPoolExecutor
 from json.decoder import JSONDecodeError
 from pathlib import Path
@@ -32,7 +33,14 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from llm_client import get_model, make_client, make_raw_client
 from schemas import TOOL_SCHEMAS
-from tools import calculate, get_fx_rate, get_inflation, get_key_rate, get_unemployment
+from tools import (
+    calculate,
+    compare_periods,
+    get_fx_rate,
+    get_inflation,
+    get_key_rate,
+    get_unemployment,
+)
 
 # набор инструментов
 TOOLS_IMPL = {
@@ -40,8 +48,11 @@ TOOLS_IMPL = {
     "get_key_rate": get_key_rate,
     "get_inflation": get_inflation,
     "get_unemployment": get_unemployment,
+    "compare_periods": compare_periods,
     "calculate": calculate,
 }
+
+TRACE_PATH = Path(__file__).resolve().parent / "trace.jsonl"
 
 
 # блок 7 — структурированный ответ
@@ -98,29 +109,41 @@ PRICE_OUT_PER_MTOK = 0.28
 _BASE_RULES = """\
 Ты — макроэкономический аналитик с данными Цб РФ и Росстата. ЧИСЛА НИКОГДА НЕ
 ПРИДУМЫВАЙ — получай их через инструменты.
+Инструменты вызывай только штатным tool-call механизмом API с валидным JSON
+объектом аргументов. Не пиши XML/markdown вида <function=...>.
 
 Инструменты:
 - get_fx_rate: курс валюты к рублю на дату
 - get_key_rate: ключевая ставка Цб на дату
 - get_inflation: ИПЦ (% г/г) на конец месяца
 - get_unemployment: безработица (% рабочей силы) на конец месяца
+- compare_periods: сравнение одной метрики в двух датах/месяцах, сразу delta и ratio
 - calculate: безопасный калькулятор для арифметики над полученными числами
 
 Алгоритм:
 1. Разложи вопрос: какие числа нужны и в каком порядке. Если несколько чисел
    независимы — запрашивай их в одном шаге (несколько вызовов сразу).
 2. Арифметику считай ТОЛЬКО через calculate.
+   В calculate передавай только числовое выражение, например "72 / 16.0".
+   Никогда не вставляй внутрь calculate названия инструментов вроде get_key_rate(...).
 3. Реальная ставка = номинальная ставка − инфляция г/г.
 4. Реальная доходность вклада ≈ (1 + ставка/100) / (1 + инфляция/100) − 1.
 5. Индекс нищеты = инфляция г/г + безработица.
 6. Кросс-курс «сколько B за 1 A» = (рублей за 1 A) / (рублей за 1 B).
    Пример: «юаней за доллар» = (рублей за доллар) / (рублей за юань).
+7. Для вопросов «во сколько раз выросло/упало», «сравни период А и Б» сначала
+   предпочитай compare_periods вместо ручной пары вызовов и calculate.
+   Если спрашивают «во сколько раз» — отвечай полем ratio из compare_periods.
+   Если спрашивают «на сколько процентных пунктов» — отвечай полем delta, не
+   процентным изменением.
+8. Если спрашивают «сейчас» про инфляцию, используй последний доступный месяц
+   в CSV: 2026-03. Если спрашивают «сейчас» про безработицу — 2026-04.
 """
 
 SYSTEM_PROMPT = (
     _BASE_RULES
     + """\
-7. Когда данных достаточно — выдай финальный ответ обычным текстом бЕЗ вызовов
+9. Когда данных достаточно — выдай финальный ответ обычным текстом бЕЗ вызовов
    инструментов. Одна-две фразы, с числами и единицами. Если число из
    fallback_csv — оговорись, что Цб в моменте недоступен.
 Формат даты — YYYY-MM-DD.
@@ -131,7 +154,7 @@ SYSTEM_PROMPT = (
 SYSTEM_PROMPT_PRO = (
     _BASE_RULES
     + """\
-7. Когда данных достаточно — НЕ пиши текст, а вызови submit_answer со структурой
+9. Когда данных достаточно — НЕ пиши текст, а вызови submit_answer со структурой
    (answer, value, unit, sources, confidence).
 Формат даты — YYYY-MM-DD.
 """
@@ -198,6 +221,77 @@ def critique(answer: AgentAnswer, tool_log: list[dict]) -> CriticVerdict:
     )
 
 
+def _jsonable(value: Any) -> Any:
+    if isinstance(value, BaseModel):
+        return value.model_dump(mode="json")
+    if isinstance(value, dict):
+        return {k: _jsonable(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [_jsonable(v) for v in value]
+    return value
+
+
+def _write_trace_event(trace_path: Path | None, event: dict[str, Any]) -> None:
+    if trace_path is None:
+        return
+    trace_path.parent.mkdir(parents=True, exist_ok=True)
+    line = json.dumps(_jsonable(event), ensure_ascii=False, default=str)
+    with trace_path.open("a", encoding="utf-8") as f:
+        f.write(line + "\n")
+
+
+def _make_trace_event(run_id: str, step: int, payload: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "run_id": run_id,
+        "ts": datetime.datetime.now().replace(microsecond=0).isoformat(),
+        "step": step,
+        **payload,
+    }
+
+
+def _metric_label(metric: str) -> str:
+    labels = {
+        "key_rate": "Ключевая ставка",
+        "fx_USD": "Курс USD",
+        "fx_EUR": "Курс EUR",
+        "fx_CNY": "Курс CNY",
+        "cpi": "Инфляция",
+        "unemployment": "Безработица",
+    }
+    return labels.get(metric, metric)
+
+
+def _fmt_num(value: Any) -> str:
+    if isinstance(value, (int, float)):
+        return f"{value:.6f}".rstrip("0").rstrip(".")
+    return str(value)
+
+
+def _compare_final_from_trace(user_query: str, trace: list[dict[str, Any]]) -> str | None:
+    q = user_query.lower()
+    events = [
+        e for e in trace
+        if e.get("call") == "compare_periods" and "error" not in e.get("obs", {})
+    ]
+    if len(events) != 1:
+        return None
+
+    obs = events[0]["obs"]
+    metric = obs.get("metric")
+    label = _metric_label(metric)
+    source = obs.get("source")
+    note = " Данные из fallback_csv." if source == "fallback_csv" else ""
+
+    if "во сколько раз" in q and obs.get("ratio") is not None:
+        verb = "вырос" if obs["ratio"] >= 1 else "снизился"
+        return f"{label} {verb} в {_fmt_num(obs['ratio'])} раза.{note}"
+
+    if "процентн" in q and "пункт" in q and obs.get("delta") is not None:
+        return f"{label} изменилась на {_fmt_num(obs['delta'])} п.п.{note}"
+
+    return None
+
+
 def _finish(
     res: dict,
     usage_log: list[dict],
@@ -250,6 +344,7 @@ def run_agent(
     use_cache: bool = False,
     track_cost: bool = False,
     verbose: bool = True,
+    trace_path: Path | None = TRACE_PATH,
 ) -> dict[str, Any]:
     """ReAct-цикл. базовый режим — финал текстом; флаги включают блоки 6-10."""
     client = make_raw_client()
@@ -263,15 +358,38 @@ def run_agent(
     ]
     trace: list[dict[str, Any]] = []
     usage_log: list[dict[str, Any]] = []  # блок 10 — токены по шагам
+    run_id = str(uuid.uuid4())
 
     for step in range(1, max_iter + 1):
-        resp = client.chat.completions.create(
-            model=model,
-            messages=messages,
-            tools=tools,
-            tool_choice="auto",
-            temperature=0.0,
-        )
+        try:
+            resp = client.chat.completions.create(
+                model=model,
+                messages=messages,
+                tools=tools,
+                tool_choice="auto",
+                temperature=0.0,
+            )
+        except Exception as e:
+            error = f"{type(e).__name__}: {e}"
+            trace.append({"step": step, "final": error, "error": error})
+            _write_trace_event(
+                trace_path,
+                _make_trace_event(run_id, step, {"final": error, "error": error}),
+            )
+            return _finish(
+                {
+                    "answer": None,
+                    "structured": None,
+                    "trace": trace,
+                    "steps": step,
+                    "run_id": run_id,
+                    "error": error,
+                },
+                usage_log,
+                track_cost=track_cost,
+                use_cache=use_cache,
+                verbose=verbose,
+            )
         msg = resp.choices[0].message
         messages.append(msg.model_dump(exclude_none=True))
 
@@ -294,13 +412,20 @@ def run_agent(
             print(f"[step {step}] {names or 'финал-текст'}")
 
         if not msg.tool_calls:
-            trace.append({"step": step, "final": msg.content})
+            final_text = _compare_final_from_trace(user_query, trace) or msg.content
+            item = {"step": step, "final": final_text}
+            trace.append(item)
+            _write_trace_event(
+                trace_path,
+                _make_trace_event(run_id, step, {"final": final_text}),
+            )
             return _finish(
                 {
-                    "answer": msg.content,
+                    "answer": final_text,
                     "structured": None,
                     "trace": trace,
                     "steps": step,
+                    "run_id": run_id,
                 },
                 usage_log,
                 track_cost=track_cost,
@@ -328,8 +453,15 @@ def run_agent(
                         "content": json.dumps(obs, ensure_ascii=False),
                     }
                 )
-                trace.append(
-                    {"step": step, "call": tc.function.name, "args": args, "obs": obs}
+                item = {"step": step, "call": tc.function.name, "args": args, "obs": obs}
+                trace.append(item)
+                _write_trace_event(
+                    trace_path,
+                    _make_trace_event(
+                        run_id,
+                        step,
+                        {"call": tc.function.name, "args": args, "obs": obs},
+                    ),
                 )
                 if verbose:
                     print(
@@ -366,12 +498,18 @@ def run_agent(
             messages.append(
                 {"role": "tool", "tool_call_id": submit.id, "content": "ответ принят"}
             )
+            trace.append({"step": step, "final": ans.model_dump(mode="json")})
+            _write_trace_event(
+                trace_path,
+                _make_trace_event(run_id, step, {"final": ans.model_dump(mode="json")}),
+            )
             return _finish(
                 {
                     "answer": ans.answer,
                     "structured": ans,
                     "trace": trace,
                     "steps": step,
+                    "run_id": run_id,
                 },
                 usage_log,
                 track_cost=track_cost,
@@ -379,13 +517,20 @@ def run_agent(
                 verbose=verbose,
             )
 
+    error = f"исчерпан лимит шагов max_iter={max_iter}"
+    trace.append({"step": max_iter, "final": error})
+    _write_trace_event(
+        trace_path,
+        _make_trace_event(run_id, max_iter, {"final": error, "error": error}),
+    )
     return _finish(
         {
             "answer": None,
             "structured": None,
             "trace": trace,
             "steps": max_iter,
-            "error": f"исчерпан лимит шагов max_iter={max_iter}",
+            "run_id": run_id,
+            "error": error,
         },
         usage_log,
         track_cost=track_cost,
@@ -437,6 +582,7 @@ def main():
         use_critic=a.critic,
         use_cache=a.cache,
         track_cost=a.cost,
+        trace_path=a.trace or TRACE_PATH,
     )
 
     print("\n=== ВОПРОС ===")
