@@ -52,6 +52,9 @@ def critic(
     question: str,
     plan: Plan,
     answers: dict[int, WorkerAnswer],
+    *,
+    temperature: float = 0.7,
+    max_retries: int = 2,
 ) -> Verdict:
     plan_lines = []
     for sq in plan.subquestions:
@@ -60,32 +63,28 @@ def critic(
         plan_lines.append(f"  {sq.id}. [{tools}]{deps}  «{sq.question}»")
     plan_text = "\n".join(plan_lines) or "  (пустой план)"
 
-    # TODO (блок 3.1): собрать answers_text из answers.
-    # ОБЯЗАТЕЛЬНО передаём ТОЛЬКО answer + used_tools, НЕ raw_trace!
-    # Иначе Критик начнёт подсматривать и соглашаться с Исполнителем.
-    # Формат строки: "  <id>. [tool1,tool2] <answer>"
-
     ans_lines = []
     for sq_id in sorted(answers):
         a = answers[sq_id]
         tools = ",".join(a.used_tools) or "—"
-        ans_lines.append(f"  {sq.id}. [{tools}] {a.answer}")
+        ans_lines.append(f"  {sq_id}. [{tools}] {a.answer}")
 
     answers_text = "\n".join(ans_lines) or "(ответов нет)"
 
     client = make_client()
+    prompt = CRITIC_PROMPT.format(
+        question=question, plan_text=plan_text, answers_text=answers_text
+    )
     return client.chat.completions.create(
         model=get_model(),
         messages=[
             {
                 "role": "system",
-                "content": CRITIC_PROMPT.format(
-                    question=question, plan_text=plan_text, answers_text=answers_text
-                ),
-            }
+                "content": "Ты строгий критик. Верни только JSON по схеме Verdict.",
+            },
+            {"role": "user", "content": prompt},
         ],
         response_model=Verdict,
-        # TODO (блок 3.2): поставь temperature=0.7 (не 0.0).
-        temperature=0.7,
-        max_retries=2,
+        temperature=temperature,
+        max_retries=max_retries,
     )

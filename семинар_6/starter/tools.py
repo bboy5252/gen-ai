@@ -18,6 +18,9 @@ cbr.ru; если тот молчит дольше 6 секунд или отда
 from __future__ import annotations
 
 import csv
+import ast
+import math
+import operator
 import re
 import urllib.error
 import urllib.parse
@@ -25,8 +28,6 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import date as _date, datetime
 from pathlib import Path
-
-import sympy
 
 DATA_DIR = Path(__file__).resolve().parent / "data"
 
@@ -219,7 +220,7 @@ def get_inflation(year: int, month: int) -> dict:
 
 def calculate(expression: str) -> dict:
     """
-    Безопасный калькулятор через sympy. Понимает арифметику, степени,
+    Безопасный калькулятор. Понимает арифметику, степени,
     sqrt, ln, log, exp. Не выполняет код — парсер.
 
     Args:
@@ -228,22 +229,51 @@ def calculate(expression: str) -> dict:
     """
     if not isinstance(expression, str) or not expression.strip():
         return {"error": "пустое выражение"}
-    # Отсечём подозрительные символы — имена могут содержать только буквы/цифры/_
-    # (нужны для log, ln, sqrt, pi, exp). Запрещаем точку-доступ и скобки-вызовы
-    # к чему угодно, кроме разрешённого множества.
-    allowed = set("0123456789.+-*/(),% ^")
-    letters = re.findall(r"[A-Za-zА-Яа-я_]+", expression)
-    blacklist = set(letters) - {
-        "log", "ln", "sqrt", "exp", "pi", "E", "e",
-        "sin", "cos", "tan", "abs",
-    }
-    if blacklist:
-        return {"error": f"недопустимые идентификаторы: {sorted(blacklist)}"}
-    bad = set(expression) - allowed - set("".join(letters))
-    if bad:
-        return {"error": f"недопустимые символы: {sorted(bad)}"}
     try:
-        val = float(sympy.sympify(expression.replace("^", "**")))
+        val = float(_safe_eval(expression.replace("^", "**")))
         return {"expression": expression, "result": round(val, 6)}
     except Exception as e:
         return {"expression": expression, "error": f"{type(e).__name__}: {e}"}
+
+
+_BIN_OPS = {
+    ast.Add: operator.add,
+    ast.Sub: operator.sub,
+    ast.Mult: operator.mul,
+    ast.Div: operator.truediv,
+    ast.Pow: operator.pow,
+    ast.Mod: operator.mod,
+}
+_UNARY_OPS = {ast.UAdd: operator.pos, ast.USub: operator.neg}
+_FUNCS = {
+    "sqrt": math.sqrt,
+    "ln": math.log,
+    "log": math.log,
+    "exp": math.exp,
+    "sin": math.sin,
+    "cos": math.cos,
+    "tan": math.tan,
+    "abs": abs,
+}
+_CONSTS = {"pi": math.pi, "e": math.e, "E": math.e}
+
+
+def _safe_eval(expression: str) -> float:
+    node = ast.parse(expression, mode="eval")
+
+    def walk(n):
+        if isinstance(n, ast.Expression):
+            return walk(n.body)
+        if isinstance(n, ast.Constant) and isinstance(n.value, (int, float)):
+            return n.value
+        if isinstance(n, ast.BinOp) and type(n.op) in _BIN_OPS:
+            return _BIN_OPS[type(n.op)](walk(n.left), walk(n.right))
+        if isinstance(n, ast.UnaryOp) and type(n.op) in _UNARY_OPS:
+            return _UNARY_OPS[type(n.op)](walk(n.operand))
+        if isinstance(n, ast.Name) and n.id in _CONSTS:
+            return _CONSTS[n.id]
+        if isinstance(n, ast.Call) and isinstance(n.func, ast.Name) and n.func.id in _FUNCS:
+            return _FUNCS[n.func.id](*(walk(arg) for arg in n.args))
+        raise ValueError(f"запрещённый фрагмент выражения: {ast.dump(n)}")
+
+    return float(walk(node))

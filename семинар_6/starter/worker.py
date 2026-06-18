@@ -56,7 +56,14 @@ def worker(sq: SubQuestion, prev_answers: dict[int, WorkerAnswer]) -> WorkerAnsw
         prev_context=prev_context,
     )
 
-    result = run_agent(prompt, max_iter=5, verbose=False)
+    try:
+        result = run_agent(prompt, max_iter=5, verbose=False)
+    except Exception as e:
+        result = {
+            "answer": None,
+            "error": f"{type(e).__name__}: {e}",
+            "trace": [],
+        }
     used = [e["call"] for e in result.get("trace", []) if "call" in e]
     answer = result.get("answer") or f"(ошибка: {result.get('error', 'unknown')})"
 

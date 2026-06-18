@@ -68,6 +68,42 @@ CASES = [
             "выдуманный инструмент в план). Это — повод для Schema-Validator в домашке."
         ),
         "expected_tools_pwc": {"get_inflation", "calculate"},
+        "must_have_keywords": [],
+        "forbid_hallucinated_tools": True,
+        "allow_honest_refusal": True,
+    },
+    {
+        "id": "Q4",
+        "query": "Что сейчас выше: ключевая ставка или индекс нищеты (инфляция плюс безработица)?",
+        "comment": (
+            "Кейс для валидатора: доступного get_unemployment в С6 нет, поэтому "
+            "PWC без валидатора часто планирует выдуманный инструмент, а валидатор "
+            "должен добиться честного отказа или перепланировки."
+        ),
+        "expected_tools_pwc": set(),
+        "must_have_keywords": [],
+        "forbid_hallucinated_tools": True,
+        "allow_honest_refusal": True,
+    },
+    {
+        "id": "Q5",
+        "query": "Дай текущие курсы USD, EUR и CNY к рублю и кратко сравни их.",
+        "comment": (
+            "Естественная параллельность: три независимых валютных подвопроса "
+            "можно исполнять одним уровнем."
+        ),
+        "expected_tools_pwc": {"get_fx_rate"},
+        "must_have_keywords": ["USD", "EUR", "CNY"],
+        "forbid_hallucinated_tools": True,
+    },
+    {
+        "id": "Q6",
+        "query": "Насколько ключевая ставка выше инфляции за март 2026 года?",
+        "comment": (
+            "Реальный макро-вопрос: нужен номинальный показатель, инфляция "
+            "и арифметика через calculate."
+        ),
+        "expected_tools_pwc": {"get_key_rate", "get_inflation", "calculate"},
         "must_have_keywords": ["%"],
         "forbid_hallucinated_tools": True,
     },
@@ -83,11 +119,7 @@ def _check_single(case: dict, result: dict) -> dict:
     ans = (result.get("answer") or "").lower()
     hallucinated = used - VALID_TOOL_NAMES
     must = all(kw.lower() in ans for kw in case["must_have_keywords"])
-    arith_without_calc = (
-        case["id"] in {"Q1", "Q2", "Q3"}
-        and "calculate" not in used
-        and bool(ans)
-    )
+    arith_without_calc = "calculate" in case["expected_tools_pwc"] and "calculate" not in used and bool(ans)
     ok = bool(ans) and not hallucinated and must and not arith_without_calc
     return {
         "ok": ok,
@@ -116,11 +148,27 @@ def _check_pwc(case: dict, result: dict) -> dict:
     plan_hallucinated = plan_tools - VALID_TOOL_NAMES
 
     must = all(kw.lower() in ans for kw in case["must_have_keywords"])
+    runtime_failure = "ratelimiterror" in ans or "planner failed" in ans
+    honest_refusal = bool(
+        case.get("allow_honest_refusal")
+        and result.get("answer")
+        and not runtime_failure
+        and (
+            "нельзя" in ans
+            or "не решить" in ans
+            or "недоступ" in ans
+            or result.get("validator_errors")
+        )
+    )
+    expected = set(case.get("expected_tools_pwc") or set())
+    tools_ok = expected.issubset(used) or honest_refusal
     ok = (
         bool(result.get("answer"))
         and not hallucinated
         and not plan_hallucinated
         and must
+        and tools_ok
+        and not runtime_failure
     )
     return {
         "ok": ok,
@@ -129,6 +177,9 @@ def _check_pwc(case: dict, result: dict) -> dict:
         "hallucinated_in_workers": sorted(hallucinated),
         "hallucinated_in_plan": sorted(plan_hallucinated),
         "must_have_ok": must,
+        "expected_tools_ok": tools_ok,
+        "honest_refusal": honest_refusal,
+        "runtime_failure": runtime_failure,
         "iterations": result.get("iterations", -1),
         "answer_preview": (result.get("answer") or "")[:180],
     }
@@ -137,6 +188,7 @@ def _check_pwc(case: dict, result: dict) -> dict:
 def run_case(case: dict, *, n: int = 5) -> dict:
     single = {"runs": [], "pass": 0}
     pwc = {"runs": [], "pass": 0}
+    pwc_validator = {"runs": [], "pass": 0}
 
     for i in range(n):
         # --- Одиночный агент ---
@@ -148,15 +200,37 @@ def run_case(case: dict, *, n: int = 5) -> dict:
         single["runs"].append(check1)
         single["pass"] += int(check1["ok"])
 
-        # --- PWC ---
+        # --- PWC без валидатора ---
         try:
-            r2 = run_pwc(case["query"], max_iter=3, verbose=False)
+            r2 = run_pwc(
+                case["query"],
+                max_iter=3,
+                verbose=False,
+                use_validator=False,
+                parallel=True,
+            )
         except Exception as e:
             r2 = {"answer": None, "error": f"{type(e).__name__}: {e}",
                   "trace": [], "plan": None}
         check2 = _check_pwc(case, r2)
         pwc["runs"].append(check2)
         pwc["pass"] += int(check2["ok"])
+
+        # --- PWC + валидатор ---
+        try:
+            r3 = run_pwc(
+                case["query"],
+                max_iter=3,
+                verbose=False,
+                use_validator=True,
+                parallel=True,
+            )
+        except Exception as e:
+            r3 = {"answer": None, "error": f"{type(e).__name__}: {e}",
+                  "trace": [], "plan": None}
+        check3 = _check_pwc(case, r3)
+        pwc_validator["runs"].append(check3)
+        pwc_validator["pass"] += int(check3["ok"])
 
     return {
         "id": case["id"],
@@ -165,6 +239,7 @@ def run_case(case: dict, *, n: int = 5) -> dict:
         "n": n,
         "single": single,
         "pwc": pwc,
+        "pwc_validator": pwc_validator,
     }
 
 
@@ -183,8 +258,8 @@ def main():
         print(f"=== {case['id']}: {case['query'][:70]}...")
         r = run_case(case, n=n)
         results.append(r)
-        s = r["single"]; p = r["pwc"]
-        print(f"   single: {s['pass']}/{n}    pwc: {p['pass']}/{n}")
+        s = r["single"]; p = r["pwc"]; pv = r["pwc_validator"]
+        print(f"   single: {s['pass']}/{n}    pwc: {p['pass']}/{n}    pwc+validator: {pv['pass']}/{n}")
         for run in p["runs"][:1]:
             if run["hallucinated_in_plan"]:
                 print(f"   ⚠ План содержит выдуманные инструменты: {run['hallucinated_in_plan']}")
@@ -195,7 +270,8 @@ def main():
     print("ИТОГО:")
     for r in results:
         print(f"  {r['id']}: single {r['single']['pass']}/{n}  "
-              f"pwc {r['pwc']['pass']}/{n}  — {r['query'][:60]}")
+              f"pwc {r['pwc']['pass']}/{n}  "
+              f"pwc+validator {r['pwc_validator']['pass']}/{n}  — {r['query'][:60]}")
 
     out = Path(__file__).parent / "eval_pwc_results.json"
     out.write_text(json.dumps(results, ensure_ascii=False, indent=2,

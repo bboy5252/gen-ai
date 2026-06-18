@@ -15,6 +15,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import Any
 
@@ -26,32 +27,108 @@ from planner import planner
 from schemas_pwc import Plan, SubQuestion, WorkerAnswer
 from worker import worker
 
+VALID_TOOLS = {"get_fx_rate", "get_key_rate", "get_inflation", "calculate"}
 
-def _topological_sort(subqs: list[SubQuestion]) -> list[SubQuestion]:
-    """Отсортировать подвопросы так, чтобы depends_on шли раньше."""
-    # TODO (блок 3.1): реализовать топологическую сортировку.
-    # Подсказка: DFS с пометкой посещённых. Если видим повторный заход в
-    # узел через текущий путь — это цикл, подними ValueError.
-    # Если ссылка на id, которого нет в списке, — тихо пропускай.
+
+def validate_plan(plan: Plan) -> list[str]:
+    """Вернуть список ошибок плана. Пустой список означает валидный план."""
+    errors: list[str] = []
+    seen_ids: set[int] = set()
+
+    for sq in plan.subquestions:
+        if sq.id in seen_ids:
+            errors.append(f"дублируется id подвопроса {sq.id}")
+        seen_ids.add(sq.id)
+
+        for tool in sq.expected_tools:
+            if not isinstance(tool, str):
+                errors.append(f"подвопрос {sq.id}: tool должен быть строкой")
+                continue
+            name = tool.strip()
+            if name != tool or "(" in name or ")" in name or "," in name:
+                errors.append(
+                    f"подвопрос {sq.id}: expected_tools должен содержать только имя, не вызов: {tool}"
+                )
+                continue
+            if name not in VALID_TOOLS:
+                errors.append(f"подвопрос {sq.id}: неизвестный инструмент {name}")
+
+        for dep_id in sq.depends_on:
+            if dep_id == sq.id:
+                errors.append(f"подвопрос {sq.id}: зависит сам от себя")
+
+    return errors
+
+
+def _topological_levels(subqs: list[SubQuestion]) -> list[list[SubQuestion]]:
+    """Разбить подвопросы на уровни: внутри уровня нет зависимостей друг от друга."""
     by_id = {s.id: s for s in subqs}
-    ordered: list[SubQuestion] = []
-    visited: set[int] = set()
+    visiting: set[int] = set()
+    done: dict[int, int] = {}
 
-    def visit(node_id: int, path: list[int]):
-        if node_id in visited:
-            return None
-        if node_id in path:
-            raise ValueError(f"Цикл в depends_on : {path + node[ids]}")
+    def depth(node_id: int, path: list[int]) -> int:
         if node_id not in by_id:
-            return None
-        for dep in by_id[node_id].depends_on:
-            visit(dep, path + [node_id])
-        visited.add(node_id)
-        ordered.append(by_id[node_id])
+            return -1
+        if node_id in done:
+            return done[node_id]
+        if node_id in visiting:
+            cycle = " -> ".join(map(str, path + [node_id]))
+            raise ValueError(f"цикл в depends_on: {cycle}")
+
+        visiting.add(node_id)
+        dep_depths = [
+            depth(dep, path + [node_id])
+            for dep in by_id[node_id].depends_on
+            if dep in by_id
+        ]
+        visiting.remove(node_id)
+        done[node_id] = (max(dep_depths) + 1) if dep_depths else 0
+        return done[node_id]
 
     for sq in subqs:
-        visit(sq.id, [])
-    return ordered
+        depth(sq.id, [])
+
+    levels: dict[int, list[SubQuestion]] = {}
+    for sq in subqs:
+        levels.setdefault(done[sq.id], []).append(sq)
+    return [levels[i] for i in sorted(levels)]
+
+
+def _topological_sort(subqs: list[SubQuestion]) -> list[SubQuestion]:
+    return [sq for level in _topological_levels(subqs) for sq in level]
+
+
+def execute_level(
+    level: list[SubQuestion],
+    prev_answers: dict[int, WorkerAnswer],
+    *,
+    parallel: bool = True,
+) -> dict[int, WorkerAnswer]:
+    """Прогнать все подвопросы одного уровня."""
+    if not level:
+        return {}
+    if not parallel or len(level) == 1:
+        return {sq.id: worker(sq, prev_answers=prev_answers) for sq in level}
+
+    out: dict[int, WorkerAnswer] = {}
+    with ThreadPoolExecutor(max_workers=min(4, len(level))) as pool:
+        future_to_sq = {
+            pool.submit(worker, sq, prev_answers): sq
+            for sq in level
+        }
+        for fut in as_completed(future_to_sq):
+            sq = future_to_sq[fut]
+            try:
+                out[sq.id] = fut.result()
+            except Exception as e:
+                out[sq.id] = WorkerAnswer(
+                    subquestion_id=sq.id,
+                    question_snippet=sq.question[:60],
+                    answer=f"(ошибка: {type(e).__name__}: {e})",
+                    used_tools=[],
+                    raw_trace=[],
+                )
+    return out
 
 
 def _synthesize(
@@ -60,29 +137,101 @@ def _synthesize(
     answers: dict[int, WorkerAnswer],
 ) -> str:
     """Собрать финальный ответ одним LLM-вызовом без tools."""
-    # TODO (блок 3.3): реализовать синтез. Простейший путь:
-    # - соединить все answers в список по пунктам,
-    # - передать LLM с промптом «собери это в 1-2 фразы для пользователя»,
-    # - temperature=0.0, без tools.
-    # Или, если очень лень, — просто " · ".join(a.answer for a in answers.values()).
-    parts = [answers[i].answer for i in sorted(answers)]
-    return " · ".join(parts)  # заглушка: склейка через точки
+    parts = [
+        f"{i}. {answers[i].answer}"
+        for i in sorted(answers)
+    ]
+    prompt = (
+        "Собери финальный ответ пользователю в 1-2 фразы. "
+        "Не добавляй новых чисел, используй только ответы ниже.\n\n"
+        f"Вопрос: {question}\n\n"
+        f"Ответы исполнителей:\n" + "\n".join(parts)
+    )
+    try:
+        client = make_raw_client()
+        resp = client.chat.completions.create(
+            model=get_model(),
+            messages=[
+                {"role": "system", "content": "Ты аккуратно синтезируешь краткий ответ."},
+                {"role": "user", "content": prompt},
+            ],
+            temperature=0.0,
+        )
+        return resp.choices[0].message.content or " · ".join(parts)
+    except Exception:
+        return " · ".join(parts)
+
+
+def _append_plan_trace(trace: list[dict[str, Any]], plan: Plan, *, iter_num: int, kind: str) -> None:
+    trace.append(
+        {
+            "iter": iter_num,
+            "kind": kind,
+            "reasoning": plan.reasoning,
+            "subquestions": [sq.model_dump() for sq in plan.subquestions],
+        }
+    )
+
+
+def _plan_with_validation(
+    question: str,
+    trace: list[dict[str, Any]],
+    *,
+    iter_num: int,
+    feedback: str | None = None,
+    use_validator: bool = True,
+) -> tuple[Plan, list[str]]:
+    try:
+        plan = planner(question, feedback=feedback)
+    except Exception as e:
+        error = f"{type(e).__name__}: {e}"
+        trace.append({"iter": iter_num, "kind": "planner_error", "error": error})
+        return Plan(reasoning=f"planner failed: {error}", subquestions=[]), [error]
+    _append_plan_trace(trace, plan, iter_num=iter_num, kind="plan")
+    if not use_validator:
+        return plan, []
+
+    errors = validate_plan(plan)
+    trace.append({"iter": iter_num, "kind": "validator", "errors": errors})
+    if not errors:
+        return plan, []
+
+    try:
+        plan = planner(
+            question,
+            feedback=(
+                "Инструменты не существуют или записаны неверно: "
+                + "; ".join(errors)
+                + ". Используй только get_fx_rate, get_key_rate, get_inflation, calculate. "
+                + "Если задача не решается этими tools, верни пустой план."
+            ),
+        )
+    except Exception as e:
+        error = f"{type(e).__name__}: {e}"
+        trace.append({"iter": iter_num, "kind": "planner_error_after_validator", "error": error})
+        return Plan(reasoning=f"planner failed: {error}", subquestions=[]), errors + [error]
+    _append_plan_trace(trace, plan, iter_num=iter_num, kind="plan_after_validator")
+    errors = validate_plan(plan)
+    trace.append({"iter": iter_num, "kind": "validator_after_feedback", "errors": errors})
+    return plan, errors
 
 
 def run_pwc(
-    question: str, *, max_iter: int = 3, verbose: bool = True
+    question: str,
+    *,
+    max_iter: int = 3,
+    verbose: bool = True,
+    use_validator: bool = True,
+    parallel: bool = True,
 ) -> dict[str, Any]:
     """Запустить цикл Планировщик-Исполнитель-Критик."""
     trace: list[dict[str, Any]] = []
 
-    plan = planner(question)
-    trace.append(
-        {
-            "iter": 0,
-            "kind": "plan",
-            "reasoning": plan.reasoning,
-            "subquestions": [sq.model_dump() for sq in plan.subquestions],
-        }
+    plan, validator_errors = _plan_with_validation(
+        question,
+        trace,
+        iter_num=0,
+        use_validator=use_validator,
     )
 
     if verbose:
@@ -90,23 +239,52 @@ def run_pwc(
         for sq in plan.subquestions:
             print(f"  {sq.id}. [{','.join(sq.expected_tools)}] {sq.question}")
 
+    if not plan.subquestions:
+        answer = f"Задачу нельзя корректно решить доступными инструментами: {plan.reasoning}"
+        return {
+            "answer": answer,
+            "plan": plan,
+            "answers": {},
+            "trace": trace,
+            "iterations": 0,
+            "validator_errors": validator_errors,
+        }
+
+    if validator_errors:
+        answer = (
+            "Задачу нельзя корректно решить доступными инструментами: "
+            + "; ".join(validator_errors)
+        )
+        return {
+            "answer": answer,
+            "plan": plan,
+            "answers": {},
+            "trace": trace,
+            "iterations": 0,
+            "validator_errors": validator_errors,
+        }
+
+    answers: dict[int, WorkerAnswer] = {}
     for iter_num in range(1, max_iter + 1):
-        answers: dict[int, WorkerAnswer] = {}
-        ordered = _topological_sort(plan.subquestions)
-        for sq in ordered:
-            ans = worker(sq, prev_answers=answers)
-            answers[sq.id] = ans
-            trace.append(
-                {
-                    "iter": iter_num,
-                    "kind": "worker",
-                    "sq_id": sq.id,
-                    "used_tools": ans.used_tools,
-                    "answer": ans.answer,
-                }
-            )
-            if verbose:
-                print(f"  [{sq.id}] → {ans.answer}   tools={ans.used_tools}")
+        answers = {}
+        levels = _topological_levels(plan.subquestions)
+        for level_idx, level in enumerate(levels, start=1):
+            level_answers = execute_level(level, answers, parallel=parallel)
+            for sq in level:
+                ans = level_answers[sq.id]
+                answers[sq.id] = ans
+                trace.append(
+                    {
+                        "iter": iter_num,
+                        "kind": "worker",
+                        "level": level_idx,
+                        "sq_id": sq.id,
+                        "used_tools": ans.used_tools,
+                        "answer": ans.answer,
+                    }
+                )
+                if verbose:
+                    print(f"  [{sq.id}] → {ans.answer}   tools={ans.used_tools}")
 
         verdict = critic(question, plan, answers)
         trace.append(
@@ -134,12 +312,31 @@ def run_pwc(
                 "iterations": iter_num,
             }
 
-        # TODO (блок 3.2): если verdict.action == "replan" — вызвать
-        #                  planner(question, feedback=verdict.reason).
-        #                  если verdict.action == "rework" — тоже planner,
-        #                  только feedback с указанием rework_ids.
-        # Сейчас просто break (чтобы не зацикливаться на заглушке).
-        break
+        if verdict.action == "replan":
+            feedback = verdict.reason
+        else:
+            feedback = f"{verdict.reason}. Переделай подвопросы: {verdict.rework_ids}"
+
+        plan, validator_errors = _plan_with_validation(
+            question,
+            trace,
+            iter_num=iter_num,
+            feedback=feedback,
+            use_validator=use_validator,
+        )
+        if not plan.subquestions or validator_errors:
+            answer = (
+                "Задачу нельзя корректно решить доступными инструментами: "
+                + (plan.reasoning if not validator_errors else "; ".join(validator_errors))
+            )
+            return {
+                "answer": answer,
+                "plan": plan,
+                "answers": answers,
+                "trace": trace,
+                "iterations": iter_num,
+                "validator_errors": validator_errors,
+            }
 
     return {
         "answer": None,

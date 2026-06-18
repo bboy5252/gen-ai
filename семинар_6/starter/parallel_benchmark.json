@@ -1,0 +1,48 @@
+[
+  {
+    "id": "Q1",
+    "query": "Во сколько раз USD подорожал с 1 января 2022 по сегодня?",
+    "sequential_seconds_avg": 3.127,
+    "parallel_seconds_avg": 0.375,
+    "speedup": 8.339,
+    "sequential_runs": [
+      {
+        "seconds": 3.127,
+        "ok": false,
+        "runtime_failure": true,
+        "answer_preview": "RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kt651rdreayvvdakpbqb9054` service tier `on_deman"
+      }
+    ],
+    "parallel_runs": [
+      {
+        "seconds": 0.375,
+        "ok": false,
+        "runtime_failure": true,
+        "answer_preview": "Задачу нельзя корректно решить доступными инструментами: planner failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant"
+      }
+    ]
+  },
+  {
+    "id": "parallel_bonus",
+    "query": "Дай текущие курсы USD, EUR и CNY к рублю и кратко сравни их.",
+    "sequential_seconds_avg": 0.416,
+    "parallel_seconds_avg": 0.494,
+    "speedup": 0.842,
+    "sequential_runs": [
+      {
+        "seconds": 0.416,
+        "ok": false,
+        "runtime_failure": true,
+        "answer_preview": "Задачу нельзя корректно решить доступными инструментами: planner failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant"
+      }
+    ],
+    "parallel_runs": [
+      {
+        "seconds": 0.494,
+        "ok": false,
+        "runtime_failure": true,
+        "answer_preview": "Задачу нельзя корректно решить доступными инструментами: planner failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant"
+      }
+    ]
+  }
+]

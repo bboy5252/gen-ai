@@ -34,6 +34,8 @@ from __future__ import annotations
 import json
 import os
 import re
+import threading
+import time
 import warnings
 from typing import Any, Type, TypeVar, get_args, get_origin
 
@@ -54,8 +56,25 @@ warnings.filterwarnings("ignore", message="Unverified HTTPS request")
 
 T = TypeVar("T")
 
+_RATE_LOCK = threading.Lock()
+_LAST_CALL_TS = 0.0
+
+
+def _throttle_llm_call() -> None:
+    interval = float(os.environ.get("LLM_CALL_INTERVAL_SEC", "0") or "0")
+    if interval <= 0:
+        return
+    global _LAST_CALL_TS
+    with _RATE_LOCK:
+        now = time.monotonic()
+        wait = _LAST_CALL_TS + interval - now
+        if wait > 0:
+            time.sleep(wait)
+        _LAST_CALL_TS = time.monotonic()
+
 
 def _make_openai_client() -> OpenAI:
+    max_retries = int(os.environ.get("LLM_MAX_RETRIES", "0"))
     base = os.environ.get("LLM_BASE_URL")
     if base:
         key = os.environ.get("LLM_AUTH_TOKEN") or os.environ.get("OPENAI_API_KEY")
@@ -66,7 +85,12 @@ def _make_openai_client() -> OpenAI:
             )
         timeout = float(os.environ.get("LLM_TIMEOUT", "200"))
         http = httpx.Client(verify=False, timeout=timeout)
-        return OpenAI(api_key=key, base_url=base, http_client=http)
+        return OpenAI(
+            api_key=key,
+            base_url=base,
+            http_client=http,
+            max_retries=max_retries,
+        )
 
     key = os.environ.get("OPENAI_API_KEY")
     if not key:
@@ -74,7 +98,7 @@ def _make_openai_client() -> OpenAI:
             "Ни LLM_BASE_URL, ни OPENAI_API_KEY не заданы. "
             "Сконфигурируй стенд через .env (см. .env.example)."
         )
-    return OpenAI(api_key=key)
+    return OpenAI(api_key=key, max_retries=max_retries)
 
 
 def get_model() -> str:
@@ -188,6 +212,7 @@ class _Completions:
 
         def _call(kw: dict):
             try:
+                _throttle_llm_call()
                 return self._c.chat.completions.create(
                     model=model,
                     messages=msgs,
@@ -198,6 +223,7 @@ class _Completions:
             except TypeError:
                 # Старый SDK не знает reasoning_effort
                 safe = {k: v for k, v in kw.items() if k != "reasoning_effort"}
+                _throttle_llm_call()
                 return self._c.chat.completions.create(
                     model=model,
                     messages=msgs,
@@ -275,10 +301,12 @@ class _RawCompletions:
 
         def _call(extra: dict):
             try:
+                _throttle_llm_call()
                 return self._inner.create(**kw, **extra)
             except TypeError:
                 # Старый SDK не знает reasoning_effort — снимаем и повторяем.
                 safe = {k: v for k, v in extra.items() if k != "reasoning_effort"}
+                _throttle_llm_call()
                 return self._inner.create(**kw, **safe)
 
         try:

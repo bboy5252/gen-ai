@@ -2,41 +2,53 @@
   {
     "id": "Q1",
     "query": "Во сколько раз USD подорожал с 1 января 2022 по сегодня?",
-    "comment": "Класс ошибки C: одиночный часто считает в уме, не зовёт calculate. PWC должен починить — Planner обязан добавить calculate-подвопрос.",
+    "comment": "Класс ошибки C: одиночный часто считает в уме, не зовёт calculate. PWC должен починить — Планировщик обязан добавить calculate-подвопрос.",
     "n": 1,
     "single": {
       "runs": [
         {
-          "ok": true,
-          "used_tools": [
-            "calculate",
-            "get_fx_rate"
-          ],
+          "ok": false,
+          "used_tools": [],
           "hallucinated": [],
-          "must_have_ok": true,
+          "must_have_ok": false,
           "arith_without_calc": false,
-          "answer_preview": "Курс доллара США **не подорожал, а подешевел** за этот период.\n\nНа 1 января 2022 года курс USD составлял **74,29 ₽**, а на сегодня (15 июня 2026) — **71,91 ₽**. Таким образом, долл"
+          "answer_preview": ""
         }
       ],
-      "pass": 1
+      "pass": 0
     },
     "pwc": {
       "runs": [
         {
           "ok": false,
-          "used_tools": [
-            "calculate",
-            "get_fx_rate"
-          ],
-          "plan_tools": [
-            "calculate",
-            "get_fx_rate"
-          ],
+          "used_tools": [],
+          "plan_tools": [],
           "hallucinated_in_workers": [],
           "hallucinated_in_plan": [],
           "must_have_ok": false,
-          "iterations": 1,
-          "answer_preview": "Курс USD на 1 января 2022 года (официальный курс ЦБ РФ) составлял **74,2926 рубля** за 1 доллар. · Курс доллара США к рублю на сегодня, 15 июня 2026 года, составляет **71,91 руб./$"
+          "expected_tools_ok": false,
+          "honest_refusal": false,
+          "runtime_failure": true,
+          "iterations": 0,
+          "answer_preview": "Задачу нельзя корректно решить доступными инструментами: planner failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant"
+        }
+      ],
+      "pass": 0
+    },
+    "pwc_validator": {
+      "runs": [
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "expected_tools_ok": false,
+          "honest_refusal": false,
+          "runtime_failure": true,
+          "iterations": 0,
+          "answer_preview": "Задачу нельзя корректно решить доступными инструментами: planner failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant"
         }
       ],
       "pass": 0
@@ -50,19 +62,15 @@
     "single": {
       "runs": [
         {
-          "ok": true,
-          "used_tools": [
-            "calculate",
-            "get_inflation",
-            "get_key_rate"
-          ],
+          "ok": false,
+          "used_tools": [],
           "hallucinated": [],
-          "must_have_ok": true,
+          "must_have_ok": false,
           "arith_without_calc": false,
-          "answer_preview": "Готово. Вот итоговый ответ:\n\n**Реальная ключевая ставка сейчас составляет ≈ 5,77% годовых.**\n\nРасчёт: 16,0% (ключевая ставка) − 10,23% (инфляция за апрель 2025, % г/г).\n\n⚠️ Небольш"
+          "answer_preview": ""
         }
       ],
-      "pass": 1
+      "pass": 0
     },
     "pwc": {
       "runs": [
@@ -73,8 +81,29 @@
           "hallucinated_in_workers": [],
           "hallucinated_in_plan": [],
           "must_have_ok": false,
-          "iterations": 3,
-          "answer_preview": ""
+          "expected_tools_ok": false,
+          "honest_refusal": false,
+          "runtime_failure": true,
+          "iterations": 0,
+          "answer_preview": "Задачу нельзя корректно решить доступными инструментами: planner failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant"
+        }
+      ],
+      "pass": 0
+    },
+    "pwc_validator": {
+      "runs": [
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "expected_tools_ok": false,
+          "honest_refusal": false,
+          "runtime_failure": true,
+          "iterations": 0,
+          "answer_preview": "Задачу нельзя корректно решить доступными инструментами: planner failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant"
         }
       ],
       "pass": 0
@@ -83,16 +112,123 @@
   {
     "id": "Q3",
     "query": "Какова накопленная инфляция с января 2022 по март 2026? Рассчитай как произведение всех (1 + ипц_м/100) по месяцам.",
-    "comment": "Класс ошибки D (граница паттерна): требует get_inflation за много месяцев + большое calculate-выражение. Одиночный галлюцинирует get_cumulative_inflation; PWC обычно тоже (Planner может добавить фейк-tool в план). Это — повод для Schema-Validator в домашке.",
+    "comment": "Класс ошибки D (граница паттерна): требует get_inflation за много месяцев + большое calculate-выражение. Одиночный галлюцинирует get_cumulative_inflation; PWC обычно тоже (Планировщик может добавить выдуманный инструмент в план). Это — повод для Schema-Validator в домашке.",
     "n": 1,
     "single": {
       "runs": [
         {
           "ok": false,
-          "used_tools": [
-            "calculate",
-            "get_inflation"
-          ],
+          "used_tools": [],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": ""
+        }
+      ],
+      "pass": 0
+    },
+    "pwc": {
+      "runs": [
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "expected_tools_ok": false,
+          "honest_refusal": false,
+          "runtime_failure": true,
+          "iterations": 0,
+          "answer_preview": "Задачу нельзя корректно решить доступными инструментами: planner failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant"
+        }
+      ],
+      "pass": 0
+    },
+    "pwc_validator": {
+      "runs": [
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "expected_tools_ok": false,
+          "honest_refusal": false,
+          "runtime_failure": true,
+          "iterations": 0,
+          "answer_preview": "Задачу нельзя корректно решить доступными инструментами: planner failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant"
+        }
+      ],
+      "pass": 0
+    }
+  },
+  {
+    "id": "Q4",
+    "query": "Что сейчас выше: ключевая ставка или индекс нищеты (инфляция плюс безработица)?",
+    "comment": "Кейс для валидатора: доступного get_unemployment в С6 нет, поэтому PWC без валидатора часто планирует выдуманный инструмент, а валидатор должен добиться честного отказа или перепланировки.",
+    "n": 1,
+    "single": {
+      "runs": [
+        {
+          "ok": false,
+          "used_tools": [],
+          "hallucinated": [],
+          "must_have_ok": true,
+          "arith_without_calc": false,
+          "answer_preview": ""
+        }
+      ],
+      "pass": 0
+    },
+    "pwc": {
+      "runs": [
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "expected_tools_ok": true,
+          "honest_refusal": false,
+          "runtime_failure": true,
+          "iterations": 0,
+          "answer_preview": "Задачу нельзя корректно решить доступными инструментами: planner failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant"
+        }
+      ],
+      "pass": 0
+    },
+    "pwc_validator": {
+      "runs": [
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": true,
+          "expected_tools_ok": true,
+          "honest_refusal": false,
+          "runtime_failure": true,
+          "iterations": 0,
+          "answer_preview": "Задачу нельзя корректно решить доступными инструментами: planner failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant"
+        }
+      ],
+      "pass": 0
+    }
+  },
+  {
+    "id": "Q5",
+    "query": "Дай текущие курсы USD, EUR и CNY к рублю и кратко сравни их.",
+    "comment": "Естественная параллельность: три независимых валютных подвопроса можно исполнять одним уровнем.",
+    "n": 1,
+    "single": {
+      "runs": [
+        {
+          "ok": false,
+          "used_tools": [],
           "hallucinated": [],
           "must_have_ok": false,
           "arith_without_calc": false,
@@ -110,8 +246,84 @@
           "hallucinated_in_workers": [],
           "hallucinated_in_plan": [],
           "must_have_ok": false,
-          "iterations": 3,
+          "expected_tools_ok": false,
+          "honest_refusal": false,
+          "runtime_failure": true,
+          "iterations": 0,
+          "answer_preview": "Задачу нельзя корректно решить доступными инструментами: planner failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant"
+        }
+      ],
+      "pass": 0
+    },
+    "pwc_validator": {
+      "runs": [
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "expected_tools_ok": false,
+          "honest_refusal": false,
+          "runtime_failure": true,
+          "iterations": 0,
+          "answer_preview": "Задачу нельзя корректно решить доступными инструментами: planner failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant"
+        }
+      ],
+      "pass": 0
+    }
+  },
+  {
+    "id": "Q6",
+    "query": "Насколько ключевая ставка выше инфляции за март 2026 года?",
+    "comment": "Реальный макро-вопрос: нужен номинальный показатель, инфляция и арифметика через calculate.",
+    "n": 1,
+    "single": {
+      "runs": [
+        {
+          "ok": false,
+          "used_tools": [],
+          "hallucinated": [],
+          "must_have_ok": false,
+          "arith_without_calc": false,
           "answer_preview": ""
+        }
+      ],
+      "pass": 0
+    },
+    "pwc": {
+      "runs": [
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "expected_tools_ok": false,
+          "honest_refusal": false,
+          "runtime_failure": true,
+          "iterations": 0,
+          "answer_preview": "Задачу нельзя корректно решить доступными инструментами: planner failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant"
+        }
+      ],
+      "pass": 0
+    },
+    "pwc_validator": {
+      "runs": [
+        {
+          "ok": false,
+          "used_tools": [],
+          "plan_tools": [],
+          "hallucinated_in_workers": [],
+          "hallucinated_in_plan": [],
+          "must_have_ok": false,
+          "expected_tools_ok": false,
+          "honest_refusal": false,
+          "runtime_failure": true,
+          "iterations": 0,
+          "answer_preview": "Задачу нельзя корректно решить доступными инструментами: planner failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant"
         }
       ],
       "pass": 0
