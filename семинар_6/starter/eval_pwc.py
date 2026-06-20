@@ -253,11 +253,32 @@ def main():
     n = 1 if args.single else args.n
 
     print(f"Eval С6: {len(CASES)} кейсов × {n} прогонов\n")
+    out = Path(__file__).parent / "eval_pwc_results.json"
     results = []
+    done_ids: set[str] = set()
+    if out.exists():
+        try:
+            existing = json.loads(out.read_text(encoding="utf-8"))
+            if isinstance(existing, list) and all(r.get("n") == n for r in existing):
+                results = existing
+                done_ids = {r.get("id") for r in existing}
+                if done_ids:
+                    print(f"[resume] уже есть: {', '.join(sorted(done_ids))}\n")
+        except Exception:
+            results = []
+            done_ids = set()
+
     for case in CASES:
+        if case["id"] in done_ids:
+            print(f"=== {case['id']}: пропуск, уже сохранено")
+            continue
         print(f"=== {case['id']}: {case['query'][:70]}...")
         r = run_case(case, n=n)
         results.append(r)
+        out.write_text(
+            json.dumps(results, ensure_ascii=False, indent=2, default=str),
+            encoding="utf-8",
+        )
         s = r["single"]; p = r["pwc"]; pv = r["pwc_validator"]
         print(f"   single: {s['pass']}/{n}    pwc: {p['pass']}/{n}    pwc+validator: {pv['pass']}/{n}")
         for run in p["runs"][:1]:
@@ -273,7 +294,6 @@ def main():
               f"pwc {r['pwc']['pass']}/{n}  "
               f"pwc+validator {r['pwc_validator']['pass']}/{n}  — {r['query'][:60]}")
 
-    out = Path(__file__).parent / "eval_pwc_results.json"
     out.write_text(json.dumps(results, ensure_ascii=False, indent=2,
                               default=str), encoding="utf-8")
     print(f"\nРезультаты: {out}")

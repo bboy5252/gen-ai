@@ -2,46 +2,46 @@
   {
     "id": "Q1",
     "query": "Во сколько раз USD подорожал с 1 января 2022 по сегодня?",
-    "sequential_seconds_avg": 3.127,
-    "parallel_seconds_avg": 0.375,
-    "speedup": 8.339,
+    "sequential_seconds_avg": 52.157,
+    "parallel_seconds_avg": 51.935,
+    "speedup": 1.004,
     "sequential_runs": [
       {
-        "seconds": 3.127,
+        "seconds": 52.157,
         "ok": false,
         "runtime_failure": true,
-        "answer_preview": "RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kt651rdreayvvdakpbqb9054` service tier `on_deman"
+        "answer_preview": "Задачу нельзя корректно решить доступными инструментами: planner failed: RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, ple"
       }
     ],
     "parallel_runs": [
       {
-        "seconds": 0.375,
+        "seconds": 51.935,
         "ok": false,
         "runtime_failure": true,
-        "answer_preview": "Задачу нельзя корректно решить доступными инструментами: planner failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant"
+        "answer_preview": "Задачу нельзя корректно решить доступными инструментами: planner failed: RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, ple"
       }
     ]
   },
   {
     "id": "parallel_bonus",
     "query": "Дай текущие курсы USD, EUR и CNY к рублю и кратко сравни их.",
-    "sequential_seconds_avg": 0.416,
-    "parallel_seconds_avg": 0.494,
-    "speedup": 0.842,
+    "sequential_seconds_avg": 51.857,
+    "parallel_seconds_avg": 52.022,
+    "speedup": 0.997,
     "sequential_runs": [
       {
-        "seconds": 0.416,
+        "seconds": 51.857,
         "ok": false,
         "runtime_failure": true,
-        "answer_preview": "Задачу нельзя корректно решить доступными инструментами: planner failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant"
+        "answer_preview": "Задачу нельзя корректно решить доступными инструментами: planner failed: RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, ple"
       }
     ],
     "parallel_runs": [
       {
-        "seconds": 0.494,
+        "seconds": 52.022,
         "ok": false,
         "runtime_failure": true,
-        "answer_preview": "Задачу нельзя корректно решить доступными инструментами: planner failed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant"
+        "answer_preview": "Задачу нельзя корректно решить доступными инструментами: planner failed: RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, ple"
       }
     ]
   }
