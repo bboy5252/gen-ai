@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "post_id": "markettwits/374878",
+    "expected_topic": "sector_trend",
+    "expected_impact": "neutral",
+    "expected_company_any": [],
+    "required_tools": ["retrieve_policy_context", "find_company_mentions", "classify_topic", "infer_impact"],
+    "comment": "Регулирование/разрешение иностранных нейросетей в РФ, без прямого эмитента."
+  },
+  {
+    "id": 2,
+    "post_id": "markettwits/374880",
+    "expected_topic": "commodities",
+    "expected_impact": "not_company_specific",
+    "expected_company_any": [],
+    "required_tools": ["retrieve_policy_context", "extract_instruments", "infer_impact"],
+    "comment": "Газ/СПГ и конкуренция Европы с Азией за энергоносители."
+  },
+  {
+    "id": 3,
+    "post_id": "markettwits/374883",
+    "expected_topic": "crypto",
+    "expected_impact": "negative",
+    "expected_company_any": [],
+    "required_tools": ["classify_topic", "extract_instruments", "infer_impact", "structured_offline_analysis"],
+    "comment": "Взлом Taiko как негатив для крипторынка без публичного тикера в каталоге."
+  },
+  {
+    "id": 4,
+    "post_id": "markettwits/374884",
+    "expected_topic": "crypto",
+    "expected_impact": "negative",
+    "expected_company_any": ["AVLT"],
+    "required_tools": ["find_company_mentions", "extract_instruments", "infer_impact"],
+    "comment": "Altura закрывает stablecoin vault после запросов на вывод средств."
+  },
+  {
+    "id": 5,
+    "post_id": "markettwits/374890",
+    "expected_topic": "macro_rates",
+    "expected_impact": "mixed",
+    "expected_company_any": [],
+    "required_tools": ["classify_topic", "infer_impact", "offline_judge"],
+    "comment": "Вероятность повышения ставки ФРС — макро-риск без одного эмитента."
+  },
+  {
+    "id": 6,
+    "post_id": "markettwits/374892",
+    "expected_topic": "company_event",
+    "expected_impact": "positive",
+    "expected_company_any": ["ROLO"],
+    "required_tools": ["find_company_mentions", "retrieve_policy_context", "infer_impact"],
+    "comment": "Русолово сообщает о расширении мощностей."
+  },
+  {
+    "id": 7,
+    "post_id": "markettwits/374897",
+    "expected_topic": "equity_flows",
+    "expected_impact": "positive",
+    "expected_company_any": ["NIKKEI"],
+    "required_tools": ["find_company_mentions", "classify_topic", "infer_impact"],
+    "comment": "NIKKEI обновляет рекорд."
+  },
+  {
+    "id": 8,
+    "post_id": "markettwits/374898",
+    "expected_topic": "macro_rates",
+    "expected_impact": "negative",
+    "expected_company_any": ["RGBI"],
+    "required_tools": ["find_company_mentions", "classify_topic", "infer_impact"],
+    "comment": "RGBI ниже уровня, ожидание высокой ключевой ставки."
+  },
+  {
+    "id": 9,
+    "post_id": "markettwits/374899",
+    "expected_topic": "company_event",
+    "expected_impact": "positive",
+    "expected_company_any": ["000660KR"],
+    "required_tools": ["find_company_mentions", "retrieve_policy_context", "infer_impact"],
+    "comment": "SK Hynix становится крупнейшей компанией Южной Кореи."
+  },
+  {
+    "id": 10,
+    "post_id": "markettwits/374900",
+    "expected_topic": "commodities",
+    "expected_impact": "negative",
+    "expected_company_any": [],
+    "required_tools": ["classify_topic", "extract_instruments", "infer_impact"],
+    "comment": "Индия вероятно не будет экспортировать сахар."
+  },
+  {
+    "id": 11,
+    "post_id": "markettwits/374903",
+    "expected_topic": "company_event",
+    "expected_impact": "positive",
+    "expected_company_any": ["VTBR"],
+    "required_tools": ["find_company_mentions", "infer_impact"],
+    "comment": "Банк запускает сервис кредитования."
+  },
+  {
+    "id": 12,
+    "post_id": "markettwits/374904",
+    "expected_topic": "crypto",
+    "expected_impact": "negative",
+    "expected_company_any": [],
+    "required_tools": ["classify_topic", "extract_instruments", "infer_impact"],
+    "comment": "MEV-bot hack loss."
+  },
+  {
+    "id": 13,
+    "post_id": "markettwits/374906",
+    "expected_topic": "equity_flows",
+    "expected_impact": "negative",
+    "expected_company_any": ["IMOEX"],
+    "required_tools": ["find_company_mentions", "classify_topic", "infer_impact"],
+    "comment": "IMOEX around downside break of 2400."
+  },
+  {
+    "id": 14,
+    "post_id": "markettwits/374908",
+    "expected_topic": "company_event",
+    "expected_impact": "positive",
+    "expected_company_any": ["DOMRF"],
+    "required_tools": ["find_company_mentions", "retrieve_policy_context", "infer_impact"],
+    "comment": "ДОМ.РФ gets five-star non-credit rating."
+  },
+  {
+    "id": 15,
+    "post_id": "markettwits/374909",
+    "expected_topic": "equity_flows",
+    "expected_impact": "negative",
+    "expected_company_any": ["IMOEX"],
+    "required_tools": ["find_company_mentions", "classify_topic", "infer_impact"],
+    "comment": "IMOEX below 2400."
+  },
+  {
+    "id": 16,
+    "post_id": "markettwits/374910",
+    "expected_topic": "equity_flows",
+    "expected_impact": "positive",
+    "expected_company_any": [],
+    "required_tools": ["classify_topic", "extract_instruments", "infer_impact"],
+    "comment": "Rally in Chinese AI shares as sector trend."
+  },
+  {
+    "id": 17,
+    "post_id": "markettwits/374913",
+    "expected_topic": "equity_flows",
+    "expected_impact": "positive",
+    "expected_company_any": ["IMOEX"],
+    "required_tools": ["find_company_mentions", "infer_impact"],
+    "comment": "IMOEX above 2400."
+  },
+  {
+    "id": 18,
+    "post_id": "markettwits/374915",
+    "expected_topic": "company_event",
+    "expected_impact": "positive",
+    "expected_company_any": ["ZAYM"],
+    "required_tools": ["find_company_mentions", "infer_impact", "offline_judge"],
+    "comment": "Zaymer shareholders approve dividends."
+  }
+]

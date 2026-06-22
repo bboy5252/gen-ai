@@ -1,0 +1,280 @@
+{"run_id": "22755e65-3012-488d-82d0-946a86a0cfc2", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.3010418, "post_id": "markettwits/374877", "hits": 5}
+{"run_id": "22755e65-3012-488d-82d0-946a86a0cfc2", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.3020742, "tickers": []}
+{"run_id": "22755e65-3012-488d-82d0-946a86a0cfc2", "step": 3, "tool": "classify_topic", "ts": 1782118920.3021288, "topic": "geopolitics"}
+{"run_id": "22755e65-3012-488d-82d0-946a86a0cfc2", "step": 4, "tool": "extract_instruments", "ts": 1782118920.302171, "instruments": []}
+{"run_id": "22755e65-3012-488d-82d0-946a86a0cfc2", "step": 5, "tool": "infer_impact", "ts": 1782118920.3022609, "impact": "not_company_specific", "impact_score": 0}
+{"run_id": "22755e65-3012-488d-82d0-946a86a0cfc2", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.302442, "mode": "offline"}
+{"run_id": "22755e65-3012-488d-82d0-946a86a0cfc2", "step": 7, "tool": "offline_judge", "ts": 1782118920.30253, "ok": true, "score": 1.0}
+{"run_id": "62cb050e-75f7-4a13-88e8-ae87f2acd06c", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.303136, "post_id": "markettwits/374878", "hits": 1}
+{"run_id": "62cb050e-75f7-4a13-88e8-ae87f2acd06c", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.3033652, "tickers": []}
+{"run_id": "62cb050e-75f7-4a13-88e8-ae87f2acd06c", "step": 3, "tool": "classify_topic", "ts": 1782118920.3034182, "topic": "sector_trend"}
+{"run_id": "62cb050e-75f7-4a13-88e8-ae87f2acd06c", "step": 4, "tool": "extract_instruments", "ts": 1782118920.303457, "instruments": ["CHINA_AI"]}
+{"run_id": "62cb050e-75f7-4a13-88e8-ae87f2acd06c", "step": 5, "tool": "infer_impact", "ts": 1782118920.30354, "impact": "neutral", "impact_score": 0}
+{"run_id": "62cb050e-75f7-4a13-88e8-ae87f2acd06c", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.303623, "mode": "offline"}
+{"run_id": "62cb050e-75f7-4a13-88e8-ae87f2acd06c", "step": 7, "tool": "offline_judge", "ts": 1782118920.303669, "ok": true, "score": 1.0}
+{"run_id": "67d69fb5-5953-4f97-8b19-7e89af5f8db0", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.304172, "post_id": "markettwits/374879", "hits": 2}
+{"run_id": "67d69fb5-5953-4f97-8b19-7e89af5f8db0", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.3045251, "tickers": []}
+{"run_id": "67d69fb5-5953-4f97-8b19-7e89af5f8db0", "step": 3, "tool": "classify_topic", "ts": 1782118920.3045928, "topic": "regulation"}
+{"run_id": "67d69fb5-5953-4f97-8b19-7e89af5f8db0", "step": 4, "tool": "extract_instruments", "ts": 1782118920.304637, "instruments": []}
+{"run_id": "67d69fb5-5953-4f97-8b19-7e89af5f8db0", "step": 5, "tool": "infer_impact", "ts": 1782118920.304728, "impact": "neutral", "impact_score": 0}
+{"run_id": "67d69fb5-5953-4f97-8b19-7e89af5f8db0", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.304829, "mode": "offline"}
+{"run_id": "67d69fb5-5953-4f97-8b19-7e89af5f8db0", "step": 7, "tool": "offline_judge", "ts": 1782118920.304875, "ok": true, "score": 1.0}
+{"run_id": "c3d63942-f297-4953-85d3-40fe53e7b0c8", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.3052921, "post_id": "markettwits/374880", "hits": 1}
+{"run_id": "c3d63942-f297-4953-85d3-40fe53e7b0c8", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.305483, "tickers": []}
+{"run_id": "c3d63942-f297-4953-85d3-40fe53e7b0c8", "step": 3, "tool": "classify_topic", "ts": 1782118920.305523, "topic": "commodities"}
+{"run_id": "c3d63942-f297-4953-85d3-40fe53e7b0c8", "step": 4, "tool": "extract_instruments", "ts": 1782118920.305556, "instruments": ["GAS"]}
+{"run_id": "c3d63942-f297-4953-85d3-40fe53e7b0c8", "step": 5, "tool": "infer_impact", "ts": 1782118920.3056269, "impact": "not_company_specific", "impact_score": 0}
+{"run_id": "c3d63942-f297-4953-85d3-40fe53e7b0c8", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.3056939, "mode": "offline"}
+{"run_id": "c3d63942-f297-4953-85d3-40fe53e7b0c8", "step": 7, "tool": "offline_judge", "ts": 1782118920.305731, "ok": true, "score": 1.0}
+{"run_id": "9e5c6cb8-6976-40ee-bc0f-59f9357cc3a6", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.306102, "post_id": "markettwits/374881", "hits": 1}
+{"run_id": "9e5c6cb8-6976-40ee-bc0f-59f9357cc3a6", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.3063118, "tickers": []}
+{"run_id": "9e5c6cb8-6976-40ee-bc0f-59f9357cc3a6", "step": 3, "tool": "classify_topic", "ts": 1782118920.3063538, "topic": "sector_trend"}
+{"run_id": "9e5c6cb8-6976-40ee-bc0f-59f9357cc3a6", "step": 4, "tool": "extract_instruments", "ts": 1782118920.306386, "instruments": []}
+{"run_id": "9e5c6cb8-6976-40ee-bc0f-59f9357cc3a6", "step": 5, "tool": "infer_impact", "ts": 1782118920.306457, "impact": "neutral", "impact_score": 0}
+{"run_id": "9e5c6cb8-6976-40ee-bc0f-59f9357cc3a6", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.3065212, "mode": "offline"}
+{"run_id": "9e5c6cb8-6976-40ee-bc0f-59f9357cc3a6", "step": 7, "tool": "offline_judge", "ts": 1782118920.306557, "ok": true, "score": 1.0}
+{"run_id": "db2db6e8-b7a0-4bf9-88c8-a84767a4d511", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.3069508, "post_id": "markettwits/374882", "hits": 2}
+{"run_id": "db2db6e8-b7a0-4bf9-88c8-a84767a4d511", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.307161, "tickers": []}
+{"run_id": "db2db6e8-b7a0-4bf9-88c8-a84767a4d511", "step": 3, "tool": "classify_topic", "ts": 1782118920.307202, "topic": "geopolitics"}
+{"run_id": "db2db6e8-b7a0-4bf9-88c8-a84767a4d511", "step": 4, "tool": "extract_instruments", "ts": 1782118920.307234, "instruments": []}
+{"run_id": "db2db6e8-b7a0-4bf9-88c8-a84767a4d511", "step": 5, "tool": "infer_impact", "ts": 1782118920.307308, "impact": "not_company_specific", "impact_score": 0}
+{"run_id": "db2db6e8-b7a0-4bf9-88c8-a84767a4d511", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.307373, "mode": "offline"}
+{"run_id": "db2db6e8-b7a0-4bf9-88c8-a84767a4d511", "step": 7, "tool": "offline_judge", "ts": 1782118920.3074088, "ok": true, "score": 1.0}
+{"run_id": "5402cd97-eeb9-4936-87c2-fe38413f2ae0", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.307775, "post_id": "markettwits/374883", "hits": 0}
+{"run_id": "5402cd97-eeb9-4936-87c2-fe38413f2ae0", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.307916, "tickers": []}
+{"run_id": "5402cd97-eeb9-4936-87c2-fe38413f2ae0", "step": 3, "tool": "classify_topic", "ts": 1782118920.307949, "topic": "crypto"}
+{"run_id": "5402cd97-eeb9-4936-87c2-fe38413f2ae0", "step": 4, "tool": "extract_instruments", "ts": 1782118920.307979, "instruments": ["CRYPTO"]}
+{"run_id": "5402cd97-eeb9-4936-87c2-fe38413f2ae0", "step": 5, "tool": "infer_impact", "ts": 1782118920.308047, "impact": "negative", "impact_score": -1}
+{"run_id": "5402cd97-eeb9-4936-87c2-fe38413f2ae0", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.3081028, "mode": "offline"}
+{"run_id": "5402cd97-eeb9-4936-87c2-fe38413f2ae0", "step": 7, "tool": "offline_judge", "ts": 1782118920.308136, "ok": true, "score": 1.0}
+{"run_id": "b5d9c67f-4bb3-4412-9776-0b9e9d5f97e7", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.308508, "post_id": "markettwits/374884", "hits": 3}
+{"run_id": "b5d9c67f-4bb3-4412-9776-0b9e9d5f97e7", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.3086982, "tickers": ["AVLT"]}
+{"run_id": "b5d9c67f-4bb3-4412-9776-0b9e9d5f97e7", "step": 3, "tool": "classify_topic", "ts": 1782118920.3087308, "topic": "crypto"}
+{"run_id": "b5d9c67f-4bb3-4412-9776-0b9e9d5f97e7", "step": 4, "tool": "extract_instruments", "ts": 1782118920.308762, "instruments": ["AVLT", "CRYPTO"]}
+{"run_id": "b5d9c67f-4bb3-4412-9776-0b9e9d5f97e7", "step": 5, "tool": "infer_impact", "ts": 1782118920.3088372, "impact": "negative", "impact_score": -2}
+{"run_id": "b5d9c67f-4bb3-4412-9776-0b9e9d5f97e7", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.3089018, "mode": "offline"}
+{"run_id": "b5d9c67f-4bb3-4412-9776-0b9e9d5f97e7", "step": 7, "tool": "offline_judge", "ts": 1782118920.308939, "ok": true, "score": 1.0}
+{"run_id": "a779ad2c-8511-45a9-aaee-05d981483bba", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.309311, "post_id": "markettwits/374885", "hits": 5}
+{"run_id": "a779ad2c-8511-45a9-aaee-05d981483bba", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.3094919, "tickers": []}
+{"run_id": "a779ad2c-8511-45a9-aaee-05d981483bba", "step": 3, "tool": "classify_topic", "ts": 1782118920.309537, "topic": "other"}
+{"run_id": "a779ad2c-8511-45a9-aaee-05d981483bba", "step": 4, "tool": "extract_instruments", "ts": 1782118920.3095691, "instruments": []}
+{"run_id": "a779ad2c-8511-45a9-aaee-05d981483bba", "step": 5, "tool": "infer_impact", "ts": 1782118920.30964, "impact": "mixed", "impact_score": 0}
+{"run_id": "a779ad2c-8511-45a9-aaee-05d981483bba", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.3097012, "mode": "offline"}
+{"run_id": "a779ad2c-8511-45a9-aaee-05d981483bba", "step": 7, "tool": "offline_judge", "ts": 1782118920.309738, "ok": true, "score": 1.0}
+{"run_id": "f977939b-40f0-4bc7-b2a5-30d0a4897070", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.310106, "post_id": "markettwits/374886", "hits": 0}
+{"run_id": "f977939b-40f0-4bc7-b2a5-30d0a4897070", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.310326, "tickers": []}
+{"run_id": "f977939b-40f0-4bc7-b2a5-30d0a4897070", "step": 3, "tool": "classify_topic", "ts": 1782118920.310379, "topic": "other"}
+{"run_id": "f977939b-40f0-4bc7-b2a5-30d0a4897070", "step": 4, "tool": "extract_instruments", "ts": 1782118920.3104231, "instruments": []}
+{"run_id": "f977939b-40f0-4bc7-b2a5-30d0a4897070", "step": 5, "tool": "infer_impact", "ts": 1782118920.3105018, "impact": "neutral", "impact_score": 0}
+{"run_id": "f977939b-40f0-4bc7-b2a5-30d0a4897070", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.310581, "mode": "offline"}
+{"run_id": "f977939b-40f0-4bc7-b2a5-30d0a4897070", "step": 7, "tool": "offline_judge", "ts": 1782118920.310626, "ok": true, "score": 1.0}
+{"run_id": "c06c7e20-7c1a-4283-b594-302873001695", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.311079, "post_id": "markettwits/374887", "hits": 3}
+{"run_id": "c06c7e20-7c1a-4283-b594-302873001695", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.311338, "tickers": []}
+{"run_id": "c06c7e20-7c1a-4283-b594-302873001695", "step": 3, "tool": "classify_topic", "ts": 1782118920.3113978, "topic": "other"}
+{"run_id": "c06c7e20-7c1a-4283-b594-302873001695", "step": 4, "tool": "extract_instruments", "ts": 1782118920.311438, "instruments": ["PAWNSHOPS_RU"]}
+{"run_id": "c06c7e20-7c1a-4283-b594-302873001695", "step": 5, "tool": "infer_impact", "ts": 1782118920.311521, "impact": "negative", "impact_score": -1}
+{"run_id": "c06c7e20-7c1a-4283-b594-302873001695", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.3116002, "mode": "offline"}
+{"run_id": "c06c7e20-7c1a-4283-b594-302873001695", "step": 7, "tool": "offline_judge", "ts": 1782118920.311643, "ok": true, "score": 1.0}
+{"run_id": "5aa10886-4497-40a7-b9bf-ec5590a6d239", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.312066, "post_id": "markettwits/374888", "hits": 5}
+{"run_id": "5aa10886-4497-40a7-b9bf-ec5590a6d239", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.31229, "tickers": []}
+{"run_id": "5aa10886-4497-40a7-b9bf-ec5590a6d239", "step": 3, "tool": "classify_topic", "ts": 1782118920.312336, "topic": "commodities"}
+{"run_id": "5aa10886-4497-40a7-b9bf-ec5590a6d239", "step": 4, "tool": "extract_instruments", "ts": 1782118920.312373, "instruments": ["WHEAT"]}
+{"run_id": "5aa10886-4497-40a7-b9bf-ec5590a6d239", "step": 5, "tool": "infer_impact", "ts": 1782118920.31246, "impact": "not_company_specific", "impact_score": 0}
+{"run_id": "5aa10886-4497-40a7-b9bf-ec5590a6d239", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.312544, "mode": "offline"}
+{"run_id": "5aa10886-4497-40a7-b9bf-ec5590a6d239", "step": 7, "tool": "offline_judge", "ts": 1782118920.3126469, "ok": true, "score": 1.0}
+{"run_id": "a7df2c6a-2074-4ff4-99ce-eb1b1be45e4c", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.313217, "post_id": "markettwits/374889", "hits": 0}
+{"run_id": "a7df2c6a-2074-4ff4-99ce-eb1b1be45e4c", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.313479, "tickers": []}
+{"run_id": "a7df2c6a-2074-4ff4-99ce-eb1b1be45e4c", "step": 3, "tool": "classify_topic", "ts": 1782118920.313548, "topic": "other"}
+{"run_id": "a7df2c6a-2074-4ff4-99ce-eb1b1be45e4c", "step": 4, "tool": "extract_instruments", "ts": 1782118920.3135948, "instruments": []}
+{"run_id": "a7df2c6a-2074-4ff4-99ce-eb1b1be45e4c", "step": 5, "tool": "infer_impact", "ts": 1782118920.313685, "impact": "neutral", "impact_score": 0}
+{"run_id": "a7df2c6a-2074-4ff4-99ce-eb1b1be45e4c", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.313777, "mode": "offline"}
+{"run_id": "a7df2c6a-2074-4ff4-99ce-eb1b1be45e4c", "step": 7, "tool": "offline_judge", "ts": 1782118920.313827, "ok": true, "score": 1.0}
+{"run_id": "50824e51-1e75-4dbb-8643-68216f5b750a", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.3142898, "post_id": "markettwits/374890", "hits": 5}
+{"run_id": "50824e51-1e75-4dbb-8643-68216f5b750a", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.314469, "tickers": []}
+{"run_id": "50824e51-1e75-4dbb-8643-68216f5b750a", "step": 3, "tool": "classify_topic", "ts": 1782118920.3145092, "topic": "macro_rates"}
+{"run_id": "50824e51-1e75-4dbb-8643-68216f5b750a", "step": 4, "tool": "extract_instruments", "ts": 1782118920.3145442, "instruments": []}
+{"run_id": "50824e51-1e75-4dbb-8643-68216f5b750a", "step": 5, "tool": "infer_impact", "ts": 1782118920.3146188, "impact": "mixed", "impact_score": 0}
+{"run_id": "50824e51-1e75-4dbb-8643-68216f5b750a", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.314689, "mode": "offline"}
+{"run_id": "50824e51-1e75-4dbb-8643-68216f5b750a", "step": 7, "tool": "offline_judge", "ts": 1782118920.3147311, "ok": true, "score": 1.0}
+{"run_id": "d21b1a28-5e81-47d1-933a-a420c44c5120", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.3151948, "post_id": "markettwits/374891", "hits": 5}
+{"run_id": "d21b1a28-5e81-47d1-933a-a420c44c5120", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.315433, "tickers": []}
+{"run_id": "d21b1a28-5e81-47d1-933a-a420c44c5120", "step": 3, "tool": "classify_topic", "ts": 1782118920.315472, "topic": "macro_rates"}
+{"run_id": "d21b1a28-5e81-47d1-933a-a420c44c5120", "step": 4, "tool": "extract_instruments", "ts": 1782118920.315508, "instruments": []}
+{"run_id": "d21b1a28-5e81-47d1-933a-a420c44c5120", "step": 5, "tool": "infer_impact", "ts": 1782118920.3155851, "impact": "mixed", "impact_score": 0}
+{"run_id": "d21b1a28-5e81-47d1-933a-a420c44c5120", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.315665, "mode": "offline"}
+{"run_id": "d21b1a28-5e81-47d1-933a-a420c44c5120", "step": 7, "tool": "offline_judge", "ts": 1782118920.315705, "ok": true, "score": 1.0}
+{"run_id": "2779c1b0-cd3a-4135-9463-80318afae016", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.316134, "post_id": "markettwits/374892", "hits": 2}
+{"run_id": "2779c1b0-cd3a-4135-9463-80318afae016", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.316386, "tickers": ["ROLO"]}
+{"run_id": "2779c1b0-cd3a-4135-9463-80318afae016", "step": 3, "tool": "classify_topic", "ts": 1782118920.316426, "topic": "company_event"}
+{"run_id": "2779c1b0-cd3a-4135-9463-80318afae016", "step": 4, "tool": "extract_instruments", "ts": 1782118920.316462, "instruments": ["ROLO"]}
+{"run_id": "2779c1b0-cd3a-4135-9463-80318afae016", "step": 5, "tool": "infer_impact", "ts": 1782118920.3165429, "impact": "positive", "impact_score": 2}
+{"run_id": "2779c1b0-cd3a-4135-9463-80318afae016", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.316624, "mode": "offline"}
+{"run_id": "2779c1b0-cd3a-4135-9463-80318afae016", "step": 7, "tool": "offline_judge", "ts": 1782118920.3166668, "ok": true, "score": 1.0}
+{"run_id": "a793d42c-f189-4bae-af5e-4ad5c1c2dec8", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.3170402, "post_id": "markettwits/374893", "hits": 3}
+{"run_id": "a793d42c-f189-4bae-af5e-4ad5c1c2dec8", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.317206, "tickers": ["IMOEX"]}
+{"run_id": "a793d42c-f189-4bae-af5e-4ad5c1c2dec8", "step": 3, "tool": "classify_topic", "ts": 1782118920.317245, "topic": "equity_flows"}
+{"run_id": "a793d42c-f189-4bae-af5e-4ad5c1c2dec8", "step": 4, "tool": "extract_instruments", "ts": 1782118920.317276, "instruments": ["IMOEX"]}
+{"run_id": "a793d42c-f189-4bae-af5e-4ad5c1c2dec8", "step": 5, "tool": "infer_impact", "ts": 1782118920.317348, "impact": "neutral", "impact_score": 0}
+{"run_id": "a793d42c-f189-4bae-af5e-4ad5c1c2dec8", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.317407, "mode": "offline"}
+{"run_id": "a793d42c-f189-4bae-af5e-4ad5c1c2dec8", "step": 7, "tool": "offline_judge", "ts": 1782118920.317442, "ok": true, "score": 1.0}
+{"run_id": "f32b5560-b313-4dea-8786-4876db3a8fc0", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.3178182, "post_id": "markettwits/374894", "hits": 1}
+{"run_id": "f32b5560-b313-4dea-8786-4876db3a8fc0", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.317992, "tickers": []}
+{"run_id": "f32b5560-b313-4dea-8786-4876db3a8fc0", "step": 3, "tool": "classify_topic", "ts": 1782118920.3180292, "topic": "geopolitics"}
+{"run_id": "f32b5560-b313-4dea-8786-4876db3a8fc0", "step": 4, "tool": "extract_instruments", "ts": 1782118920.318061, "instruments": []}
+{"run_id": "f32b5560-b313-4dea-8786-4876db3a8fc0", "step": 5, "tool": "infer_impact", "ts": 1782118920.318134, "impact": "not_company_specific", "impact_score": 0}
+{"run_id": "f32b5560-b313-4dea-8786-4876db3a8fc0", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.318198, "mode": "offline"}
+{"run_id": "f32b5560-b313-4dea-8786-4876db3a8fc0", "step": 7, "tool": "offline_judge", "ts": 1782118920.318233, "ok": true, "score": 1.0}
+{"run_id": "5a5bd828-8567-456a-b9e8-a2ca2e3d4c1a", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.3186219, "post_id": "markettwits/374895", "hits": 4}
+{"run_id": "5a5bd828-8567-456a-b9e8-a2ca2e3d4c1a", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.3188422, "tickers": []}
+{"run_id": "5a5bd828-8567-456a-b9e8-a2ca2e3d4c1a", "step": 3, "tool": "classify_topic", "ts": 1782118920.3188841, "topic": "commodities"}
+{"run_id": "5a5bd828-8567-456a-b9e8-a2ca2e3d4c1a", "step": 4, "tool": "extract_instruments", "ts": 1782118920.318918, "instruments": ["COAL"]}
+{"run_id": "5a5bd828-8567-456a-b9e8-a2ca2e3d4c1a", "step": 5, "tool": "infer_impact", "ts": 1782118920.3189912, "impact": "positive", "impact_score": 1}
+{"run_id": "5a5bd828-8567-456a-b9e8-a2ca2e3d4c1a", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.319066, "mode": "offline"}
+{"run_id": "5a5bd828-8567-456a-b9e8-a2ca2e3d4c1a", "step": 7, "tool": "offline_judge", "ts": 1782118920.319104, "ok": true, "score": 1.0}
+{"run_id": "ac3b5ee0-c444-4fb5-a8b6-0f4530534f63", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.319479, "post_id": "markettwits/374896", "hits": 2}
+{"run_id": "ac3b5ee0-c444-4fb5-a8b6-0f4530534f63", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.3196568, "tickers": []}
+{"run_id": "ac3b5ee0-c444-4fb5-a8b6-0f4530534f63", "step": 3, "tool": "classify_topic", "ts": 1782118920.319693, "topic": "geopolitics"}
+{"run_id": "ac3b5ee0-c444-4fb5-a8b6-0f4530534f63", "step": 4, "tool": "extract_instruments", "ts": 1782118920.3197298, "instruments": []}
+{"run_id": "ac3b5ee0-c444-4fb5-a8b6-0f4530534f63", "step": 5, "tool": "infer_impact", "ts": 1782118920.319812, "impact": "not_company_specific", "impact_score": 0}
+{"run_id": "ac3b5ee0-c444-4fb5-a8b6-0f4530534f63", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.319873, "mode": "offline"}
+{"run_id": "ac3b5ee0-c444-4fb5-a8b6-0f4530534f63", "step": 7, "tool": "offline_judge", "ts": 1782118920.3199081, "ok": true, "score": 1.0}
+{"run_id": "cb2f7f9e-a245-4d44-bc21-4085e01de5c0", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.32027, "post_id": "markettwits/374897", "hits": 5}
+{"run_id": "cb2f7f9e-a245-4d44-bc21-4085e01de5c0", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.3204281, "tickers": ["NIKKEI"]}
+{"run_id": "cb2f7f9e-a245-4d44-bc21-4085e01de5c0", "step": 3, "tool": "classify_topic", "ts": 1782118920.320471, "topic": "equity_flows"}
+{"run_id": "cb2f7f9e-a245-4d44-bc21-4085e01de5c0", "step": 4, "tool": "extract_instruments", "ts": 1782118920.320503, "instruments": ["NIKKEI"]}
+{"run_id": "cb2f7f9e-a245-4d44-bc21-4085e01de5c0", "step": 5, "tool": "infer_impact", "ts": 1782118920.320575, "impact": "positive", "impact_score": 2}
+{"run_id": "cb2f7f9e-a245-4d44-bc21-4085e01de5c0", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.3206332, "mode": "offline"}
+{"run_id": "cb2f7f9e-a245-4d44-bc21-4085e01de5c0", "step": 7, "tool": "offline_judge", "ts": 1782118920.320668, "ok": true, "score": 1.0}
+{"run_id": "c153dd2c-9e6c-418f-aebc-e57e8ac683f0", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.321051, "post_id": "markettwits/374898", "hits": 4}
+{"run_id": "c153dd2c-9e6c-418f-aebc-e57e8ac683f0", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.3212328, "tickers": ["RGBI"]}
+{"run_id": "c153dd2c-9e6c-418f-aebc-e57e8ac683f0", "step": 3, "tool": "classify_topic", "ts": 1782118920.321273, "topic": "macro_rates"}
+{"run_id": "c153dd2c-9e6c-418f-aebc-e57e8ac683f0", "step": 4, "tool": "extract_instruments", "ts": 1782118920.32131, "instruments": ["RGBI"]}
+{"run_id": "c153dd2c-9e6c-418f-aebc-e57e8ac683f0", "step": 5, "tool": "infer_impact", "ts": 1782118920.321394, "impact": "negative", "impact_score": -2}
+{"run_id": "c153dd2c-9e6c-418f-aebc-e57e8ac683f0", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.321462, "mode": "offline"}
+{"run_id": "c153dd2c-9e6c-418f-aebc-e57e8ac683f0", "step": 7, "tool": "offline_judge", "ts": 1782118920.3214998, "ok": true, "score": 1.0}
+{"run_id": "251c7da0-e611-46a9-ab44-a90a9b632923", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.3218749, "post_id": "markettwits/374899", "hits": 4}
+{"run_id": "251c7da0-e611-46a9-ab44-a90a9b632923", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.3221, "tickers": ["000660KR", "005930KR"]}
+{"run_id": "251c7da0-e611-46a9-ab44-a90a9b632923", "step": 3, "tool": "classify_topic", "ts": 1782118920.322149, "topic": "company_event"}
+{"run_id": "251c7da0-e611-46a9-ab44-a90a9b632923", "step": 4, "tool": "extract_instruments", "ts": 1782118920.322187, "instruments": ["000660KR", "005930KR"]}
+{"run_id": "251c7da0-e611-46a9-ab44-a90a9b632923", "step": 5, "tool": "infer_impact", "ts": 1782118920.322276, "impact": "positive", "impact_score": 1}
+{"run_id": "251c7da0-e611-46a9-ab44-a90a9b632923", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.3223522, "mode": "offline"}
+{"run_id": "251c7da0-e611-46a9-ab44-a90a9b632923", "step": 7, "tool": "offline_judge", "ts": 1782118920.3223948, "ok": true, "score": 1.0}
+{"run_id": "a18388c9-addc-40f9-abbd-a44b38e1284d", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.3227708, "post_id": "markettwits/374900", "hits": 2}
+{"run_id": "a18388c9-addc-40f9-abbd-a44b38e1284d", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.322956, "tickers": []}
+{"run_id": "a18388c9-addc-40f9-abbd-a44b38e1284d", "step": 3, "tool": "classify_topic", "ts": 1782118920.323, "topic": "commodities"}
+{"run_id": "a18388c9-addc-40f9-abbd-a44b38e1284d", "step": 4, "tool": "extract_instruments", "ts": 1782118920.323034, "instruments": ["SUGAR"]}
+{"run_id": "a18388c9-addc-40f9-abbd-a44b38e1284d", "step": 5, "tool": "infer_impact", "ts": 1782118920.3231192, "impact": "negative", "impact_score": -1}
+{"run_id": "a18388c9-addc-40f9-abbd-a44b38e1284d", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.3232, "mode": "offline"}
+{"run_id": "a18388c9-addc-40f9-abbd-a44b38e1284d", "step": 7, "tool": "offline_judge", "ts": 1782118920.3232372, "ok": true, "score": 1.0}
+{"run_id": "690ddc4e-6a14-4d0c-85c8-c562a05d2ac2", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.323623, "post_id": "markettwits/374901", "hits": 3}
+{"run_id": "690ddc4e-6a14-4d0c-85c8-c562a05d2ac2", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.323853, "tickers": []}
+{"run_id": "690ddc4e-6a14-4d0c-85c8-c562a05d2ac2", "step": 3, "tool": "classify_topic", "ts": 1782118920.323908, "topic": "sector_trend"}
+{"run_id": "690ddc4e-6a14-4d0c-85c8-c562a05d2ac2", "step": 4, "tool": "extract_instruments", "ts": 1782118920.3239481, "instruments": ["CHINA_AUTO"]}
+{"run_id": "690ddc4e-6a14-4d0c-85c8-c562a05d2ac2", "step": 5, "tool": "infer_impact", "ts": 1782118920.32403, "impact": "neutral", "impact_score": 0}
+{"run_id": "690ddc4e-6a14-4d0c-85c8-c562a05d2ac2", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.3241029, "mode": "offline"}
+{"run_id": "690ddc4e-6a14-4d0c-85c8-c562a05d2ac2", "step": 7, "tool": "offline_judge", "ts": 1782118920.3241432, "ok": true, "score": 1.0}
+{"run_id": "1afd5872-5425-4e92-8a1f-78ebe0260c92", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.324529, "post_id": "markettwits/374902", "hits": 1}
+{"run_id": "1afd5872-5425-4e92-8a1f-78ebe0260c92", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.3247428, "tickers": []}
+{"run_id": "1afd5872-5425-4e92-8a1f-78ebe0260c92", "step": 3, "tool": "classify_topic", "ts": 1782118920.324787, "topic": "geopolitics"}
+{"run_id": "1afd5872-5425-4e92-8a1f-78ebe0260c92", "step": 4, "tool": "extract_instruments", "ts": 1782118920.324826, "instruments": ["OIL"]}
+{"run_id": "1afd5872-5425-4e92-8a1f-78ebe0260c92", "step": 5, "tool": "infer_impact", "ts": 1782118920.324911, "impact": "not_company_specific", "impact_score": 0}
+{"run_id": "1afd5872-5425-4e92-8a1f-78ebe0260c92", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.324987, "mode": "offline"}
+{"run_id": "1afd5872-5425-4e92-8a1f-78ebe0260c92", "step": 7, "tool": "offline_judge", "ts": 1782118920.325026, "ok": true, "score": 1.0}
+{"run_id": "2afb84a6-3bce-43db-9b42-fe8f4779c667", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.325388, "post_id": "markettwits/374903", "hits": 2}
+{"run_id": "2afb84a6-3bce-43db-9b42-fe8f4779c667", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.325556, "tickers": ["VTBR"]}
+{"run_id": "2afb84a6-3bce-43db-9b42-fe8f4779c667", "step": 3, "tool": "classify_topic", "ts": 1782118920.325595, "topic": "company_event"}
+{"run_id": "2afb84a6-3bce-43db-9b42-fe8f4779c667", "step": 4, "tool": "extract_instruments", "ts": 1782118920.325632, "instruments": ["VTBR"]}
+{"run_id": "2afb84a6-3bce-43db-9b42-fe8f4779c667", "step": 5, "tool": "infer_impact", "ts": 1782118920.3257139, "impact": "positive", "impact_score": 2}
+{"run_id": "2afb84a6-3bce-43db-9b42-fe8f4779c667", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.325784, "mode": "offline"}
+{"run_id": "2afb84a6-3bce-43db-9b42-fe8f4779c667", "step": 7, "tool": "offline_judge", "ts": 1782118920.325825, "ok": true, "score": 1.0}
+{"run_id": "151a449e-6092-4cbc-8c1f-80b6942ad762", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.3262, "post_id": "markettwits/374904", "hits": 2}
+{"run_id": "151a449e-6092-4cbc-8c1f-80b6942ad762", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.326373, "tickers": []}
+{"run_id": "151a449e-6092-4cbc-8c1f-80b6942ad762", "step": 3, "tool": "classify_topic", "ts": 1782118920.326417, "topic": "crypto"}
+{"run_id": "151a449e-6092-4cbc-8c1f-80b6942ad762", "step": 4, "tool": "extract_instruments", "ts": 1782118920.326464, "instruments": ["CRYPTO"]}
+{"run_id": "151a449e-6092-4cbc-8c1f-80b6942ad762", "step": 5, "tool": "infer_impact", "ts": 1782118920.32655, "impact": "negative", "impact_score": -1}
+{"run_id": "151a449e-6092-4cbc-8c1f-80b6942ad762", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.326619, "mode": "offline"}
+{"run_id": "151a449e-6092-4cbc-8c1f-80b6942ad762", "step": 7, "tool": "offline_judge", "ts": 1782118920.3266659, "ok": true, "score": 1.0}
+{"run_id": "afc433af-f100-4dde-9ac9-7ee9d05ee687", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.32707, "post_id": "markettwits/374905", "hits": 1}
+{"run_id": "afc433af-f100-4dde-9ac9-7ee9d05ee687", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.327258, "tickers": []}
+{"run_id": "afc433af-f100-4dde-9ac9-7ee9d05ee687", "step": 3, "tool": "classify_topic", "ts": 1782118920.3272982, "topic": "crypto"}
+{"run_id": "afc433af-f100-4dde-9ac9-7ee9d05ee687", "step": 4, "tool": "extract_instruments", "ts": 1782118920.327337, "instruments": ["CRYPTO"]}
+{"run_id": "afc433af-f100-4dde-9ac9-7ee9d05ee687", "step": 5, "tool": "infer_impact", "ts": 1782118920.327418, "impact": "neutral", "impact_score": 0}
+{"run_id": "afc433af-f100-4dde-9ac9-7ee9d05ee687", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.327486, "mode": "offline"}
+{"run_id": "afc433af-f100-4dde-9ac9-7ee9d05ee687", "step": 7, "tool": "offline_judge", "ts": 1782118920.3275251, "ok": true, "score": 1.0}
+{"run_id": "93cbe8c2-465f-4979-9fa3-0bd481bd0555", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.3279119, "post_id": "markettwits/374906", "hits": 4}
+{"run_id": "93cbe8c2-465f-4979-9fa3-0bd481bd0555", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.328089, "tickers": ["IMOEX"]}
+{"run_id": "93cbe8c2-465f-4979-9fa3-0bd481bd0555", "step": 3, "tool": "classify_topic", "ts": 1782118920.3281338, "topic": "equity_flows"}
+{"run_id": "93cbe8c2-465f-4979-9fa3-0bd481bd0555", "step": 4, "tool": "extract_instruments", "ts": 1782118920.328174, "instruments": ["IMOEX"]}
+{"run_id": "93cbe8c2-465f-4979-9fa3-0bd481bd0555", "step": 5, "tool": "infer_impact", "ts": 1782118920.328258, "impact": "negative", "impact_score": -2}
+{"run_id": "93cbe8c2-465f-4979-9fa3-0bd481bd0555", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.32833, "mode": "offline"}
+{"run_id": "93cbe8c2-465f-4979-9fa3-0bd481bd0555", "step": 7, "tool": "offline_judge", "ts": 1782118920.328374, "ok": true, "score": 1.0}
+{"run_id": "dec934f2-8970-465b-9b8c-5015186f3bbb", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.328762, "post_id": "markettwits/374907", "hits": 2}
+{"run_id": "dec934f2-8970-465b-9b8c-5015186f3bbb", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.328983, "tickers": []}
+{"run_id": "dec934f2-8970-465b-9b8c-5015186f3bbb", "step": 3, "tool": "classify_topic", "ts": 1782118920.329025, "topic": "geopolitics"}
+{"run_id": "dec934f2-8970-465b-9b8c-5015186f3bbb", "step": 4, "tool": "extract_instruments", "ts": 1782118920.329062, "instruments": []}
+{"run_id": "dec934f2-8970-465b-9b8c-5015186f3bbb", "step": 5, "tool": "infer_impact", "ts": 1782118920.3291771, "impact": "not_company_specific", "impact_score": 0}
+{"run_id": "dec934f2-8970-465b-9b8c-5015186f3bbb", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.329371, "mode": "offline"}
+{"run_id": "dec934f2-8970-465b-9b8c-5015186f3bbb", "step": 7, "tool": "offline_judge", "ts": 1782118920.3294249, "ok": true, "score": 1.0}
+{"run_id": "7221681f-b003-4560-8e07-687a510b5472", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.329866, "post_id": "markettwits/374908", "hits": 4}
+{"run_id": "7221681f-b003-4560-8e07-687a510b5472", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.33006, "tickers": ["DOMRF"]}
+{"run_id": "7221681f-b003-4560-8e07-687a510b5472", "step": 3, "tool": "classify_topic", "ts": 1782118920.330098, "topic": "company_event"}
+{"run_id": "7221681f-b003-4560-8e07-687a510b5472", "step": 4, "tool": "extract_instruments", "ts": 1782118920.3301382, "instruments": ["DOMRF"]}
+{"run_id": "7221681f-b003-4560-8e07-687a510b5472", "step": 5, "tool": "infer_impact", "ts": 1782118920.330218, "impact": "positive", "impact_score": 2}
+{"run_id": "7221681f-b003-4560-8e07-687a510b5472", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.330285, "mode": "offline"}
+{"run_id": "7221681f-b003-4560-8e07-687a510b5472", "step": 7, "tool": "offline_judge", "ts": 1782118920.330325, "ok": true, "score": 1.0}
+{"run_id": "5aba3174-8dd1-402e-b21d-62e800ae049d", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.330697, "post_id": "markettwits/374909", "hits": 3}
+{"run_id": "5aba3174-8dd1-402e-b21d-62e800ae049d", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.330871, "tickers": ["IMOEX"]}
+{"run_id": "5aba3174-8dd1-402e-b21d-62e800ae049d", "step": 3, "tool": "classify_topic", "ts": 1782118920.330912, "topic": "equity_flows"}
+{"run_id": "5aba3174-8dd1-402e-b21d-62e800ae049d", "step": 4, "tool": "extract_instruments", "ts": 1782118920.330945, "instruments": ["IMOEX"]}
+{"run_id": "5aba3174-8dd1-402e-b21d-62e800ae049d", "step": 5, "tool": "infer_impact", "ts": 1782118920.331018, "impact": "negative", "impact_score": -2}
+{"run_id": "5aba3174-8dd1-402e-b21d-62e800ae049d", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.331075, "mode": "offline"}
+{"run_id": "5aba3174-8dd1-402e-b21d-62e800ae049d", "step": 7, "tool": "offline_judge", "ts": 1782118920.331112, "ok": true, "score": 1.0}
+{"run_id": "5154a060-38d1-48c6-8e47-267f47d1032f", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.331518, "post_id": "markettwits/374910", "hits": 5}
+{"run_id": "5154a060-38d1-48c6-8e47-267f47d1032f", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.3317351, "tickers": []}
+{"run_id": "5154a060-38d1-48c6-8e47-267f47d1032f", "step": 3, "tool": "classify_topic", "ts": 1782118920.331779, "topic": "equity_flows"}
+{"run_id": "5154a060-38d1-48c6-8e47-267f47d1032f", "step": 4, "tool": "extract_instruments", "ts": 1782118920.3318138, "instruments": ["CHINA_AI"]}
+{"run_id": "5154a060-38d1-48c6-8e47-267f47d1032f", "step": 5, "tool": "infer_impact", "ts": 1782118920.3318882, "impact": "positive", "impact_score": 1}
+{"run_id": "5154a060-38d1-48c6-8e47-267f47d1032f", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.331959, "mode": "offline"}
+{"run_id": "5154a060-38d1-48c6-8e47-267f47d1032f", "step": 7, "tool": "offline_judge", "ts": 1782118920.331997, "ok": true, "score": 1.0}
+{"run_id": "d83da361-72fa-428e-a4fe-6674b97799a7", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.332375, "post_id": "markettwits/374911", "hits": 3}
+{"run_id": "d83da361-72fa-428e-a4fe-6674b97799a7", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.332535, "tickers": []}
+{"run_id": "d83da361-72fa-428e-a4fe-6674b97799a7", "step": 3, "tool": "classify_topic", "ts": 1782118920.332586, "topic": "geopolitics"}
+{"run_id": "d83da361-72fa-428e-a4fe-6674b97799a7", "step": 4, "tool": "extract_instruments", "ts": 1782118920.33263, "instruments": []}
+{"run_id": "d83da361-72fa-428e-a4fe-6674b97799a7", "step": 5, "tool": "infer_impact", "ts": 1782118920.332713, "impact": "not_company_specific", "impact_score": 0}
+{"run_id": "d83da361-72fa-428e-a4fe-6674b97799a7", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.3327842, "mode": "offline"}
+{"run_id": "d83da361-72fa-428e-a4fe-6674b97799a7", "step": 7, "tool": "offline_judge", "ts": 1782118920.332829, "ok": true, "score": 1.0}
+{"run_id": "1608ab7a-1a99-4512-841b-a6bcc9cb9af7", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.33323, "post_id": "markettwits/374912", "hits": 5}
+{"run_id": "1608ab7a-1a99-4512-841b-a6bcc9cb9af7", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.333399, "tickers": []}
+{"run_id": "1608ab7a-1a99-4512-841b-a6bcc9cb9af7", "step": 3, "tool": "classify_topic", "ts": 1782118920.33344, "topic": "regulation"}
+{"run_id": "1608ab7a-1a99-4512-841b-a6bcc9cb9af7", "step": 4, "tool": "extract_instruments", "ts": 1782118920.333475, "instruments": []}
+{"run_id": "1608ab7a-1a99-4512-841b-a6bcc9cb9af7", "step": 5, "tool": "infer_impact", "ts": 1782118920.333546, "impact": "neutral", "impact_score": 0}
+{"run_id": "1608ab7a-1a99-4512-841b-a6bcc9cb9af7", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.333614, "mode": "offline"}
+{"run_id": "1608ab7a-1a99-4512-841b-a6bcc9cb9af7", "step": 7, "tool": "offline_judge", "ts": 1782118920.333648, "ok": true, "score": 1.0}
+{"run_id": "cda5567f-48b6-446c-b035-97484d8ac77e", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.3340201, "post_id": "markettwits/374913", "hits": 3}
+{"run_id": "cda5567f-48b6-446c-b035-97484d8ac77e", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.3341901, "tickers": ["IMOEX"]}
+{"run_id": "cda5567f-48b6-446c-b035-97484d8ac77e", "step": 3, "tool": "classify_topic", "ts": 1782118920.334229, "topic": "equity_flows"}
+{"run_id": "cda5567f-48b6-446c-b035-97484d8ac77e", "step": 4, "tool": "extract_instruments", "ts": 1782118920.334261, "instruments": ["IMOEX"]}
+{"run_id": "cda5567f-48b6-446c-b035-97484d8ac77e", "step": 5, "tool": "infer_impact", "ts": 1782118920.334332, "impact": "positive", "impact_score": 2}
+{"run_id": "cda5567f-48b6-446c-b035-97484d8ac77e", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.334389, "mode": "offline"}
+{"run_id": "cda5567f-48b6-446c-b035-97484d8ac77e", "step": 7, "tool": "offline_judge", "ts": 1782118920.334424, "ok": true, "score": 1.0}
+{"run_id": "66d8b755-39ad-42d6-b280-e4ab6d29f1a4", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.334801, "post_id": "markettwits/374914", "hits": 3}
+{"run_id": "66d8b755-39ad-42d6-b280-e4ab6d29f1a4", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.33503, "tickers": []}
+{"run_id": "66d8b755-39ad-42d6-b280-e4ab6d29f1a4", "step": 3, "tool": "classify_topic", "ts": 1782118920.33507, "topic": "geopolitics"}
+{"run_id": "66d8b755-39ad-42d6-b280-e4ab6d29f1a4", "step": 4, "tool": "extract_instruments", "ts": 1782118920.335104, "instruments": []}
+{"run_id": "66d8b755-39ad-42d6-b280-e4ab6d29f1a4", "step": 5, "tool": "infer_impact", "ts": 1782118920.335181, "impact": "not_company_specific", "impact_score": 0}
+{"run_id": "66d8b755-39ad-42d6-b280-e4ab6d29f1a4", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.335253, "mode": "offline"}
+{"run_id": "66d8b755-39ad-42d6-b280-e4ab6d29f1a4", "step": 7, "tool": "offline_judge", "ts": 1782118920.3352902, "ok": true, "score": 1.0}
+{"run_id": "99c8dc3e-de36-430e-9ed7-0a14510a924d", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.3356621, "post_id": "markettwits/374915", "hits": 5}
+{"run_id": "99c8dc3e-de36-430e-9ed7-0a14510a924d", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.335847, "tickers": ["ZAYM"]}
+{"run_id": "99c8dc3e-de36-430e-9ed7-0a14510a924d", "step": 3, "tool": "classify_topic", "ts": 1782118920.335893, "topic": "company_event"}
+{"run_id": "99c8dc3e-de36-430e-9ed7-0a14510a924d", "step": 4, "tool": "extract_instruments", "ts": 1782118920.336114, "instruments": ["ZAYM"]}
+{"run_id": "99c8dc3e-de36-430e-9ed7-0a14510a924d", "step": 5, "tool": "infer_impact", "ts": 1782118920.336711, "impact": "positive", "impact_score": 2}
+{"run_id": "99c8dc3e-de36-430e-9ed7-0a14510a924d", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.337176, "mode": "offline"}
+{"run_id": "99c8dc3e-de36-430e-9ed7-0a14510a924d", "step": 7, "tool": "offline_judge", "ts": 1782118920.3372219, "ok": true, "score": 1.0}
+{"run_id": "64b7579f-c9bc-4dae-a2c5-d1c0b7df1ed6", "step": 1, "tool": "retrieve_policy_context", "ts": 1782118920.3376482, "post_id": "markettwits/374916", "hits": 1}
+{"run_id": "64b7579f-c9bc-4dae-a2c5-d1c0b7df1ed6", "step": 2, "tool": "find_company_mentions", "ts": 1782118920.337844, "tickers": []}
+{"run_id": "64b7579f-c9bc-4dae-a2c5-d1c0b7df1ed6", "step": 3, "tool": "classify_topic", "ts": 1782118920.337889, "topic": "geopolitics"}
+{"run_id": "64b7579f-c9bc-4dae-a2c5-d1c0b7df1ed6", "step": 4, "tool": "extract_instruments", "ts": 1782118920.3379269, "instruments": []}
+{"run_id": "64b7579f-c9bc-4dae-a2c5-d1c0b7df1ed6", "step": 5, "tool": "infer_impact", "ts": 1782118920.338009, "impact": "not_company_specific", "impact_score": 0}
+{"run_id": "64b7579f-c9bc-4dae-a2c5-d1c0b7df1ed6", "step": 6, "tool": "structured_offline_analysis", "ts": 1782118920.338082, "mode": "offline"}
+{"run_id": "64b7579f-c9bc-4dae-a2c5-d1c0b7df1ed6", "step": 7, "tool": "offline_judge", "ts": 1782118920.338123, "ok": true, "score": 1.0}

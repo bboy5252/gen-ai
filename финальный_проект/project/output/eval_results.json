@@ -1,0 +1,581 @@
+{
+  "cases": 18,
+  "passed": 18,
+  "pass_rate": 1.0,
+  "topic_accuracy": 1.0,
+  "impact_accuracy": 1.0,
+  "company_accuracy": 1.0,
+  "path_accuracy": 1.0,
+  "ghost_quotes": 0,
+  "ghost_numbers": 0,
+  "avg_steps": 7.0,
+  "results": [
+    {
+      "id": 1,
+      "post_id": "markettwits/374878",
+      "expected_topic": "sector_trend",
+      "predicted_topic": "sector_trend",
+      "expected_impact": "neutral",
+      "predicted_impact": "neutral",
+      "expected_company_any": [],
+      "predicted_companies": [],
+      "topic_ok": true,
+      "impact_ok": true,
+      "company_ok": true,
+      "path_ok": true,
+      "tools_used": [
+        "retrieve_policy_context",
+        "find_company_mentions",
+        "classify_topic",
+        "extract_instruments",
+        "infer_impact",
+        "structured_offline_analysis",
+        "offline_judge"
+      ],
+      "steps": 7,
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "verdict_score": 1.0,
+      "estimated_tokens": 224,
+      "estimated_cost_usd": 9.3e-05
+    },
+    {
+      "id": 2,
+      "post_id": "markettwits/374880",
+      "expected_topic": "commodities",
+      "predicted_topic": "commodities",
+      "expected_impact": "not_company_specific",
+      "predicted_impact": "not_company_specific",
+      "expected_company_any": [],
+      "predicted_companies": [],
+      "topic_ok": true,
+      "impact_ok": true,
+      "company_ok": true,
+      "path_ok": true,
+      "tools_used": [
+        "retrieve_policy_context",
+        "find_company_mentions",
+        "classify_topic",
+        "extract_instruments",
+        "infer_impact",
+        "structured_offline_analysis",
+        "offline_judge"
+      ],
+      "steps": 7,
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "verdict_score": 1.0,
+      "estimated_tokens": 314,
+      "estimated_cost_usd": 0.000106
+    },
+    {
+      "id": 3,
+      "post_id": "markettwits/374883",
+      "expected_topic": "crypto",
+      "predicted_topic": "crypto",
+      "expected_impact": "negative",
+      "predicted_impact": "negative",
+      "expected_company_any": [],
+      "predicted_companies": [],
+      "topic_ok": true,
+      "impact_ok": true,
+      "company_ok": true,
+      "path_ok": true,
+      "tools_used": [
+        "retrieve_policy_context",
+        "find_company_mentions",
+        "classify_topic",
+        "extract_instruments",
+        "infer_impact",
+        "structured_offline_analysis",
+        "offline_judge"
+      ],
+      "steps": 7,
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "verdict_score": 1.0,
+      "estimated_tokens": 58,
+      "estimated_cost_usd": 7e-05
+    },
+    {
+      "id": 4,
+      "post_id": "markettwits/374884",
+      "expected_topic": "crypto",
+      "predicted_topic": "crypto",
+      "expected_impact": "negative",
+      "predicted_impact": "negative",
+      "expected_company_any": [
+        "AVLT"
+      ],
+      "predicted_companies": [
+        "AVLT"
+      ],
+      "topic_ok": true,
+      "impact_ok": true,
+      "company_ok": true,
+      "path_ok": true,
+      "tools_used": [
+        "retrieve_policy_context",
+        "find_company_mentions",
+        "classify_topic",
+        "extract_instruments",
+        "infer_impact",
+        "structured_offline_analysis",
+        "offline_judge"
+      ],
+      "steps": 7,
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "verdict_score": 1.0,
+      "estimated_tokens": 566,
+      "estimated_cost_usd": 0.000141
+    },
+    {
+      "id": 5,
+      "post_id": "markettwits/374890",
+      "expected_topic": "macro_rates",
+      "predicted_topic": "macro_rates",
+      "expected_impact": "mixed",
+      "predicted_impact": "mixed",
+      "expected_company_any": [],
+      "predicted_companies": [],
+      "topic_ok": true,
+      "impact_ok": true,
+      "company_ok": true,
+      "path_ok": true,
+      "tools_used": [
+        "retrieve_policy_context",
+        "find_company_mentions",
+        "classify_topic",
+        "extract_instruments",
+        "infer_impact",
+        "structured_offline_analysis",
+        "offline_judge"
+      ],
+      "steps": 7,
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "verdict_score": 1.0,
+      "estimated_tokens": 775,
+      "estimated_cost_usd": 0.00017
+    },
+    {
+      "id": 6,
+      "post_id": "markettwits/374892",
+      "expected_topic": "company_event",
+      "predicted_topic": "company_event",
+      "expected_impact": "positive",
+      "predicted_impact": "positive",
+      "expected_company_any": [
+        "ROLO"
+      ],
+      "predicted_companies": [
+        "ROLO"
+      ],
+      "topic_ok": true,
+      "impact_ok": true,
+      "company_ok": true,
+      "path_ok": true,
+      "tools_used": [
+        "retrieve_policy_context",
+        "find_company_mentions",
+        "classify_topic",
+        "extract_instruments",
+        "infer_impact",
+        "structured_offline_analysis",
+        "offline_judge"
+      ],
+      "steps": 7,
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "verdict_score": 1.0,
+      "estimated_tokens": 383,
+      "estimated_cost_usd": 0.000115
+    },
+    {
+      "id": 7,
+      "post_id": "markettwits/374897",
+      "expected_topic": "equity_flows",
+      "predicted_topic": "equity_flows",
+      "expected_impact": "positive",
+      "predicted_impact": "positive",
+      "expected_company_any": [
+        "NIKKEI"
+      ],
+      "predicted_companies": [
+        "NIKKEI"
+      ],
+      "topic_ok": true,
+      "impact_ok": true,
+      "company_ok": true,
+      "path_ok": true,
+      "tools_used": [
+        "retrieve_policy_context",
+        "find_company_mentions",
+        "classify_topic",
+        "extract_instruments",
+        "infer_impact",
+        "structured_offline_analysis",
+        "offline_judge"
+      ],
+      "steps": 7,
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "verdict_score": 1.0,
+      "estimated_tokens": 730,
+      "estimated_cost_usd": 0.000164
+    },
+    {
+      "id": 8,
+      "post_id": "markettwits/374898",
+      "expected_topic": "macro_rates",
+      "predicted_topic": "macro_rates",
+      "expected_impact": "negative",
+      "predicted_impact": "negative",
+      "expected_company_any": [
+        "RGBI"
+      ],
+      "predicted_companies": [
+        "RGBI"
+      ],
+      "topic_ok": true,
+      "impact_ok": true,
+      "company_ok": true,
+      "path_ok": true,
+      "tools_used": [
+        "retrieve_policy_context",
+        "find_company_mentions",
+        "classify_topic",
+        "extract_instruments",
+        "infer_impact",
+        "structured_offline_analysis",
+        "offline_judge"
+      ],
+      "steps": 7,
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "verdict_score": 1.0,
+      "estimated_tokens": 603,
+      "estimated_cost_usd": 0.000146
+    },
+    {
+      "id": 9,
+      "post_id": "markettwits/374899",
+      "expected_topic": "company_event",
+      "predicted_topic": "company_event",
+      "expected_impact": "positive",
+      "predicted_impact": "positive",
+      "expected_company_any": [
+        "000660KR"
+      ],
+      "predicted_companies": [
+        "000660KR",
+        "005930KR"
+      ],
+      "topic_ok": true,
+      "impact_ok": true,
+      "company_ok": true,
+      "path_ok": true,
+      "tools_used": [
+        "retrieve_policy_context",
+        "find_company_mentions",
+        "classify_topic",
+        "extract_instruments",
+        "infer_impact",
+        "structured_offline_analysis",
+        "offline_judge"
+      ],
+      "steps": 7,
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "verdict_score": 1.0,
+      "estimated_tokens": 647,
+      "estimated_cost_usd": 0.000152
+    },
+    {
+      "id": 10,
+      "post_id": "markettwits/374900",
+      "expected_topic": "commodities",
+      "predicted_topic": "commodities",
+      "expected_impact": "negative",
+      "predicted_impact": "negative",
+      "expected_company_any": [],
+      "predicted_companies": [],
+      "topic_ok": true,
+      "impact_ok": true,
+      "company_ok": true,
+      "path_ok": true,
+      "tools_used": [
+        "retrieve_policy_context",
+        "find_company_mentions",
+        "classify_topic",
+        "extract_instruments",
+        "infer_impact",
+        "structured_offline_analysis",
+        "offline_judge"
+      ],
+      "steps": 7,
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "verdict_score": 1.0,
+      "estimated_tokens": 366,
+      "estimated_cost_usd": 0.000113
+    },
+    {
+      "id": 11,
+      "post_id": "markettwits/374903",
+      "expected_topic": "company_event",
+      "predicted_topic": "company_event",
+      "expected_impact": "positive",
+      "predicted_impact": "positive",
+      "expected_company_any": [
+        "VTBR"
+      ],
+      "predicted_companies": [
+        "VTBR"
+      ],
+      "topic_ok": true,
+      "impact_ok": true,
+      "company_ok": true,
+      "path_ok": true,
+      "tools_used": [
+        "retrieve_policy_context",
+        "find_company_mentions",
+        "classify_topic",
+        "extract_instruments",
+        "infer_impact",
+        "structured_offline_analysis",
+        "offline_judge"
+      ],
+      "steps": 7,
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "verdict_score": 1.0,
+      "estimated_tokens": 394,
+      "estimated_cost_usd": 0.000117
+    },
+    {
+      "id": 12,
+      "post_id": "markettwits/374904",
+      "expected_topic": "crypto",
+      "predicted_topic": "crypto",
+      "expected_impact": "negative",
+      "predicted_impact": "negative",
+      "expected_company_any": [],
+      "predicted_companies": [],
+      "topic_ok": true,
+      "impact_ok": true,
+      "company_ok": true,
+      "path_ok": true,
+      "tools_used": [
+        "retrieve_policy_context",
+        "find_company_mentions",
+        "classify_topic",
+        "extract_instruments",
+        "infer_impact",
+        "structured_offline_analysis",
+        "offline_judge"
+      ],
+      "steps": 7,
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "verdict_score": 1.0,
+      "estimated_tokens": 366,
+      "estimated_cost_usd": 0.000113
+    },
+    {
+      "id": 13,
+      "post_id": "markettwits/374906",
+      "expected_topic": "equity_flows",
+      "predicted_topic": "equity_flows",
+      "expected_impact": "negative",
+      "predicted_impact": "negative",
+      "expected_company_any": [
+        "IMOEX"
+      ],
+      "predicted_companies": [
+        "IMOEX"
+      ],
+      "topic_ok": true,
+      "impact_ok": true,
+      "company_ok": true,
+      "path_ok": true,
+      "tools_used": [
+        "retrieve_policy_context",
+        "find_company_mentions",
+        "classify_topic",
+        "extract_instruments",
+        "infer_impact",
+        "structured_offline_analysis",
+        "offline_judge"
+      ],
+      "steps": 7,
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "verdict_score": 1.0,
+      "estimated_tokens": 539,
+      "estimated_cost_usd": 0.000137
+    },
+    {
+      "id": 14,
+      "post_id": "markettwits/374908",
+      "expected_topic": "company_event",
+      "predicted_topic": "company_event",
+      "expected_impact": "positive",
+      "predicted_impact": "positive",
+      "expected_company_any": [
+        "DOMRF"
+      ],
+      "predicted_companies": [
+        "DOMRF"
+      ],
+      "topic_ok": true,
+      "impact_ok": true,
+      "company_ok": true,
+      "path_ok": true,
+      "tools_used": [
+        "retrieve_policy_context",
+        "find_company_mentions",
+        "classify_topic",
+        "extract_instruments",
+        "infer_impact",
+        "structured_offline_analysis",
+        "offline_judge"
+      ],
+      "steps": 7,
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "verdict_score": 1.0,
+      "estimated_tokens": 761,
+      "estimated_cost_usd": 0.000168
+    },
+    {
+      "id": 15,
+      "post_id": "markettwits/374909",
+      "expected_topic": "equity_flows",
+      "predicted_topic": "equity_flows",
+      "expected_impact": "negative",
+      "predicted_impact": "negative",
+      "expected_company_any": [
+        "IMOEX"
+      ],
+      "predicted_companies": [
+        "IMOEX"
+      ],
+      "topic_ok": true,
+      "impact_ok": true,
+      "company_ok": true,
+      "path_ok": true,
+      "tools_used": [
+        "retrieve_policy_context",
+        "find_company_mentions",
+        "classify_topic",
+        "extract_instruments",
+        "infer_impact",
+        "structured_offline_analysis",
+        "offline_judge"
+      ],
+      "steps": 7,
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "verdict_score": 1.0,
+      "estimated_tokens": 447,
+      "estimated_cost_usd": 0.000124
+    },
+    {
+      "id": 16,
+      "post_id": "markettwits/374910",
+      "expected_topic": "equity_flows",
+      "predicted_topic": "equity_flows",
+      "expected_impact": "positive",
+      "predicted_impact": "positive",
+      "expected_company_any": [],
+      "predicted_companies": [],
+      "topic_ok": true,
+      "impact_ok": true,
+      "company_ok": true,
+      "path_ok": true,
+      "tools_used": [
+        "retrieve_policy_context",
+        "find_company_mentions",
+        "classify_topic",
+        "extract_instruments",
+        "infer_impact",
+        "structured_offline_analysis",
+        "offline_judge"
+      ],
+      "steps": 7,
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "verdict_score": 1.0,
+      "estimated_tokens": 574,
+      "estimated_cost_usd": 0.000142
+    },
+    {
+      "id": 17,
+      "post_id": "markettwits/374913",
+      "expected_topic": "equity_flows",
+      "predicted_topic": "equity_flows",
+      "expected_impact": "positive",
+      "predicted_impact": "positive",
+      "expected_company_any": [
+        "IMOEX"
+      ],
+      "predicted_companies": [
+        "IMOEX"
+      ],
+      "topic_ok": true,
+      "impact_ok": true,
+      "company_ok": true,
+      "path_ok": true,
+      "tools_used": [
+        "retrieve_policy_context",
+        "find_company_mentions",
+        "classify_topic",
+        "extract_instruments",
+        "infer_impact",
+        "structured_offline_analysis",
+        "offline_judge"
+      ],
+      "steps": 7,
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "verdict_score": 1.0,
+      "estimated_tokens": 446,
+      "estimated_cost_usd": 0.000124
+    },
+    {
+      "id": 18,
+      "post_id": "markettwits/374915",
+      "expected_topic": "company_event",
+      "predicted_topic": "company_event",
+      "expected_impact": "positive",
+      "predicted_impact": "positive",
+      "expected_company_any": [
+        "ZAYM"
+      ],
+      "predicted_companies": [
+        "ZAYM"
+      ],
+      "topic_ok": true,
+      "impact_ok": true,
+      "company_ok": true,
+      "path_ok": true,
+      "tools_used": [
+        "retrieve_policy_context",
+        "find_company_mentions",
+        "classify_topic",
+        "extract_instruments",
+        "infer_impact",
+        "structured_offline_analysis",
+        "offline_judge"
+      ],
+      "steps": 7,
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "verdict_score": 1.0,
+      "estimated_tokens": 811,
+      "estimated_cost_usd": 0.000175
+    }
+  ]
+}

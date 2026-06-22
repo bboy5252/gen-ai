@@ -1,0 +1,2873 @@
+[
+  {
+    "run_id": "22755e65-3012-488d-82d0-946a86a0cfc2",
+    "analysis": {
+      "post_id": "markettwits/374877",
+      "published_at": "2026-06-22T05:12:52Z",
+      "source_url": "https://t.me/markettwits/374877",
+      "text_quote": "🇮🇷 #иран #геополитика #today Вчера иранские СМИ пестрили заголовками о том, что иранская делегация покинула переговоры с США в знак протеста на новые угрозы Трампа. Также сообщалось о том, что Иранская делегация не вернется к переговорам пока Трамп не извинится за свои угрозы. Сегодня глава МИД Ирана заявляет о \"значительном прогрессе\", достигнутом в переговорах, которые продолжались допоздна.",
+      "topic": "geopolitics",
+      "companies": [],
+      "instruments": [],
+      "impact": "not_company_specific",
+      "impact_score": 0,
+      "impact_horizon": "intraday",
+      "summary": "🇮🇷 #иран #геополитика #today Вчера иранские СМИ пестрили заголовками о том, что иранская делегация покинула переговоры с США в знак протеста на новые угрозы Трампа. Также сообщалось о том, что Иранская...",
+      "rationale": "Геополитическая новость без прямого эмитента или рыночного инструмента.",
+      "evidence_quotes": [
+        "🇮🇷 #иран #геополитика #today Вчера иранские СМИ пестрили заголовками о том, что иранская делегация покинула переговоры с США в знак протеста на новые угрозы Трампа."
+      ],
+      "uncertainty_flags": [
+        "no_direct_company"
+      ],
+      "urgency_score": 5,
+      "retrieved_context": [
+        "company_catalog:catalog_RGBI: RGBI Индекс ОФЗ sector=bonds country=Russia\naliases: RGBI, ИНДЕКС ОФЗ, ОФЗ\npositive triggers: снижение ставки, рост, >\nnegative triggers: < 117, не опустит ключевую, повышение ставки",
+        "market_rules:market_rules_2: `sector_trend`: отраслевой тренд без одной компании, например китайские авто, китайские ИИ-акции, оборонные стартапы.\n\n## Горизонт\n\n`intraday`: уровень индекса, движение цены, срочная эскалация.\n\n`short_term`: событие ближайших дней или недель, дивидендная отсечка, переговоры, календарь.\n\n`medium_term`: квартальный прогноз, ставка на конец года, отраслевой спрос.\n\n`long_term`: структурные изменения рынка, инвестиции фондов, многолетние ограничения.",
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ.",
+        "company_catalog:catalog_SP500: SP500 S&P 500 sector=equity_index country=United States\naliases: SP500, S&P 500, акции США\npositive triggers: повысил прогноз, приток, ралли\nnegative triggers: повышение ставки, отрицательная корреляция, снижение",
+        "market_rules:market_rules_0: # MarketTwits Event Radar knowledge base\n\nИсточник новостей: публичная web-страница Telegram-канала `https://t.me/s/markettwits`.\n\n## Правила тональности для компаний и инструментов\n\nПозитив для компании или инструмента:\n- рост цены, новый рекорд, ралли, сильный приток капитала;\n- buyback, утвержденные дивиденды, запуск нового продукта, партнерство;\n- повышение прогноза, высокий рейтинг, рост доли рынка или спроса;\n- регуляторная ясность для рынка, если текст прямо говорит о бычьем драйвере.\n\nНегатив для компании или инструмента:\n- взлом, крупные потери, рекордный отток средств, массовый вывод ликвидности;\n- санкции, торговые ограничения, пошлины, запреты экспорта или угрозы блокады;\n- повышение ставок или ожидание повышения ставок для облигаций и акций;\n- снижение прогноза ВВП/спроса, закрытие продукта, риск военной эскалации."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.49999999999999994,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "negative",
+          "confidence": 0.4799999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "neutral",
+          "confidence": 0.5499999999999999,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 861,
+    "estimated_cost_usd": 0.000182
+  },
+  {
+    "run_id": "62cb050e-75f7-4a13-88e8-ae87f2acd06c",
+    "analysis": {
+      "post_id": "markettwits/374878",
+      "published_at": "2026-06-22T05:16:27Z",
+      "source_url": "https://t.me/markettwits/374878",
+      "text_quote": "🇷🇺 #ии #россия Власти передумали запрещать в России иностранные нейросети . IT-системы, в которые они уже внедрены, смогут работать на них до 2032г — Известия",
+      "topic": "sector_trend",
+      "companies": [],
+      "instruments": [
+        "CHINA_AI"
+      ],
+      "impact": "neutral",
+      "impact_score": 0,
+      "impact_horizon": "unclear",
+      "summary": "🇷🇺 #ии #россия Власти передумали запрещать в России иностранные нейросети . IT-системы, в которые они уже внедрены, смогут работать на них до 2032г — Известия",
+      "rationale": "Явного направленного маркера для компании или инструмента нет.",
+      "evidence_quotes": [
+        "🇷🇺 #ии #россия Власти передумали запрещать в России иностранные нейросети . IT-системы, в которые они уже внедрены, смогут работать на них до 2032г — Известия"
+      ],
+      "uncertainty_flags": [
+        "no_direct_company"
+      ],
+      "urgency_score": 3,
+      "retrieved_context": [
+        "market_rules:market_rules_2: `sector_trend`: отраслевой тренд без одной компании, например китайские авто, китайские ИИ-акции, оборонные стартапы.\n\n## Горизонт\n\n`intraday`: уровень индекса, движение цены, срочная эскалация.\n\n`short_term`: событие ближайших дней или недель, дивидендная отсечка, переговоры, календарь.\n\n`medium_term`: квартальный прогноз, ставка на конец года, отраслевой спрос.\n\n`long_term`: структурные изменения рынка, инвестиции фондов, многолетние ограничения."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.58,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "neutral",
+          "confidence": 0.5599999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "neutral",
+          "confidence": 0.63,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 224,
+    "estimated_cost_usd": 9.3e-05
+  },
+  {
+    "run_id": "67d69fb5-5953-4f97-8b19-7e89af5f8db0",
+    "analysis": {
+      "post_id": "markettwits/374879",
+      "published_at": "2026-06-22T05:22:30Z",
+      "source_url": "https://t.me/markettwits/374879",
+      "text_quote": "🇷🇺 #ии #россия Правительство подготовило к внесению законопроект об ИИ . Документ может быть внесен в Госдуму до конца недели. — Ъ В новой версии документа под регулирование подпадают только большие фундаментальные модели, включающие более 1 млрд параметров. Решения меньшего масштаба, включая созданные на открытом коде, от требований освобождены. Из документа исчезло понятие «доверенные» модели, остались только «суверенные» и «национальные».",
+      "topic": "regulation",
+      "companies": [],
+      "instruments": [],
+      "impact": "neutral",
+      "impact_score": 0,
+      "impact_horizon": "short_term",
+      "summary": "🇷🇺 #ии #россия Правительство подготовило к внесению законопроект об ИИ . Документ может быть внесен в Госдуму до конца недели. — Ъ В новой версии документа под регулирование подпадают только большие...",
+      "rationale": "Явного направленного маркера для компании или инструмента нет.",
+      "evidence_quotes": [
+        "🇷🇺 #ии #россия Правительство подготовило к внесению законопроект об ИИ ."
+      ],
+      "uncertainty_flags": [
+        "no_direct_company"
+      ],
+      "urgency_score": 3,
+      "retrieved_context": [
+        "market_rules:market_rules_2: `sector_trend`: отраслевой тренд без одной компании, например китайские авто, китайские ИИ-акции, оборонные стартапы.\n\n## Горизонт\n\n`intraday`: уровень индекса, движение цены, срочная эскалация.\n\n`short_term`: событие ближайших дней или недель, дивидендная отсечка, переговоры, календарь.\n\n`medium_term`: квартальный прогноз, ставка на конец года, отраслевой спрос.\n\n`long_term`: структурные изменения рынка, инвестиции фондов, многолетние ограничения.",
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.58,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "neutral",
+          "confidence": 0.5599999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "neutral",
+          "confidence": 0.63,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 519,
+    "estimated_cost_usd": 0.000134
+  },
+  {
+    "run_id": "c3d63942-f297-4953-85d3-40fe53e7b0c8",
+    "analysis": {
+      "post_id": "markettwits/374880",
+      "published_at": "2026-06-22T05:24:31Z",
+      "source_url": "https://t.me/markettwits/374880",
+      "text_quote": "🛢 🇪🇺 #газ #спг #европа #азия \"Каждый сам за себя\": Европа предупредила о растущей конкуренции за энергоносители со стороны Азии -- Politico",
+      "topic": "commodities",
+      "companies": [],
+      "instruments": [
+        "GAS"
+      ],
+      "impact": "not_company_specific",
+      "impact_score": 0,
+      "impact_horizon": "unclear",
+      "summary": "🛢 🇪🇺 #газ #спг #европа #азия \"Каждый сам за себя\": Европа предупредила о растущей конкуренции за энергоносители со стороны Азии -- Politico",
+      "rationale": "Новость макро/геополитическая, прямой компании нет.",
+      "evidence_quotes": [
+        "🛢 🇪🇺 #газ #спг #европа #азия \"Каждый сам за себя\": Европа предупредила о растущей конкуренции за энергоносители со стороны Азии -- Politico"
+      ],
+      "uncertainty_flags": [
+        "no_direct_company"
+      ],
+      "urgency_score": 3,
+      "retrieved_context": [
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.49999999999999994,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "not_company_specific",
+          "confidence": 0.4799999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "neutral",
+          "confidence": 0.5499999999999999,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 314,
+    "estimated_cost_usd": 0.000106
+  },
+  {
+    "run_id": "9e5c6cb8-6976-40ee-bc0f-59f9357cc3a6",
+    "analysis": {
+      "post_id": "markettwits/374881",
+      "published_at": "2026-06-22T05:28:37Z",
+      "source_url": "https://t.me/markettwits/374881",
+      "text_quote": "🇷🇺 #авто #россия #отчетность НБКИ: в мае число выдач автокредитов за год увеличилось на 3,3% г/г",
+      "topic": "sector_trend",
+      "companies": [],
+      "instruments": [],
+      "impact": "neutral",
+      "impact_score": 0,
+      "impact_horizon": "unclear",
+      "summary": "🇷🇺 #авто #россия #отчетность НБКИ: в мае число выдач автокредитов за год увеличилось на 3,3% г/г",
+      "rationale": "Явного направленного маркера для компании или инструмента нет.",
+      "evidence_quotes": [
+        "🇷🇺 #авто #россия #отчетность НБКИ: в мае число выдач автокредитов за год увеличилось на 3,3% г/г"
+      ],
+      "uncertainty_flags": [
+        "no_direct_company"
+      ],
+      "urgency_score": 3,
+      "retrieved_context": [
+        "market_rules:market_rules_2: `sector_trend`: отраслевой тренд без одной компании, например китайские авто, китайские ИИ-акции, оборонные стартапы.\n\n## Горизонт\n\n`intraday`: уровень индекса, движение цены, срочная эскалация.\n\n`short_term`: событие ближайших дней или недель, дивидендная отсечка, переговоры, календарь.\n\n`medium_term`: квартальный прогноз, ставка на конец года, отраслевой спрос.\n\n`long_term`: структурные изменения рынка, инвестиции фондов, многолетние ограничения."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.58,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "neutral",
+          "confidence": 0.5599999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "neutral",
+          "confidence": 0.63,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 205,
+    "estimated_cost_usd": 9e-05
+  },
+  {
+    "run_id": "db2db6e8-b7a0-4bf9-88c8-a84767a4d511",
+    "analysis": {
+      "post_id": "markettwits/374882",
+      "published_at": "2026-06-22T05:31:10Z",
+      "source_url": "https://t.me/markettwits/374882",
+      "text_quote": "🇮🇷 #иран #геополитика Технические команды США и Ирана до конца недели продолжат консультации в Швейцарии — совместное заявление Катара и Пакистана",
+      "topic": "geopolitics",
+      "companies": [],
+      "instruments": [],
+      "impact": "not_company_specific",
+      "impact_score": 0,
+      "impact_horizon": "short_term",
+      "summary": "🇮🇷 #иран #геополитика Технические команды США и Ирана до конца недели продолжат консультации в Швейцарии — совместное заявление Катара и Пакистана",
+      "rationale": "Геополитическая новость без прямого эмитента или рыночного инструмента.",
+      "evidence_quotes": [
+        "🇮🇷 #иран #геополитика Технические команды США и Ирана до конца недели продолжат консультации в Швейцарии"
+      ],
+      "uncertainty_flags": [
+        "no_direct_company"
+      ],
+      "urgency_score": 3,
+      "retrieved_context": [
+        "company_catalog:catalog_SP500: SP500 S&P 500 sector=equity_index country=United States\naliases: SP500, S&P 500, акции США\npositive triggers: повысил прогноз, приток, ралли\nnegative triggers: повышение ставки, отрицательная корреляция, снижение",
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.49999999999999994,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "negative",
+          "confidence": 0.4799999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "neutral",
+          "confidence": 0.5499999999999999,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 384,
+    "estimated_cost_usd": 0.000115
+  },
+  {
+    "run_id": "5402cd97-eeb9-4936-87c2-fe38413f2ae0",
+    "analysis": {
+      "post_id": "markettwits/374883",
+      "published_at": "2026-06-22T05:34:09Z",
+      "source_url": "https://t.me/markettwits/374883",
+      "text_quote": "⚠️ ✴️ #хак #крипто Taiko взломан",
+      "topic": "crypto",
+      "companies": [],
+      "instruments": [
+        "CRYPTO"
+      ],
+      "impact": "negative",
+      "impact_score": -1,
+      "impact_horizon": "unclear",
+      "summary": "⚠️ ✴️ #хак #крипто Taiko взломан",
+      "rationale": "Негативные маркеры перевешивают позитивные.",
+      "evidence_quotes": [
+        "⚠️ ✴️ #хак #крипто Taiko взломан"
+      ],
+      "uncertainty_flags": [],
+      "urgency_score": 5,
+      "retrieved_context": [],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.58,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "negative",
+          "confidence": 0.5599999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "negative",
+          "confidence": 0.63,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 58,
+    "estimated_cost_usd": 7e-05
+  },
+  {
+    "run_id": "b5d9c67f-4bb3-4412-9776-0b9e9d5f97e7",
+    "analysis": {
+      "post_id": "markettwits/374884",
+      "published_at": "2026-06-22T05:38:14Z",
+      "source_url": "https://t.me/markettwits/374884",
+      "text_quote": "⚠️ ✴️ #AVLT = 12% DeFi-проект Altura закрывает хранилище стейблкоинов после рекордного количества запросов на вывод средств, поступивших в выходные дни.",
+      "topic": "crypto",
+      "companies": [
+        {
+          "ticker": "AVLT",
+          "company": "Altura",
+          "sector": "crypto",
+          "evidence_quote": "⚠️ ✴️ #AVLT = 12% DeFi-проект Altura закрывает хранилище стейблкоинов после рекордного количества запросов на вывод средств, поступивших в выходные дни.",
+          "confidence": 0.92
+        }
+      ],
+      "instruments": [
+        "AVLT",
+        "CRYPTO"
+      ],
+      "impact": "negative",
+      "impact_score": -2,
+      "impact_horizon": "intraday",
+      "summary": "⚠️ ✴️ #AVLT = 12% DeFi-проект Altura закрывает хранилище стейблкоинов после рекордного количества запросов на вывод средств, поступивших в выходные дни.",
+      "rationale": "Негативные маркеры перевешивают позитивные.",
+      "evidence_quotes": [
+        "⚠️ ✴️ #AVLT = 12% DeFi-проект Altura закрывает хранилище стейблкоинов после рекордного количества запросов на вывод средств, поступивших в выходные дни."
+      ],
+      "uncertainty_flags": [],
+      "urgency_score": 7,
+      "retrieved_context": [
+        "company_catalog:catalog_AVLT: AVLT Altura sector=crypto country=Global\naliases: AVLT, Altura\npositive triggers: рост, запуск\nnegative triggers: закрывает, вывод средств, рекордного количества запросов",
+        "market_rules:market_rules_0: # MarketTwits Event Radar knowledge base\n\nИсточник новостей: публичная web-страница Telegram-канала `https://t.me/s/markettwits`.\n\n## Правила тональности для компаний и инструментов\n\nПозитив для компании или инструмента:\n- рост цены, новый рекорд, ралли, сильный приток капитала;\n- buyback, утвержденные дивиденды, запуск нового продукта, партнерство;\n- повышение прогноза, высокий рейтинг, рост доли рынка или спроса;\n- регуляторная ясность для рынка, если текст прямо говорит о бычьем драйвере.\n\nНегатив для компании или инструмента:\n- взлом, крупные потери, рекордный отток средств, массовый вывод ликвидности;\n- санкции, торговые ограничения, пошлины, запреты экспорта или угрозы блокады;\n- повышение ставок или ожидание повышения ставок для облигаций и акций;\n- снижение прогноза ВВП/спроса, закрытие продукта, риск военной эскалации.",
+        "market_rules:market_rules_2: `sector_trend`: отраслевой тренд без одной компании, например китайские авто, китайские ИИ-акции, оборонные стартапы.\n\n## Горизонт\n\n`intraday`: уровень индекса, движение цены, срочная эскалация.\n\n`short_term`: событие ближайших дней или недель, дивидендная отсечка, переговоры, календарь.\n\n`medium_term`: квартальный прогноз, ставка на конец года, отраслевой спрос.\n\n`long_term`: структурные изменения рынка, инвестиции фондов, многолетние ограничения."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "negative",
+          "confidence": 0.72,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "negative",
+          "confidence": 0.7,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "negative",
+          "confidence": 0.77,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 2
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 566,
+    "estimated_cost_usd": 0.000141
+  },
+  {
+    "run_id": "a779ad2c-8511-45a9-aaee-05d981483bba",
+    "analysis": {
+      "post_id": "markettwits/374885",
+      "published_at": "2026-06-22T05:40:00Z",
+      "source_url": "https://t.me/markettwits/374885",
+      "text_quote": "⚠️ 🇨🇳 #экономика #китай #прогноз Goldman понизил прогноз роста ВВП Китая во 2кв до 3,5%",
+      "topic": "other",
+      "companies": [],
+      "instruments": [],
+      "impact": "mixed",
+      "impact_score": 0,
+      "impact_horizon": "medium_term",
+      "summary": "⚠️ 🇨🇳 #экономика #китай #прогноз Goldman понизил прогноз роста ВВП Китая во 2кв до 3,5%",
+      "rationale": "Есть и позитивные, и негативные маркеры.",
+      "evidence_quotes": [
+        "⚠️ 🇨🇳 #экономика #китай #прогноз Goldman понизил прогноз роста ВВП Китая во 2кв до 3,5%"
+      ],
+      "uncertainty_flags": [
+        "no_direct_company",
+        "conflicting_markers"
+      ],
+      "urgency_score": 7,
+      "retrieved_context": [
+        "company_catalog:catalog_SP500: SP500 S&P 500 sector=equity_index country=United States\naliases: SP500, S&P 500, акции США\npositive triggers: повысил прогноз, приток, ралли\nnegative triggers: повышение ставки, отрицательная корреляция, снижение",
+        "company_catalog:catalog_DOMRF: DOMRF ДОМ.РФ sector=real_estate_finance country=Russia\naliases: DOMRF, ДОМРФ, ДОМ.РФ\npositive triggers: пять звёзд, пять звезд, рейтинг, повысил\nnegative triggers: понизил, отозвал, негативный",
+        "market_rules:market_rules_2: `sector_trend`: отраслевой тренд без одной компании, например китайские авто, китайские ИИ-акции, оборонные стартапы.\n\n## Горизонт\n\n`intraday`: уровень индекса, движение цены, срочная эскалация.\n\n`short_term`: событие ближайших дней или недель, дивидендная отсечка, переговоры, календарь.\n\n`medium_term`: квартальный прогноз, ставка на конец года, отраслевой спрос.\n\n`long_term`: структурные изменения рынка, инвестиции фондов, многолетние ограничения.",
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ.",
+        "market_rules:market_rules_0: # MarketTwits Event Radar knowledge base\n\nИсточник новостей: публичная web-страница Telegram-канала `https://t.me/s/markettwits`.\n\n## Правила тональности для компаний и инструментов\n\nПозитив для компании или инструмента:\n- рост цены, новый рекорд, ралли, сильный приток капитала;\n- buyback, утвержденные дивиденды, запуск нового продукта, партнерство;\n- повышение прогноза, высокий рейтинг, рост доли рынка или спроса;\n- регуляторная ясность для рынка, если текст прямо говорит о бычьем драйвере.\n\nНегатив для компании или инструмента:\n- взлом, крупные потери, рекордный отток средств, массовый вывод ликвидности;\n- санкции, торговые ограничения, пошлины, запреты экспорта или угрозы блокады;\n- повышение ставок или ожидание повышения ставок для облигаций и акций;\n- снижение прогноза ВВП/спроса, закрытие продукта, риск военной эскалации."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.49999999999999994,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "mixed",
+          "confidence": 0.4799999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "neutral",
+          "confidence": 0.5499999999999999,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 769,
+    "estimated_cost_usd": 0.000169
+  },
+  {
+    "run_id": "f977939b-40f0-4bc7-b2a5-30d0a4897070",
+    "analysis": {
+      "post_id": "markettwits/374886",
+      "published_at": "2026-06-22T05:46:15Z",
+      "source_url": "https://t.me/markettwits/374886",
+      "text_quote": "🇧🇷 🇷🇺 #дедолларизация #бразилия #россия #fx Бразилия хочет использовать нацвалюты в расчетах с Россией — посол - РИА",
+      "topic": "other",
+      "companies": [],
+      "instruments": [],
+      "impact": "neutral",
+      "impact_score": 0,
+      "impact_horizon": "unclear",
+      "summary": "🇧🇷 🇷🇺 #дедолларизация #бразилия #россия #fx Бразилия хочет использовать нацвалюты в расчетах с Россией — посол - РИА",
+      "rationale": "Явного направленного маркера для компании или инструмента нет.",
+      "evidence_quotes": [
+        "🇧🇷 🇷🇺 #дедолларизация #бразилия #россия #fx Бразилия хочет использовать нацвалюты в расчетах с Россией"
+      ],
+      "uncertainty_flags": [
+        "no_direct_company"
+      ],
+      "urgency_score": 3,
+      "retrieved_context": [],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.58,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "neutral",
+          "confidence": 0.5599999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "neutral",
+          "confidence": 0.63,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 82,
+    "estimated_cost_usd": 7.3e-05
+  },
+  {
+    "run_id": "c06c7e20-7c1a-4283-b594-302873001695",
+    "analysis": {
+      "post_id": "markettwits/374887",
+      "published_at": "2026-06-22T05:47:45Z",
+      "source_url": "https://t.me/markettwits/374887",
+      "text_quote": "⚠️ 🇷🇺 #ломбарды #россия Ломбарды начнут массово закрываться в 2026 г — Известия Почти 50% участников рынка завершили 2025 год с отрицательной или околонулевой рентабельностью",
+      "topic": "other",
+      "companies": [],
+      "instruments": [
+        "PAWNSHOPS_RU"
+      ],
+      "impact": "negative",
+      "impact_score": -1,
+      "impact_horizon": "medium_term",
+      "summary": "⚠️ 🇷🇺 #ломбарды #россия Ломбарды начнут массово закрываться в 2026 г — Известия Почти 50% участников рынка завершили 2025 год с отрицательной или околонулевой рентабельностью",
+      "rationale": "Негативные маркеры перевешивают позитивные.",
+      "evidence_quotes": [
+        "⚠️ 🇷🇺 #ломбарды #россия Ломбарды начнут массово закрываться в 2026 г — Известия Почти 50% участников рынка завершили 2025 год с отрицательной или околонулевой рентабельностью"
+      ],
+      "uncertainty_flags": [
+        "no_direct_company"
+      ],
+      "urgency_score": 6,
+      "retrieved_context": [
+        "market_rules:market_rules_0: # MarketTwits Event Radar knowledge base\n\nИсточник новостей: публичная web-страница Telegram-канала `https://t.me/s/markettwits`.\n\n## Правила тональности для компаний и инструментов\n\nПозитив для компании или инструмента:\n- рост цены, новый рекорд, ралли, сильный приток капитала;\n- buyback, утвержденные дивиденды, запуск нового продукта, партнерство;\n- повышение прогноза, высокий рейтинг, рост доли рынка или спроса;\n- регуляторная ясность для рынка, если текст прямо говорит о бычьем драйвере.\n\nНегатив для компании или инструмента:\n- взлом, крупные потери, рекордный отток средств, массовый вывод ликвидности;\n- санкции, торговые ограничения, пошлины, запреты экспорта или угрозы блокады;\n- повышение ставок или ожидание повышения ставок для облигаций и акций;\n- снижение прогноза ВВП/спроса, закрытие продукта, риск военной эскалации.",
+        "market_rules:market_rules_2: `sector_trend`: отраслевой тренд без одной компании, например китайские авто, китайские ИИ-акции, оборонные стартапы.\n\n## Горизонт\n\n`intraday`: уровень индекса, движение цены, срочная эскалация.\n\n`short_term`: событие ближайших дней или недель, дивидендная отсечка, переговоры, календарь.\n\n`medium_term`: квартальный прогноз, ставка на конец года, отраслевой спрос.\n\n`long_term`: структурные изменения рынка, инвестиции фондов, многолетние ограничения.",
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.58,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "negative",
+          "confidence": 0.5599999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "negative",
+          "confidence": 0.63,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 675,
+    "estimated_cost_usd": 0.000156
+  },
+  {
+    "run_id": "5aa10886-4497-40a7-b9bf-ec5590a6d239",
+    "analysis": {
+      "post_id": "markettwits/374888",
+      "published_at": "2026-06-22T05:49:35Z",
+      "source_url": "https://t.me/markettwits/374888",
+      "text_quote": "🇷🇺 #зерно #пшеница #россия #интервенции Эксперты не видят оснований для интервенций на рынке зерна в 2026 г — Ведомости Последний раз зерно из федерального интервенционного фонда продавалось почти год назад.",
+      "topic": "commodities",
+      "companies": [],
+      "instruments": [
+        "WHEAT"
+      ],
+      "impact": "not_company_specific",
+      "impact_score": 0,
+      "impact_horizon": "medium_term",
+      "summary": "🇷🇺 #зерно #пшеница #россия #интервенции Эксперты не видят оснований для интервенций на рынке зерна в 2026 г — Ведомости Последний раз зерно из федерального интервенционного фонда продавалось почти год назад.",
+      "rationale": "Новость макро/геополитическая, прямой компании нет.",
+      "evidence_quotes": [
+        "🇷🇺 #зерно #пшеница #россия #интервенции Эксперты не видят оснований для интервенций на рынке зерна в 2026 г — Ведомости Последний раз зерно из федерального интервенционного фонда продавалось почти год назад."
+      ],
+      "uncertainty_flags": [
+        "no_direct_company"
+      ],
+      "urgency_score": 3,
+      "retrieved_context": [
+        "market_rules:market_rules_0: # MarketTwits Event Radar knowledge base\n\nИсточник новостей: публичная web-страница Telegram-канала `https://t.me/s/markettwits`.\n\n## Правила тональности для компаний и инструментов\n\nПозитив для компании или инструмента:\n- рост цены, новый рекорд, ралли, сильный приток капитала;\n- buyback, утвержденные дивиденды, запуск нового продукта, партнерство;\n- повышение прогноза, высокий рейтинг, рост доли рынка или спроса;\n- регуляторная ясность для рынка, если текст прямо говорит о бычьем драйвере.\n\nНегатив для компании или инструмента:\n- взлом, крупные потери, рекордный отток средств, массовый вывод ликвидности;\n- санкции, торговые ограничения, пошлины, запреты экспорта или угрозы блокады;\n- повышение ставок или ожидание повышения ставок для облигаций и акций;\n- снижение прогноза ВВП/спроса, закрытие продукта, риск военной эскалации.",
+        "company_catalog:catalog_UGLD: UGLD ЮГК sector=gold_mining country=Russia\naliases: UGLD, ЮГК\npositive triggers: совет директоров, золото, рост\nnegative triggers: переоценено, снижение, интервенции",
+        "company_catalog:catalog_RGBI: RGBI Индекс ОФЗ sector=bonds country=Russia\naliases: RGBI, ИНДЕКС ОФЗ, ОФЗ\npositive triggers: снижение ставки, рост, >\nnegative triggers: < 117, не опустит ключевую, повышение ставки",
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ.",
+        "market_rules:market_rules_2: `sector_trend`: отраслевой тренд без одной компании, например китайские авто, китайские ИИ-акции, оборонные стартапы.\n\n## Горизонт\n\n`intraday`: уровень индекса, движение цены, срочная эскалация.\n\n`short_term`: событие ближайших дней или недель, дивидендная отсечка, переговоры, календарь.\n\n`medium_term`: квартальный прогноз, ставка на конец года, отраслевой спрос.\n\n`long_term`: структурные изменения рынка, инвестиции фондов, многолетние ограничения."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.49999999999999994,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "not_company_specific",
+          "confidence": 0.4799999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "neutral",
+          "confidence": 0.5499999999999999,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 796,
+    "estimated_cost_usd": 0.000173
+  },
+  {
+    "run_id": "a7df2c6a-2074-4ff4-99ce-eb1b1be45e4c",
+    "analysis": {
+      "post_id": "markettwits/374889",
+      "published_at": "2026-06-22T05:51:31Z",
+      "source_url": "https://t.me/markettwits/374889",
+      "text_quote": "🇬🇧 #выборы #британия Стармер может объявить о сроках своего ухода утром 22 июня. Уже началась предварительная подготовка к возможной передаче власти — The Guardian",
+      "topic": "other",
+      "companies": [],
+      "instruments": [],
+      "impact": "neutral",
+      "impact_score": 0,
+      "impact_horizon": "unclear",
+      "summary": "🇬🇧 #выборы #британия Стармер может объявить о сроках своего ухода утром 22 июня. Уже началась предварительная подготовка к возможной передаче власти — The Guardian",
+      "rationale": "Явного направленного маркера для компании или инструмента нет.",
+      "evidence_quotes": [
+        "🇬🇧 #выборы #британия Стармер может объявить о сроках своего ухода утром 22 июня."
+      ],
+      "uncertainty_flags": [
+        "no_direct_company"
+      ],
+      "urgency_score": 3,
+      "retrieved_context": [],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.58,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "neutral",
+          "confidence": 0.5599999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "neutral",
+          "confidence": 0.63,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 94,
+    "estimated_cost_usd": 7.5e-05
+  },
+  {
+    "run_id": "50824e51-1e75-4dbb-8643-68216f5b750a",
+    "analysis": {
+      "post_id": "markettwits/374890",
+      "published_at": "2026-06-22T05:53:30Z",
+      "source_url": "https://t.me/markettwits/374890",
+      "text_quote": "⚠️ 🇺🇸 #дкп #сша #прогноз Оценка вероятности повышения ставки ФРС в этом году выросла на платформе на Kalshi до 55%",
+      "topic": "macro_rates",
+      "companies": [],
+      "instruments": [],
+      "impact": "mixed",
+      "impact_score": 0,
+      "impact_horizon": "unclear",
+      "summary": "⚠️ 🇺🇸 #дкп #сша #прогноз Оценка вероятности повышения ставки ФРС в этом году выросла на платформе на Kalshi до 55%",
+      "rationale": "Есть и позитивные, и негативные маркеры.",
+      "evidence_quotes": [
+        "⚠️ 🇺🇸 #дкп #сша #прогноз Оценка вероятности повышения ставки ФРС в этом году выросла на платформе на Kalshi до 55%"
+      ],
+      "uncertainty_flags": [
+        "conflicting_markers"
+      ],
+      "urgency_score": 8,
+      "retrieved_context": [
+        "company_catalog:catalog_SP500: SP500 S&P 500 sector=equity_index country=United States\naliases: SP500, S&P 500, акции США\npositive triggers: повысил прогноз, приток, ралли\nnegative triggers: повышение ставки, отрицательная корреляция, снижение",
+        "market_rules:market_rules_2: `sector_trend`: отраслевой тренд без одной компании, например китайские авто, китайские ИИ-акции, оборонные стартапы.\n\n## Горизонт\n\n`intraday`: уровень индекса, движение цены, срочная эскалация.\n\n`short_term`: событие ближайших дней или недель, дивидендная отсечка, переговоры, календарь.\n\n`medium_term`: квартальный прогноз, ставка на конец года, отраслевой спрос.\n\n`long_term`: структурные изменения рынка, инвестиции фондов, многолетние ограничения.",
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ.",
+        "company_catalog:catalog_RGBI: RGBI Индекс ОФЗ sector=bonds country=Russia\naliases: RGBI, ИНДЕКС ОФЗ, ОФЗ\npositive triggers: снижение ставки, рост, >\nnegative triggers: < 117, не опустит ключевую, повышение ставки",
+        "market_rules:market_rules_0: # MarketTwits Event Radar knowledge base\n\nИсточник новостей: публичная web-страница Telegram-канала `https://t.me/s/markettwits`.\n\n## Правила тональности для компаний и инструментов\n\nПозитив для компании или инструмента:\n- рост цены, новый рекорд, ралли, сильный приток капитала;\n- buyback, утвержденные дивиденды, запуск нового продукта, партнерство;\n- повышение прогноза, высокий рейтинг, рост доли рынка или спроса;\n- регуляторная ясность для рынка, если текст прямо говорит о бычьем драйвере.\n\nНегатив для компании или инструмента:\n- взлом, крупные потери, рекордный отток средств, массовый вывод ликвидности;\n- санкции, торговые ограничения, пошлины, запреты экспорта или угрозы блокады;\n- повышение ставок или ожидание повышения ставок для облигаций и акций;\n- снижение прогноза ВВП/спроса, закрытие продукта, риск военной эскалации."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.49999999999999994,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "negative",
+          "confidence": 0.4799999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "neutral",
+          "confidence": 0.5499999999999999,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 775,
+    "estimated_cost_usd": 0.00017
+  },
+  {
+    "run_id": "d21b1a28-5e81-47d1-933a-a420c44c5120",
+    "analysis": {
+      "post_id": "markettwits/374891",
+      "published_at": "2026-06-22T06:00:36Z",
+      "source_url": "https://t.me/markettwits/374891",
+      "text_quote": "🇺🇸 #акции #облигации #сша Стремительно растет отрицательная корреляция между акциями США и доходностями гособлигаций — данные BBG что указывает на рост чувствительности акций к ожиданиям повышения ставки Трейдеры активно ставят на повышение ставки ФРС в этом году — BBG",
+      "topic": "macro_rates",
+      "companies": [],
+      "instruments": [],
+      "impact": "mixed",
+      "impact_score": 0,
+      "impact_horizon": "unclear",
+      "summary": "🇺🇸 #акции #облигации #сша Стремительно растет отрицательная корреляция между акциями США и доходностями гособлигаций — данные BBG что указывает на рост чувствительности акций к ожиданиям повышения ставки...",
+      "rationale": "Есть и позитивные, и негативные маркеры.",
+      "evidence_quotes": [
+        "🇺🇸 #акции #облигации #сша Стремительно растет отрицательная корреляция между акциями США и доходностями гособлигаций"
+      ],
+      "uncertainty_flags": [
+        "conflicting_markers"
+      ],
+      "urgency_score": 6,
+      "retrieved_context": [
+        "company_catalog:catalog_SP500: SP500 S&P 500 sector=equity_index country=United States\naliases: SP500, S&P 500, акции США\npositive triggers: повысил прогноз, приток, ралли\nnegative triggers: повышение ставки, отрицательная корреляция, снижение",
+        "company_catalog:catalog_RGBI: RGBI Индекс ОФЗ sector=bonds country=Russia\naliases: RGBI, ИНДЕКС ОФЗ, ОФЗ\npositive triggers: снижение ставки, рост, >\nnegative triggers: < 117, не опустит ключевую, повышение ставки",
+        "market_rules:market_rules_0: # MarketTwits Event Radar knowledge base\n\nИсточник новостей: публичная web-страница Telegram-канала `https://t.me/s/markettwits`.\n\n## Правила тональности для компаний и инструментов\n\nПозитив для компании или инструмента:\n- рост цены, новый рекорд, ралли, сильный приток капитала;\n- buyback, утвержденные дивиденды, запуск нового продукта, партнерство;\n- повышение прогноза, высокий рейтинг, рост доли рынка или спроса;\n- регуляторная ясность для рынка, если текст прямо говорит о бычьем драйвере.\n\nНегатив для компании или инструмента:\n- взлом, крупные потери, рекордный отток средств, массовый вывод ликвидности;\n- санкции, торговые ограничения, пошлины, запреты экспорта или угрозы блокады;\n- повышение ставок или ожидание повышения ставок для облигаций и акций;\n- снижение прогноза ВВП/спроса, закрытие продукта, риск военной эскалации.",
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ.",
+        "market_rules:market_rules_2: `sector_trend`: отраслевой тренд без одной компании, например китайские авто, китайские ИИ-акции, оборонные стартапы.\n\n## Горизонт\n\n`intraday`: уровень индекса, движение цены, срочная эскалация.\n\n`short_term`: событие ближайших дней или недель, дивидендная отсечка, переговоры, календарь.\n\n`medium_term`: квартальный прогноз, ставка на конец года, отраслевой спрос.\n\n`long_term`: структурные изменения рынка, инвестиции фондов, многолетние ограничения."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.49999999999999994,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "negative",
+          "confidence": 0.4799999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "neutral",
+          "confidence": 0.5499999999999999,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 816,
+    "estimated_cost_usd": 0.000176
+  },
+  {
+    "run_id": "2779c1b0-cd3a-4135-9463-80318afae016",
+    "analysis": {
+      "post_id": "markettwits/374892",
+      "published_at": "2026-06-22T06:08:41Z",
+      "source_url": "https://t.me/markettwits/374892",
+      "text_quote": "🇷🇺 #ROLO #олово Русолово в 2029 г выведет на полную мощность Амурский металлургический комбинат Русолово к 2028 г увеличит мощности двух фабрик, Правоумийской и Солнечной в 1,6 раза Потребность РФ в олове к 2030 году составит 5,4 тыс. тонн — компания",
+      "topic": "company_event",
+      "companies": [
+        {
+          "ticker": "ROLO",
+          "company": "Русолово",
+          "sector": "metals",
+          "evidence_quote": "🇷🇺 #ROLO #олово Русолово в 2029 г выведет на полную мощность Амурский металлургический комбинат Русолово к 2028 г увеличит мощности двух фабрик, Правоумийской и Солнечной в 1,6 раза Потребность РФ в олове к 2030 году сос",
+          "confidence": 0.92
+        }
+      ],
+      "instruments": [
+        "ROLO"
+      ],
+      "impact": "positive",
+      "impact_score": 2,
+      "impact_horizon": "medium_term",
+      "summary": "🇷🇺 #ROLO #олово Русолово в 2029 г выведет на полную мощность Амурский металлургический комбинат Русолово к 2028 г увеличит мощности двух фабрик, Правоумийской и Солнечной в 1,6 раза Потребность РФ в олове к...",
+      "rationale": "Позитивные маркеры перевешивают негативные.",
+      "evidence_quotes": [
+        "🇷🇺 #ROLO #олово Русолово в 2029 г выведет на полную мощность Амурский металлургический комбинат Русолово к 2028 г увеличит мощности двух фабрик, Правоумийской и Солнечной в 1,6 раза Потребность РФ в олове к 2030 году сос"
+      ],
+      "uncertainty_flags": [],
+      "urgency_score": 3,
+      "retrieved_context": [
+        "company_catalog:catalog_ROLO: ROLO Русолово sector=metals country=Russia\naliases: ROLO, Русолово\npositive triggers: увеличит мощности, полную мощность, потребность\nnegative triggers: снижение, задержка, падение",
+        "market_rules:market_rules_2: `sector_trend`: отраслевой тренд без одной компании, например китайские авто, китайские ИИ-акции, оборонные стартапы.\n\n## Горизонт\n\n`intraday`: уровень индекса, движение цены, срочная эскалация.\n\n`short_term`: событие ближайших дней или недель, дивидендная отсечка, переговоры, календарь.\n\n`medium_term`: квартальный прогноз, ставка на конец года, отраслевой спрос.\n\n`long_term`: структурные изменения рынка, инвестиции фондов, многолетние ограничения."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "positive",
+          "confidence": 0.72,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "positive",
+          "confidence": 0.7,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "positive",
+          "confidence": 0.77,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 2
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 383,
+    "estimated_cost_usd": 0.000115
+  },
+  {
+    "run_id": "a793d42c-f189-4bae-af5e-4ad5c1c2dec8",
+    "analysis": {
+      "post_id": "markettwits/374893",
+      "published_at": "2026-06-22T06:17:43Z",
+      "source_url": "https://t.me/markettwits/374893",
+      "text_quote": "🇷🇺 #акции #россия IMOEX тестирует 2400",
+      "topic": "equity_flows",
+      "companies": [
+        {
+          "ticker": "IMOEX",
+          "company": "Индекс Мосбиржи",
+          "sector": "equity_index",
+          "evidence_quote": "🇷🇺 #акции #россия IMOEX тестирует 2400",
+          "confidence": 0.78
+        }
+      ],
+      "instruments": [
+        "IMOEX"
+      ],
+      "impact": "neutral",
+      "impact_score": 0,
+      "impact_horizon": "intraday",
+      "summary": "🇷🇺 #акции #россия IMOEX тестирует 2400",
+      "rationale": "Явного направленного маркера для компании или инструмента нет.",
+      "evidence_quotes": [
+        "🇷🇺 #акции #россия IMOEX тестирует 2400"
+      ],
+      "uncertainty_flags": [],
+      "urgency_score": 2,
+      "retrieved_context": [
+        "company_catalog:catalog_IMOEX: IMOEX Индекс Мосбиржи sector=equity_index country=Russia\naliases: IMOEX, Индекс Мосбиржи, Мосбиржа\npositive triggers: > 2400, выше 2400, рост, ралли\nnegative triggers: < 2400, ниже 2400, опускаться ниже",
+        "company_catalog:catalog_SP500: SP500 S&P 500 sector=equity_index country=United States\naliases: SP500, S&P 500, акции США\npositive triggers: повысил прогноз, приток, ралли\nnegative triggers: повышение ставки, отрицательная корреляция, снижение",
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "neutral",
+          "confidence": 0.72,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "neutral",
+          "confidence": 0.7,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "neutral",
+          "confidence": 0.77,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 2
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 454,
+    "estimated_cost_usd": 0.000125
+  },
+  {
+    "run_id": "f32b5560-b313-4dea-8786-4876db3a8fc0",
+    "analysis": {
+      "post_id": "markettwits/374894",
+      "published_at": "2026-06-22T06:20:51Z",
+      "source_url": "https://t.me/markettwits/374894",
+      "text_quote": "⚠️ 🇮🇷 #иран #геополитика Израиль отказывается выводить войска из южных районов Ливана - повторяет Нетаньяху и министр обороны Кац",
+      "topic": "geopolitics",
+      "companies": [],
+      "instruments": [],
+      "impact": "not_company_specific",
+      "impact_score": 0,
+      "impact_horizon": "unclear",
+      "summary": "⚠️ 🇮🇷 #иран #геополитика Израиль отказывается выводить войска из южных районов Ливана - повторяет Нетаньяху и министр обороны Кац",
+      "rationale": "Геополитическая новость без прямого эмитента или рыночного инструмента.",
+      "evidence_quotes": [
+        "⚠️ 🇮🇷 #иран #геополитика Израиль отказывается выводить войска из южных районов Ливана - повторяет Нетаньяху и министр обороны Кац"
+      ],
+      "uncertainty_flags": [
+        "no_direct_company"
+      ],
+      "urgency_score": 5,
+      "retrieved_context": [
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.49999999999999994,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "negative",
+          "confidence": 0.4799999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "neutral",
+          "confidence": 0.5499999999999999,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 315,
+    "estimated_cost_usd": 0.000106
+  },
+  {
+    "run_id": "5a5bd828-8567-456a-b9e8-a2ca2e3d4c1a",
+    "analysis": {
+      "post_id": "markettwits/374895",
+      "published_at": "2026-06-22T06:26:58Z",
+      "source_url": "https://t.me/markettwits/374895",
+      "text_quote": "🇷🇺 🇮🇳 #уголь #россия #индия Поставки энергетического угля из России в Индию выросли на 16% за пять месяцев — Ъ Импорт энергетического угля Индией упал до 4-летнего минимума на фоне роста производства экологически чистой электроэнергии — RTRS",
+      "topic": "commodities",
+      "companies": [],
+      "instruments": [
+        "COAL"
+      ],
+      "impact": "positive",
+      "impact_score": 1,
+      "impact_horizon": "unclear",
+      "summary": "🇷🇺 🇮🇳 #уголь #россия #индия Поставки энергетического угля из России в Индию выросли на 16% за пять месяцев — Ъ Импорт энергетического угля Индией упал до 4-летнего минимума на фоне роста производства...",
+      "rationale": "Позитивные маркеры перевешивают негативные.",
+      "evidence_quotes": [
+        "🇷🇺 🇮🇳 #уголь #россия #индия Поставки энергетического угля из России в Индию выросли на 16% за пять месяцев — Ъ Импорт энергетического угля Индией упал до 4-летнего минимума на фоне роста производства экологически чистой"
+      ],
+      "uncertainty_flags": [
+        "no_direct_company"
+      ],
+      "urgency_score": 5,
+      "retrieved_context": [
+        "market_rules:market_rules_2: `sector_trend`: отраслевой тренд без одной компании, например китайские авто, китайские ИИ-акции, оборонные стартапы.\n\n## Горизонт\n\n`intraday`: уровень индекса, движение цены, срочная эскалация.\n\n`short_term`: событие ближайших дней или недель, дивидендная отсечка, переговоры, календарь.\n\n`medium_term`: квартальный прогноз, ставка на конец года, отраслевой спрос.\n\n`long_term`: структурные изменения рынка, инвестиции фондов, многолетние ограничения.",
+        "company_catalog:catalog_DOMRF: DOMRF ДОМ.РФ sector=real_estate_finance country=Russia\naliases: DOMRF, ДОМРФ, ДОМ.РФ\npositive triggers: пять звёзд, пять звезд, рейтинг, повысил\nnegative triggers: понизил, отозвал, негативный",
+        "company_catalog:catalog_IRKT: IRKT Яковлев sector=aircraft country=Russia\naliases: IRKT, Яковлев, Иркут\npositive triggers: поставки, рост\nnegative triggers: задержка, снижение",
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.58,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "positive",
+          "confidence": 0.5599999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "positive",
+          "confidence": 0.63,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 568,
+    "estimated_cost_usd": 0.000141
+  },
+  {
+    "run_id": "ac3b5ee0-c444-4fb5-a8b6-0f4530534f63",
+    "analysis": {
+      "post_id": "markettwits/374896",
+      "published_at": "2026-06-22T06:28:37Z",
+      "source_url": "https://t.me/markettwits/374896",
+      "text_quote": "⚠️ 🇹🇼 #тайвань #геополитика Тайвань на этой неделе проведет пятидневные учения по обеспечению \"немедленной боевой готовности\"",
+      "topic": "geopolitics",
+      "companies": [],
+      "instruments": [],
+      "impact": "not_company_specific",
+      "impact_score": 0,
+      "impact_horizon": "short_term",
+      "summary": "⚠️ 🇹🇼 #тайвань #геополитика Тайвань на этой неделе проведет пятидневные учения по обеспечению \"немедленной боевой готовности\"",
+      "rationale": "Геополитическая новость без прямого эмитента или рыночного инструмента.",
+      "evidence_quotes": [
+        "⚠️ 🇹🇼 #тайвань #геополитика Тайвань на этой неделе проведет пятидневные учения по обеспечению \"немедленной боевой готовности\""
+      ],
+      "uncertainty_flags": [
+        "no_direct_company"
+      ],
+      "urgency_score": 5,
+      "retrieved_context": [
+        "market_rules:market_rules_2: `sector_trend`: отраслевой тренд без одной компании, например китайские авто, китайские ИИ-акции, оборонные стартапы.\n\n## Горизонт\n\n`intraday`: уровень индекса, движение цены, срочная эскалация.\n\n`short_term`: событие ближайших дней или недель, дивидендная отсечка, переговоры, календарь.\n\n`medium_term`: квартальный прогноз, ставка на конец года, отраслевой спрос.\n\n`long_term`: структурные изменения рынка, инвестиции фондов, многолетние ограничения.",
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.49999999999999994,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "negative",
+          "confidence": 0.4799999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "neutral",
+          "confidence": 0.5499999999999999,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 441,
+    "estimated_cost_usd": 0.000123
+  },
+  {
+    "run_id": "cb2f7f9e-a245-4d44-bc21-4085e01de5c0",
+    "analysis": {
+      "post_id": "markettwits/374897",
+      "published_at": "2026-06-22T06:30:48Z",
+      "source_url": "https://t.me/markettwits/374897",
+      "text_quote": "💥 🇯🇵 #акции #япония NIKKEI = рекорд",
+      "topic": "equity_flows",
+      "companies": [
+        {
+          "ticker": "NIKKEI",
+          "company": "Nikkei 225",
+          "sector": "equity_index",
+          "evidence_quote": "💥 🇯🇵 #акции #япония NIKKEI = рекорд",
+          "confidence": 0.78
+        }
+      ],
+      "instruments": [
+        "NIKKEI"
+      ],
+      "impact": "positive",
+      "impact_score": 2,
+      "impact_horizon": "intraday",
+      "summary": "💥 🇯🇵 #акции #япония NIKKEI = рекорд",
+      "rationale": "Позитивные маркеры перевешивают негативные.",
+      "evidence_quotes": [
+        "💥 🇯🇵 #акции #япония NIKKEI = рекорд"
+      ],
+      "uncertainty_flags": [],
+      "urgency_score": 5,
+      "retrieved_context": [
+        "company_catalog:catalog_NIKKEI: NIKKEI Nikkei 225 sector=equity_index country=Japan\naliases: NIKKEI, Nikkei\npositive triggers: рекорд, рост\nnegative triggers: падение, снижение",
+        "company_catalog:catalog_SP500: SP500 S&P 500 sector=equity_index country=United States\naliases: SP500, S&P 500, акции США\npositive triggers: повысил прогноз, приток, ралли\nnegative triggers: повышение ставки, отрицательная корреляция, снижение",
+        "company_catalog:catalog_000660KR: 000660KR SK Hynix sector=semiconductors country=South Korea\naliases: SK Hynix, SK hynix, 000660KR, Hynix\npositive triggers: обогнал, самой дорогой, рекорд, ралли, спрос\nnegative triggers: санкции, ограничения, падение, снижение",
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ.",
+        "market_rules:market_rules_0: # MarketTwits Event Radar knowledge base\n\nИсточник новостей: публичная web-страница Telegram-канала `https://t.me/s/markettwits`.\n\n## Правила тональности для компаний и инструментов\n\nПозитив для компании или инструмента:\n- рост цены, новый рекорд, ралли, сильный приток капитала;\n- buyback, утвержденные дивиденды, запуск нового продукта, партнерство;\n- повышение прогноза, высокий рейтинг, рост доли рынка или спроса;\n- регуляторная ясность для рынка, если текст прямо говорит о бычьем драйвере.\n\nНегатив для компании или инструмента:\n- взлом, крупные потери, рекордный отток средств, массовый вывод ликвидности;\n- санкции, торговые ограничения, пошлины, запреты экспорта или угрозы блокады;\n- повышение ставок или ожидание повышения ставок для облигаций и акций;\n- снижение прогноза ВВП/спроса, закрытие продукта, риск военной эскалации."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "positive",
+          "confidence": 0.72,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "positive",
+          "confidence": 0.7,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "positive",
+          "confidence": 0.77,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 2
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 730,
+    "estimated_cost_usd": 0.000164
+  },
+  {
+    "run_id": "c153dd2c-9e6c-418f-aebc-e57e8ac683f0",
+    "analysis": {
+      "post_id": "markettwits/374898",
+      "published_at": "2026-06-22T06:33:17Z",
+      "source_url": "https://t.me/markettwits/374898",
+      "text_quote": "⚠️ 🇷🇺 #облигации #россия #офз ИНДЕКС ОФЗ (RGBI) < 117 ЦБ не опустит ключевую ниже 12% к концу года — аналитики, опрос Известия",
+      "topic": "macro_rates",
+      "companies": [
+        {
+          "ticker": "RGBI",
+          "company": "Индекс ОФЗ",
+          "sector": "bonds",
+          "evidence_quote": "⚠️ 🇷🇺 #облигации #россия #офз ИНДЕКС ОФЗ (RGBI) < 117 ЦБ не опустит ключевую ниже 12% к концу года",
+          "confidence": 0.78
+        }
+      ],
+      "instruments": [
+        "RGBI"
+      ],
+      "impact": "negative",
+      "impact_score": -2,
+      "impact_horizon": "intraday",
+      "summary": "⚠️ 🇷🇺 #облигации #россия #офз ИНДЕКС ОФЗ (RGBI) < 117 ЦБ не опустит ключевую ниже 12% к концу года — аналитики, опрос Известия",
+      "rationale": "Негативные маркеры перевешивают позитивные.",
+      "evidence_quotes": [
+        "⚠️ 🇷🇺 #облигации #россия #офз ИНДЕКС ОФЗ (RGBI) < 117 ЦБ не опустит ключевую ниже 12% к концу года"
+      ],
+      "uncertainty_flags": [],
+      "urgency_score": 8,
+      "retrieved_context": [
+        "company_catalog:catalog_RGBI: RGBI Индекс ОФЗ sector=bonds country=Russia\naliases: RGBI, ИНДЕКС ОФЗ, ОФЗ\npositive triggers: снижение ставки, рост, >\nnegative triggers: < 117, не опустит ключевую, повышение ставки",
+        "company_catalog:catalog_IMOEX: IMOEX Индекс Мосбиржи sector=equity_index country=Russia\naliases: IMOEX, Индекс Мосбиржи, Мосбиржа\npositive triggers: > 2400, выше 2400, рост, ралли\nnegative triggers: < 2400, ниже 2400, опускаться ниже",
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ.",
+        "market_rules:market_rules_2: `sector_trend`: отраслевой тренд без одной компании, например китайские авто, китайские ИИ-акции, оборонные стартапы.\n\n## Горизонт\n\n`intraday`: уровень индекса, движение цены, срочная эскалация.\n\n`short_term`: событие ближайших дней или недель, дивидендная отсечка, переговоры, календарь.\n\n`medium_term`: квартальный прогноз, ставка на конец года, отраслевой спрос.\n\n`long_term`: структурные изменения рынка, инвестиции фондов, многолетние ограничения."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "negative",
+          "confidence": 0.72,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "negative",
+          "confidence": 0.7,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "negative",
+          "confidence": 0.77,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 2
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 603,
+    "estimated_cost_usd": 0.000146
+  },
+  {
+    "run_id": "251c7da0-e611-46a9-ab44-a90a9b632923",
+    "analysis": {
+      "post_id": "markettwits/374899",
+      "published_at": "2026-06-22T06:42:50Z",
+      "source_url": "https://t.me/markettwits/374899",
+      "text_quote": "💥 🇰🇷 #000660KR #акции #юкорея #макро Производитель чипов SK Hynix обогнал Samsung Electronics и стала самой дорогой компанией Южной Кореи",
+      "topic": "company_event",
+      "companies": [
+        {
+          "ticker": "000660KR",
+          "company": "SK Hynix",
+          "sector": "semiconductors",
+          "evidence_quote": "💥 🇰🇷 #000660KR #акции #юкорея #макро Производитель чипов SK Hynix обогнал Samsung Electronics и стала самой дорогой компанией Южной Кореи",
+          "confidence": 0.92
+        },
+        {
+          "ticker": "005930KR",
+          "company": "Samsung Electronics",
+          "sector": "semiconductors",
+          "evidence_quote": "💥 🇰🇷 #000660KR #акции #юкорея #макро Производитель чипов SK Hynix обогнал Samsung Electronics и стала самой дорогой компанией Южной Кореи",
+          "confidence": 0.78
+        }
+      ],
+      "instruments": [
+        "000660KR",
+        "005930KR"
+      ],
+      "impact": "positive",
+      "impact_score": 1,
+      "impact_horizon": "unclear",
+      "summary": "💥 🇰🇷 #000660KR #акции #юкорея #макро Производитель чипов SK Hynix обогнал Samsung Electronics и стала самой дорогой компанией Южной Кореи",
+      "rationale": "Позитивные маркеры перевешивают негативные.",
+      "evidence_quotes": [
+        "💥 🇰🇷 #000660KR #акции #юкорея #макро Производитель чипов SK Hynix обогнал Samsung Electronics и стала самой дорогой компанией Южной Кореи"
+      ],
+      "uncertainty_flags": [],
+      "urgency_score": 5,
+      "retrieved_context": [
+        "company_catalog:catalog_000660KR: 000660KR SK Hynix sector=semiconductors country=South Korea\naliases: SK Hynix, SK hynix, 000660KR, Hynix\npositive triggers: обогнал, самой дорогой, рекорд, ралли, спрос\nnegative triggers: санкции, ограничения, падение, снижение",
+        "company_catalog:catalog_005930KR: 005930KR Samsung Electronics sector=semiconductors country=South Korea\naliases: Samsung Electronics, Samsung\npositive triggers: обогнал, рост, ралли\nnegative triggers: обогнал Samsung, потерял лидерство, снижение",
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ.",
+        "company_catalog:catalog_SP500: SP500 S&P 500 sector=equity_index country=United States\naliases: SP500, S&P 500, акции США\npositive triggers: повысил прогноз, приток, ралли\nnegative triggers: повышение ставки, отрицательная корреляция, снижение"
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "positive",
+          "confidence": 0.72,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "positive",
+          "confidence": 0.7,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "positive",
+          "confidence": 0.77,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 3
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 647,
+    "estimated_cost_usd": 0.000152
+  },
+  {
+    "run_id": "a18388c9-addc-40f9-abbd-a44b38e1284d",
+    "analysis": {
+      "post_id": "markettwits/374900",
+      "published_at": "2026-06-22T06:45:33Z",
+      "source_url": "https://t.me/markettwits/374900",
+      "text_quote": "🚫 🇮🇳 #сахар #индия Индия, вероятно, не будет экспортировать сахар в течение многих лет из-за Эль-Ниньо и сокращения поставок этанола — RTRS",
+      "topic": "commodities",
+      "companies": [],
+      "instruments": [
+        "SUGAR"
+      ],
+      "impact": "negative",
+      "impact_score": -1,
+      "impact_horizon": "long_term",
+      "summary": "🚫 🇮🇳 #сахар #индия Индия, вероятно, не будет экспортировать сахар в течение многих лет из-за Эль-Ниньо и сокращения поставок этанола — RTRS",
+      "rationale": "Негативные маркеры перевешивают позитивные.",
+      "evidence_quotes": [
+        "🚫 🇮🇳 #сахар #индия Индия, вероятно, не будет экспортировать сахар в течение многих лет из-за Эль-Ниньо и сокращения поставок этанола — RTRS"
+      ],
+      "uncertainty_flags": [
+        "no_direct_company"
+      ],
+      "urgency_score": 6,
+      "retrieved_context": [
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ.",
+        "company_catalog:catalog_RGBI: RGBI Индекс ОФЗ sector=bonds country=Russia\naliases: RGBI, ИНДЕКС ОФЗ, ОФЗ\npositive triggers: снижение ставки, рост, >\nnegative triggers: < 117, не опустит ключевую, повышение ставки"
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.58,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "negative",
+          "confidence": 0.5599999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "negative",
+          "confidence": 0.63,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 366,
+    "estimated_cost_usd": 0.000113
+  },
+  {
+    "run_id": "690ddc4e-6a14-4d0c-85c8-c562a05d2ac2",
+    "analysis": {
+      "post_id": "markettwits/374901",
+      "published_at": "2026-06-22T06:49:28Z",
+      "source_url": "https://t.me/markettwits/374901",
+      "text_quote": "🇨🇳 #nev #африка #китай #авто Глобальный энергетический кризис, вызванный войной на Ближнем Востоке, значительно увеличил спрос на электромобили в Африке, что стало стимулом для Китая, доминирующего на рынке — FT",
+      "topic": "sector_trend",
+      "companies": [],
+      "instruments": [
+        "CHINA_AUTO"
+      ],
+      "impact": "neutral",
+      "impact_score": 0,
+      "impact_horizon": "unclear",
+      "summary": "🇨🇳 #nev #африка #китай #авто Глобальный энергетический кризис, вызванный войной на Ближнем Востоке, значительно увеличил спрос на электромобили в Африке, что стало стимулом для Китая, доминирующего на рынке...",
+      "rationale": "Явного направленного маркера для компании или инструмента нет.",
+      "evidence_quotes": [
+        "🇨🇳 #nev #африка #китай #авто Глобальный энергетический кризис, вызванный войной на Ближнем Востоке, значительно увеличил спрос на электромобили в Африке, что стало стимулом для Китая, доминирующего на рынке — FT"
+      ],
+      "uncertainty_flags": [
+        "no_direct_company"
+      ],
+      "urgency_score": 3,
+      "retrieved_context": [
+        "market_rules:market_rules_2: `sector_trend`: отраслевой тренд без одной компании, например китайские авто, китайские ИИ-акции, оборонные стартапы.\n\n## Горизонт\n\n`intraday`: уровень индекса, движение цены, срочная эскалация.\n\n`short_term`: событие ближайших дней или недель, дивидендная отсечка, переговоры, календарь.\n\n`medium_term`: квартальный прогноз, ставка на конец года, отраслевой спрос.\n\n`long_term`: структурные изменения рынка, инвестиции фондов, многолетние ограничения.",
+        "market_rules:market_rules_0: # MarketTwits Event Radar knowledge base\n\nИсточник новостей: публичная web-страница Telegram-канала `https://t.me/s/markettwits`.\n\n## Правила тональности для компаний и инструментов\n\nПозитив для компании или инструмента:\n- рост цены, новый рекорд, ралли, сильный приток капитала;\n- buyback, утвержденные дивиденды, запуск нового продукта, партнерство;\n- повышение прогноза, высокий рейтинг, рост доли рынка или спроса;\n- регуляторная ясность для рынка, если текст прямо говорит о бычьем драйвере.\n\nНегатив для компании или инструмента:\n- взлом, крупные потери, рекордный отток средств, массовый вывод ликвидности;\n- санкции, торговые ограничения, пошлины, запреты экспорта или угрозы блокады;\n- повышение ставок или ожидание повышения ставок для облигаций и акций;\n- снижение прогноза ВВП/спроса, закрытие продукта, риск военной эскалации.",
+        "company_catalog:catalog_000660KR: 000660KR SK Hynix sector=semiconductors country=South Korea\naliases: SK Hynix, SK hynix, 000660KR, Hynix\npositive triggers: обогнал, самой дорогой, рекорд, ралли, спрос\nnegative triggers: санкции, ограничения, падение, снижение"
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.58,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "neutral",
+          "confidence": 0.5599999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "neutral",
+          "confidence": 0.63,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 536,
+    "estimated_cost_usd": 0.000137
+  },
+  {
+    "run_id": "1afd5872-5425-4e92-8a1f-78ebe0260c92",
+    "analysis": {
+      "post_id": "markettwits/374902",
+      "published_at": "2026-06-22T06:58:22Z",
+      "source_url": "https://t.me/markettwits/374902",
+      "text_quote": "🛢 🇮🇷 #ормуз #иран Глава Комиссии по национальной безопасности иранского парламента Ибрахим Азизи заявил, что Ормузский пролив — это суверенные воды Ирана, и окончательное решение по проливу остается за Ираном.",
+      "topic": "geopolitics",
+      "companies": [],
+      "instruments": [
+        "OIL"
+      ],
+      "impact": "not_company_specific",
+      "impact_score": 0,
+      "impact_horizon": "unclear",
+      "summary": "🛢 🇮🇷 #ормуз #иран Глава Комиссии по национальной безопасности иранского парламента Ибрахим Азизи заявил, что Ормузский пролив — это суверенные воды Ирана, и окончательное решение по проливу остается за Ираном.",
+      "rationale": "Новость макро/геополитическая, прямой компании нет.",
+      "evidence_quotes": [
+        "🛢 🇮🇷 #ормуз #иран Глава Комиссии по национальной безопасности иранского парламента Ибрахим Азизи заявил, что Ормузский пролив — это суверенные воды Ирана, и окончательное решение по проливу остается за Ираном."
+      ],
+      "uncertainty_flags": [
+        "no_direct_company"
+      ],
+      "urgency_score": 3,
+      "retrieved_context": [
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.49999999999999994,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "negative",
+          "confidence": 0.4799999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "neutral",
+          "confidence": 0.5499999999999999,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 332,
+    "estimated_cost_usd": 0.000108
+  },
+  {
+    "run_id": "2afb84a6-3bce-43db-9b42-fe8f4779c667",
+    "analysis": {
+      "post_id": "markettwits/374903",
+      "published_at": "2026-06-22T07:05:23Z",
+      "source_url": "https://t.me/markettwits/374903",
+      "text_quote": "🇷🇺 #VTBR WB банк запустил первый сервис кредитования для физических лиц.",
+      "topic": "company_event",
+      "companies": [
+        {
+          "ticker": "VTBR",
+          "company": "ВТБ",
+          "sector": "banks",
+          "evidence_quote": "🇷🇺 #VTBR WB банк запустил первый сервис кредитования для физических лиц.",
+          "confidence": 0.92
+        }
+      ],
+      "instruments": [
+        "VTBR"
+      ],
+      "impact": "positive",
+      "impact_score": 2,
+      "impact_horizon": "unclear",
+      "summary": "🇷🇺 #VTBR WB банк запустил первый сервис кредитования для физических лиц.",
+      "rationale": "Позитивные маркеры перевешивают негативные.",
+      "evidence_quotes": [
+        "🇷🇺 #VTBR WB банк запустил первый сервис кредитования для физических лиц."
+      ],
+      "uncertainty_flags": [],
+      "urgency_score": 4,
+      "retrieved_context": [
+        "company_catalog:catalog_VTBR: VTBR ВТБ sector=banks country=Russia\naliases: VTBR, ВТБ, WB банк, ВБ банк\npositive triggers: запустил, кредитования, рост\nnegative triggers: санкции, снижение, убыток",
+        "market_rules:market_rules_0: # MarketTwits Event Radar knowledge base\n\nИсточник новостей: публичная web-страница Telegram-канала `https://t.me/s/markettwits`.\n\n## Правила тональности для компаний и инструментов\n\nПозитив для компании или инструмента:\n- рост цены, новый рекорд, ралли, сильный приток капитала;\n- buyback, утвержденные дивиденды, запуск нового продукта, партнерство;\n- повышение прогноза, высокий рейтинг, рост доли рынка или спроса;\n- регуляторная ясность для рынка, если текст прямо говорит о бычьем драйвере.\n\nНегатив для компании или инструмента:\n- взлом, крупные потери, рекордный отток средств, массовый вывод ликвидности;\n- санкции, торговые ограничения, пошлины, запреты экспорта или угрозы блокады;\n- повышение ставок или ожидание повышения ставок для облигаций и акций;\n- снижение прогноза ВВП/спроса, закрытие продукта, риск военной эскалации."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "positive",
+          "confidence": 0.72,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "positive",
+          "confidence": 0.7,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "positive",
+          "confidence": 0.77,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 2
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 394,
+    "estimated_cost_usd": 0.000117
+  },
+  {
+    "run_id": "151a449e-6092-4cbc-8c1f-80b6942ad762",
+    "analysis": {
+      "post_id": "markettwits/374904",
+      "published_at": "2026-06-22T07:07:45Z",
+      "source_url": "https://t.me/markettwits/374904",
+      "text_quote": "⚠️ ✴️ #хак #крипто Потери MEV-бота JaredFromSubway от взлома превысили $15 млн",
+      "topic": "crypto",
+      "companies": [],
+      "instruments": [
+        "CRYPTO"
+      ],
+      "impact": "negative",
+      "impact_score": -1,
+      "impact_horizon": "unclear",
+      "summary": "⚠️ ✴️ #хак #крипто Потери MEV-бота JaredFromSubway от взлома превысили $15 млн",
+      "rationale": "Негативные маркеры перевешивают позитивные.",
+      "evidence_quotes": [
+        "⚠️ ✴️ #хак #крипто Потери MEV-бота JaredFromSubway от взлома превысили $15 млн"
+      ],
+      "uncertainty_flags": [],
+      "urgency_score": 7,
+      "retrieved_context": [
+        "company_catalog:catalog_BTC: BTC Bitcoin sector=crypto country=Global\naliases: BTC, Bitcoin, биткоин, спотовых BTC ETF, BTC ETF\npositive triggers: покупает, резервах, приток, институционалов, бычьим драйвером\nnegative triggers: отток, взлом, потери, падение",
+        "market_rules:market_rules_0: # MarketTwits Event Radar knowledge base\n\nИсточник новостей: публичная web-страница Telegram-канала `https://t.me/s/markettwits`.\n\n## Правила тональности для компаний и инструментов\n\nПозитив для компании или инструмента:\n- рост цены, новый рекорд, ралли, сильный приток капитала;\n- buyback, утвержденные дивиденды, запуск нового продукта, партнерство;\n- повышение прогноза, высокий рейтинг, рост доли рынка или спроса;\n- регуляторная ясность для рынка, если текст прямо говорит о бычьем драйвере.\n\nНегатив для компании или инструмента:\n- взлом, крупные потери, рекордный отток средств, массовый вывод ликвидности;\n- санкции, торговые ограничения, пошлины, запреты экспорта или угрозы блокады;\n- повышение ставок или ожидание повышения ставок для облигаций и акций;\n- снижение прогноза ВВП/спроса, закрытие продукта, риск военной эскалации."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.58,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "negative",
+          "confidence": 0.5599999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "negative",
+          "confidence": 0.63,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 366,
+    "estimated_cost_usd": 0.000113
+  },
+  {
+    "run_id": "afc433af-f100-4dde-9ac9-7ee9d05ee687",
+    "analysis": {
+      "post_id": "markettwits/374905",
+      "published_at": "2026-06-22T07:11:38Z",
+      "source_url": "https://t.me/markettwits/374905",
+      "text_quote": "✴️ 🇵🇭 #rwa #филиппины #крипто Финрегулятор Филиппин объявил о готовности страны к токенизации реальных активов (RWA)",
+      "topic": "crypto",
+      "companies": [],
+      "instruments": [
+        "CRYPTO"
+      ],
+      "impact": "neutral",
+      "impact_score": 0,
+      "impact_horizon": "unclear",
+      "summary": "✴️ 🇵🇭 #rwa #филиппины #крипто Финрегулятор Филиппин объявил о готовности страны к токенизации реальных активов (RWA)",
+      "rationale": "Явного направленного маркера для компании или инструмента нет.",
+      "evidence_quotes": [
+        "✴️ 🇵🇭 #rwa #филиппины #крипто Финрегулятор Филиппин объявил о готовности страны к токенизации реальных активов (RWA)"
+      ],
+      "uncertainty_flags": [],
+      "urgency_score": 3,
+      "retrieved_context": [
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.58,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "neutral",
+          "confidence": 0.5599999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "neutral",
+          "confidence": 0.63,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 307,
+    "estimated_cost_usd": 0.000105
+  },
+  {
+    "run_id": "93cbe8c2-465f-4979-9fa3-0bd481bd0555",
+    "analysis": {
+      "post_id": "markettwits/374906",
+      "published_at": "2026-06-22T07:15:22Z",
+      "source_url": "https://t.me/markettwits/374906",
+      "text_quote": "⚠️ 🇷🇺 #акции #россия IMOEX очень не хочет опускаться ниже 2400, но \"Дух Эвиана\" может помешать — источники",
+      "topic": "equity_flows",
+      "companies": [
+        {
+          "ticker": "IMOEX",
+          "company": "Индекс Мосбиржи",
+          "sector": "equity_index",
+          "evidence_quote": "⚠️ 🇷🇺 #акции #россия IMOEX очень не хочет опускаться ниже 2400, но \"Дух Эвиана\" может помешать",
+          "confidence": 0.78
+        }
+      ],
+      "instruments": [
+        "IMOEX"
+      ],
+      "impact": "negative",
+      "impact_score": -2,
+      "impact_horizon": "unclear",
+      "summary": "⚠️ 🇷🇺 #акции #россия IMOEX очень не хочет опускаться ниже 2400, но \"Дух Эвиана\" может помешать — источники",
+      "rationale": "Негативные маркеры перевешивают позитивные.",
+      "evidence_quotes": [
+        "⚠️ 🇷🇺 #акции #россия IMOEX очень не хочет опускаться ниже 2400, но \"Дух Эвиана\" может помешать"
+      ],
+      "uncertainty_flags": [],
+      "urgency_score": 6,
+      "retrieved_context": [
+        "company_catalog:catalog_IMOEX: IMOEX Индекс Мосбиржи sector=equity_index country=Russia\naliases: IMOEX, Индекс Мосбиржи, Мосбиржа\npositive triggers: > 2400, выше 2400, рост, ралли\nnegative triggers: < 2400, ниже 2400, опускаться ниже",
+        "company_catalog:catalog_RGBI: RGBI Индекс ОФЗ sector=bonds country=Russia\naliases: RGBI, ИНДЕКС ОФЗ, ОФЗ\npositive triggers: снижение ставки, рост, >\nnegative triggers: < 117, не опустит ключевую, повышение ставки",
+        "company_catalog:catalog_SP500: SP500 S&P 500 sector=equity_index country=United States\naliases: SP500, S&P 500, акции США\npositive triggers: повысил прогноз, приток, ралли\nnegative triggers: повышение ставки, отрицательная корреляция, снижение",
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "negative",
+          "confidence": 0.72,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "negative",
+          "confidence": 0.7,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "negative",
+          "confidence": 0.77,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 2
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 539,
+    "estimated_cost_usd": 0.000137
+  },
+  {
+    "run_id": "dec934f2-8970-465b-9b8c-5015186f3bbb",
+    "analysis": {
+      "post_id": "markettwits/374907",
+      "published_at": "2026-06-22T07:17:41Z",
+      "source_url": "https://t.me/markettwits/374907",
+      "text_quote": "🇮🇷 #иран #геополитика Иранская делегация направляется в Тегеран после переговоров в Швейцарии — IRNA Технические команды США и Ирана до конца недели продолжат консультации в Швейцарии — совместное заявление Катара и Пакистана",
+      "topic": "geopolitics",
+      "companies": [],
+      "instruments": [],
+      "impact": "not_company_specific",
+      "impact_score": 0,
+      "impact_horizon": "short_term",
+      "summary": "🇮🇷 #иран #геополитика Иранская делегация направляется в Тегеран после переговоров в Швейцарии — IRNA Технические команды США и Ирана до конца недели продолжат консультации в Швейцарии — совместное заявление...",
+      "rationale": "Геополитическая новость без прямого эмитента или рыночного инструмента.",
+      "evidence_quotes": [
+        "🇮🇷 #иран #геополитика Иранская делегация направляется в Тегеран после переговоров в Швейцарии"
+      ],
+      "uncertainty_flags": [
+        "no_direct_company"
+      ],
+      "urgency_score": 3,
+      "retrieved_context": [
+        "company_catalog:catalog_SP500: SP500 S&P 500 sector=equity_index country=United States\naliases: SP500, S&P 500, акции США\npositive triggers: повысил прогноз, приток, ралли\nnegative triggers: повышение ставки, отрицательная корреляция, снижение",
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.49999999999999994,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "negative",
+          "confidence": 0.4799999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "neutral",
+          "confidence": 0.5499999999999999,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 405,
+    "estimated_cost_usd": 0.000118
+  },
+  {
+    "run_id": "7221681f-b003-4560-8e07-687a510b5472",
+    "analysis": {
+      "post_id": "markettwits/374908",
+      "published_at": "2026-06-22T07:25:03Z",
+      "source_url": "https://t.me/markettwits/374908",
+      "text_quote": "💥 🇷🇺 #DOMRF НКР присвоило акциям ДОМРФ некредитный рейтинг на уровне «пять звёзд»",
+      "topic": "company_event",
+      "companies": [
+        {
+          "ticker": "DOMRF",
+          "company": "ДОМ.РФ",
+          "sector": "real_estate_finance",
+          "evidence_quote": "💥 🇷🇺 #DOMRF НКР присвоило акциям ДОМРФ некредитный рейтинг на уровне «пять звёзд»",
+          "confidence": 0.92
+        }
+      ],
+      "instruments": [
+        "DOMRF"
+      ],
+      "impact": "positive",
+      "impact_score": 2,
+      "impact_horizon": "unclear",
+      "summary": "💥 🇷🇺 #DOMRF НКР присвоило акциям ДОМРФ некредитный рейтинг на уровне «пять звёзд»",
+      "rationale": "Позитивные маркеры перевешивают негативные.",
+      "evidence_quotes": [
+        "💥 🇷🇺 #DOMRF НКР присвоило акциям ДОМРФ некредитный рейтинг на уровне «пять звёзд»"
+      ],
+      "uncertainty_flags": [],
+      "urgency_score": 6,
+      "retrieved_context": [
+        "company_catalog:catalog_DOMRF: DOMRF ДОМ.РФ sector=real_estate_finance country=Russia\naliases: DOMRF, ДОМРФ, ДОМ.РФ\npositive triggers: пять звёзд, пять звезд, рейтинг, повысил\nnegative triggers: понизил, отозвал, негативный",
+        "market_rules:market_rules_2: `sector_trend`: отраслевой тренд без одной компании, например китайские авто, китайские ИИ-акции, оборонные стартапы.\n\n## Горизонт\n\n`intraday`: уровень индекса, движение цены, срочная эскалация.\n\n`short_term`: событие ближайших дней или недель, дивидендная отсечка, переговоры, календарь.\n\n`medium_term`: квартальный прогноз, ставка на конец года, отраслевой спрос.\n\n`long_term`: структурные изменения рынка, инвестиции фондов, многолетние ограничения.",
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ.",
+        "market_rules:market_rules_0: # MarketTwits Event Radar knowledge base\n\nИсточник новостей: публичная web-страница Telegram-канала `https://t.me/s/markettwits`.\n\n## Правила тональности для компаний и инструментов\n\nПозитив для компании или инструмента:\n- рост цены, новый рекорд, ралли, сильный приток капитала;\n- buyback, утвержденные дивиденды, запуск нового продукта, партнерство;\n- повышение прогноза, высокий рейтинг, рост доли рынка или спроса;\n- регуляторная ясность для рынка, если текст прямо говорит о бычьем драйвере.\n\nНегатив для компании или инструмента:\n- взлом, крупные потери, рекордный отток средств, массовый вывод ликвидности;\n- санкции, торговые ограничения, пошлины, запреты экспорта или угрозы блокады;\n- повышение ставок или ожидание повышения ставок для облигаций и акций;\n- снижение прогноза ВВП/спроса, закрытие продукта, риск военной эскалации."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "positive",
+          "confidence": 0.72,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "positive",
+          "confidence": 0.7,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "positive",
+          "confidence": 0.77,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 2
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 761,
+    "estimated_cost_usd": 0.000168
+  },
+  {
+    "run_id": "5aba3174-8dd1-402e-b21d-62e800ae049d",
+    "analysis": {
+      "post_id": "markettwits/374909",
+      "published_at": "2026-06-22T07:26:08Z",
+      "source_url": "https://t.me/markettwits/374909",
+      "text_quote": "⚠️ 🇷🇺 #акции #россия IMOEX < 2400",
+      "topic": "equity_flows",
+      "companies": [
+        {
+          "ticker": "IMOEX",
+          "company": "Индекс Мосбиржи",
+          "sector": "equity_index",
+          "evidence_quote": "⚠️ 🇷🇺 #акции #россия IMOEX < 2400",
+          "confidence": 0.78
+        }
+      ],
+      "instruments": [
+        "IMOEX"
+      ],
+      "impact": "negative",
+      "impact_score": -2,
+      "impact_horizon": "intraday",
+      "summary": "⚠️ 🇷🇺 #акции #россия IMOEX < 2400",
+      "rationale": "Негативные маркеры перевешивают позитивные.",
+      "evidence_quotes": [
+        "⚠️ 🇷🇺 #акции #россия IMOEX < 2400"
+      ],
+      "uncertainty_flags": [],
+      "urgency_score": 5,
+      "retrieved_context": [
+        "company_catalog:catalog_IMOEX: IMOEX Индекс Мосбиржи sector=equity_index country=Russia\naliases: IMOEX, Индекс Мосбиржи, Мосбиржа\npositive triggers: > 2400, выше 2400, рост, ралли\nnegative triggers: < 2400, ниже 2400, опускаться ниже",
+        "company_catalog:catalog_SP500: SP500 S&P 500 sector=equity_index country=United States\naliases: SP500, S&P 500, акции США\npositive triggers: повысил прогноз, приток, ралли\nnegative triggers: повышение ставки, отрицательная корреляция, снижение",
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "negative",
+          "confidence": 0.72,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "negative",
+          "confidence": 0.7,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "negative",
+          "confidence": 0.77,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 2
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 447,
+    "estimated_cost_usd": 0.000124
+  },
+  {
+    "run_id": "5154a060-38d1-48c6-8e47-267f47d1032f",
+    "analysis": {
+      "post_id": "markettwits/374910",
+      "published_at": "2026-06-22T07:30:01Z",
+      "source_url": "https://t.me/markettwits/374910",
+      "text_quote": "💥 🇨🇳 #ии #акции #китай Июнь стал месяцем ралли китайских ии-акций ранее власти объявляли, что Китай значительно увеличит финансовую поддержку для стимулирования развития и потребления/использования ИИ в стране",
+      "topic": "equity_flows",
+      "companies": [],
+      "instruments": [
+        "CHINA_AI"
+      ],
+      "impact": "positive",
+      "impact_score": 1,
+      "impact_horizon": "unclear",
+      "summary": "💥 🇨🇳 #ии #акции #китай Июнь стал месяцем ралли китайских ии-акций ранее власти объявляли, что Китай значительно увеличит финансовую поддержку для стимулирования развития и потребления/использования ИИ в стране",
+      "rationale": "Позитивные маркеры перевешивают негативные.",
+      "evidence_quotes": [
+        "💥 🇨🇳 #ии #акции #китай Июнь стал месяцем ралли китайских ии-акций ранее власти объявляли, что Китай значительно увеличит финансовую поддержку для стимулирования развития и потребления/использования ИИ в стране"
+      ],
+      "uncertainty_flags": [],
+      "urgency_score": 6,
+      "retrieved_context": [
+        "market_rules:market_rules_0: # MarketTwits Event Radar knowledge base\n\nИсточник новостей: публичная web-страница Telegram-канала `https://t.me/s/markettwits`.\n\n## Правила тональности для компаний и инструментов\n\nПозитив для компании или инструмента:\n- рост цены, новый рекорд, ралли, сильный приток капитала;\n- buyback, утвержденные дивиденды, запуск нового продукта, партнерство;\n- повышение прогноза, высокий рейтинг, рост доли рынка или спроса;\n- регуляторная ясность для рынка, если текст прямо говорит о бычьем драйвере.\n\nНегатив для компании или инструмента:\n- взлом, крупные потери, рекордный отток средств, массовый вывод ликвидности;\n- санкции, торговые ограничения, пошлины, запреты экспорта или угрозы блокады;\n- повышение ставок или ожидание повышения ставок для облигаций и акций;\n- снижение прогноза ВВП/спроса, закрытие продукта, риск военной эскалации.",
+        "company_catalog:catalog_SP500: SP500 S&P 500 sector=equity_index country=United States\naliases: SP500, S&P 500, акции США\npositive triggers: повысил прогноз, приток, ралли\nnegative triggers: повышение ставки, отрицательная корреляция, снижение",
+        "company_catalog:catalog_ROLO: ROLO Русолово sector=metals country=Russia\naliases: ROLO, Русолово\npositive triggers: увеличит мощности, полную мощность, потребность\nnegative triggers: снижение, задержка, падение",
+        "company_catalog:catalog_SVCB: SVCB Совкомбанк sector=banks country=Russia\naliases: SVCB, Совкомбанк, Совкомбанк\npositive triggers: buyback, выкуп, рост, +, ралли\nnegative triggers: снижение, санкции, убыток",
+        "company_catalog:catalog_005930KR: 005930KR Samsung Electronics sector=semiconductors country=South Korea\naliases: Samsung Electronics, Samsung\npositive triggers: обогнал, рост, ралли\nnegative triggers: обогнал Samsung, потерял лидерство, снижение"
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.58,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "positive",
+          "confidence": 0.5599999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "positive",
+          "confidence": 0.63,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 574,
+    "estimated_cost_usd": 0.000142
+  },
+  {
+    "run_id": "d83da361-72fa-428e-a4fe-6674b97799a7",
+    "analysis": {
+      "post_id": "markettwits/374911",
+      "published_at": "2026-06-22T07:33:11Z",
+      "source_url": "https://t.me/markettwits/374911",
+      "text_quote": "⚠️ 🇮🇷 #иран #геополитика КСИР: если Израиль не уйдет из южного Ливана, его ждет поражение",
+      "topic": "geopolitics",
+      "companies": [],
+      "instruments": [],
+      "impact": "not_company_specific",
+      "impact_score": 0,
+      "impact_horizon": "unclear",
+      "summary": "⚠️ 🇮🇷 #иран #геополитика КСИР: если Израиль не уйдет из южного Ливана, его ждет поражение",
+      "rationale": "Геополитическая новость без прямого эмитента или рыночного инструмента.",
+      "evidence_quotes": [
+        "⚠️ 🇮🇷 #иран #геополитика КСИР: если Израиль не уйдет из южного Ливана, его ждет поражение"
+      ],
+      "uncertainty_flags": [
+        "no_direct_company"
+      ],
+      "urgency_score": 5,
+      "retrieved_context": [
+        "company_catalog:catalog_RGBI: RGBI Индекс ОФЗ sector=bonds country=Russia\naliases: RGBI, ИНДЕКС ОФЗ, ОФЗ\npositive triggers: снижение ставки, рост, >\nnegative triggers: < 117, не опустит ключевую, повышение ставки",
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ.",
+        "market_rules:market_rules_0: # MarketTwits Event Radar knowledge base\n\nИсточник новостей: публичная web-страница Telegram-канала `https://t.me/s/markettwits`.\n\n## Правила тональности для компаний и инструментов\n\nПозитив для компании или инструмента:\n- рост цены, новый рекорд, ралли, сильный приток капитала;\n- buyback, утвержденные дивиденды, запуск нового продукта, партнерство;\n- повышение прогноза, высокий рейтинг, рост доли рынка или спроса;\n- регуляторная ясность для рынка, если текст прямо говорит о бычьем драйвере.\n\nНегатив для компании или инструмента:\n- взлом, крупные потери, рекордный отток средств, массовый вывод ликвидности;\n- санкции, торговые ограничения, пошлины, запреты экспорта или угрозы блокады;\n- повышение ставок или ожидание повышения ставок для облигаций и акций;\n- снижение прогноза ВВП/спроса, закрытие продукта, риск военной эскалации."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.49999999999999994,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "negative",
+          "confidence": 0.4799999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "neutral",
+          "confidence": 0.5499999999999999,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 590,
+    "estimated_cost_usd": 0.000144
+  },
+  {
+    "run_id": "1608ab7a-1a99-4512-841b-a6bcc9cb9af7",
+    "analysis": {
+      "post_id": "markettwits/374912",
+      "published_at": "2026-06-22T07:37:12Z",
+      "source_url": "https://t.me/markettwits/374912",
+      "text_quote": "🇰🇿 #казахстан #рейтинг Fitch подтвердило рейтинг Казахстана на уровне \"BBB\", прогноз - стабильный",
+      "topic": "regulation",
+      "companies": [],
+      "instruments": [],
+      "impact": "neutral",
+      "impact_score": 0,
+      "impact_horizon": "unclear",
+      "summary": "🇰🇿 #казахстан #рейтинг Fitch подтвердило рейтинг Казахстана на уровне \"BBB\", прогноз - стабильный",
+      "rationale": "Явного направленного маркера для компании или инструмента нет.",
+      "evidence_quotes": [
+        "🇰🇿 #казахстан #рейтинг Fitch подтвердило рейтинг Казахстана на уровне \"BBB\", прогноз - стабильный"
+      ],
+      "uncertainty_flags": [
+        "no_direct_company"
+      ],
+      "urgency_score": 3,
+      "retrieved_context": [
+        "company_catalog:catalog_DOMRF: DOMRF ДОМ.РФ sector=real_estate_finance country=Russia\naliases: DOMRF, ДОМРФ, ДОМ.РФ\npositive triggers: пять звёзд, пять звезд, рейтинг, повысил\nnegative triggers: понизил, отозвал, негативный",
+        "market_rules:market_rules_2: `sector_trend`: отраслевой тренд без одной компании, например китайские авто, китайские ИИ-акции, оборонные стартапы.\n\n## Горизонт\n\n`intraday`: уровень индекса, движение цены, срочная эскалация.\n\n`short_term`: событие ближайших дней или недель, дивидендная отсечка, переговоры, календарь.\n\n`medium_term`: квартальный прогноз, ставка на конец года, отраслевой спрос.\n\n`long_term`: структурные изменения рынка, инвестиции фондов, многолетние ограничения.",
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ.",
+        "company_catalog:catalog_SP500: SP500 S&P 500 sector=equity_index country=United States\naliases: SP500, S&P 500, акции США\npositive triggers: повысил прогноз, приток, ралли\nnegative triggers: повышение ставки, отрицательная корреляция, снижение",
+        "market_rules:market_rules_0: # MarketTwits Event Radar knowledge base\n\nИсточник новостей: публичная web-страница Telegram-канала `https://t.me/s/markettwits`.\n\n## Правила тональности для компаний и инструментов\n\nПозитив для компании или инструмента:\n- рост цены, новый рекорд, ралли, сильный приток капитала;\n- buyback, утвержденные дивиденды, запуск нового продукта, партнерство;\n- повышение прогноза, высокий рейтинг, рост доли рынка или спроса;\n- регуляторная ясность для рынка, если текст прямо говорит о бычьем драйвере.\n\nНегатив для компании или инструмента:\n- взлом, крупные потери, рекордный отток средств, массовый вывод ликвидности;\n- санкции, торговые ограничения, пошлины, запреты экспорта или угрозы блокады;\n- повышение ставок или ожидание повышения ставок для облигаций и акций;\n- снижение прогноза ВВП/спроса, закрытие продукта, риск военной эскалации."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.58,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "neutral",
+          "confidence": 0.5599999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "neutral",
+          "confidence": 0.63,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 780,
+    "estimated_cost_usd": 0.000171
+  },
+  {
+    "run_id": "cda5567f-48b6-446c-b035-97484d8ac77e",
+    "analysis": {
+      "post_id": "markettwits/374913",
+      "published_at": "2026-06-22T07:52:40Z",
+      "source_url": "https://t.me/markettwits/374913",
+      "text_quote": "💥 🇷🇺 #акции #россия IMOEX > 2400",
+      "topic": "equity_flows",
+      "companies": [
+        {
+          "ticker": "IMOEX",
+          "company": "Индекс Мосбиржи",
+          "sector": "equity_index",
+          "evidence_quote": "💥 🇷🇺 #акции #россия IMOEX > 2400",
+          "confidence": 0.78
+        }
+      ],
+      "instruments": [
+        "IMOEX"
+      ],
+      "impact": "positive",
+      "impact_score": 2,
+      "impact_horizon": "intraday",
+      "summary": "💥 🇷🇺 #акции #россия IMOEX > 2400",
+      "rationale": "Позитивные маркеры перевешивают негативные.",
+      "evidence_quotes": [
+        "💥 🇷🇺 #акции #россия IMOEX > 2400"
+      ],
+      "uncertainty_flags": [],
+      "urgency_score": 4,
+      "retrieved_context": [
+        "company_catalog:catalog_IMOEX: IMOEX Индекс Мосбиржи sector=equity_index country=Russia\naliases: IMOEX, Индекс Мосбиржи, Мосбиржа\npositive triggers: > 2400, выше 2400, рост, ралли\nnegative triggers: < 2400, ниже 2400, опускаться ниже",
+        "company_catalog:catalog_SP500: SP500 S&P 500 sector=equity_index country=United States\naliases: SP500, S&P 500, акции США\npositive triggers: повысил прогноз, приток, ралли\nnegative triggers: повышение ставки, отрицательная корреляция, снижение",
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "positive",
+          "confidence": 0.72,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "positive",
+          "confidence": 0.7,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "positive",
+          "confidence": 0.77,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 2
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 446,
+    "estimated_cost_usd": 0.000124
+  },
+  {
+    "run_id": "66d8b755-39ad-42d6-b280-e4ab6d29f1a4",
+    "analysis": {
+      "post_id": "markettwits/374914",
+      "published_at": "2026-06-22T07:56:46Z",
+      "source_url": "https://t.me/markettwits/374914",
+      "text_quote": "🇮🇷 #иран #геополитика Технические переговоры США -Иран стартуют сегодня в Швейцарии Переговоры будут посвящены механизмам реализации меморандума о взаимопонимании между США и Ираном и формированию соответствующих технических групп — МИД Ирана",
+      "topic": "geopolitics",
+      "companies": [],
+      "instruments": [],
+      "impact": "not_company_specific",
+      "impact_score": 0,
+      "impact_horizon": "intraday",
+      "summary": "🇮🇷 #иран #геополитика Технические переговоры США -Иран стартуют сегодня в Швейцарии Переговоры будут посвящены механизмам реализации меморандума о взаимопонимании между США и Ираном и формированию...",
+      "rationale": "Геополитическая новость без прямого эмитента или рыночного инструмента.",
+      "evidence_quotes": [
+        "🇮🇷 #иран #геополитика Технические переговоры США -Иран стартуют сегодня в Швейцарии Переговоры будут посвящены механизмам реализации меморандума о взаимопонимании между США и Ираном и формированию соответствующих техниче"
+      ],
+      "uncertainty_flags": [
+        "no_direct_company"
+      ],
+      "urgency_score": 3,
+      "retrieved_context": [
+        "company_catalog:catalog_SP500: SP500 S&P 500 sector=equity_index country=United States\naliases: SP500, S&P 500, акции США\npositive triggers: повысил прогноз, приток, ралли\nnegative triggers: повышение ставки, отрицательная корреляция, снижение",
+        "market_rules:market_rules_2: `sector_trend`: отраслевой тренд без одной компании, например китайские авто, китайские ИИ-акции, оборонные стартапы.\n\n## Горизонт\n\n`intraday`: уровень индекса, движение цены, срочная эскалация.\n\n`short_term`: событие ближайших дней или недель, дивидендная отсечка, переговоры, календарь.\n\n`medium_term`: квартальный прогноз, ставка на конец года, отраслевой спрос.\n\n`long_term`: структурные изменения рынка, инвестиции фондов, многолетние ограничения.",
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.49999999999999994,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "negative",
+          "confidence": 0.4799999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "neutral",
+          "confidence": 0.5499999999999999,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 536,
+    "estimated_cost_usd": 0.000137
+  },
+  {
+    "run_id": "99c8dc3e-de36-430e-9ed7-0a14510a924d",
+    "analysis": {
+      "post_id": "markettwits/374915",
+      "published_at": "2026-06-22T08:02:25Z",
+      "source_url": "https://t.me/markettwits/374915",
+      "text_quote": "❗️ 🇷🇺 #ZAYM #дивиденд акционеры ЗАЙМЕР одобрили дивиденды 1кв 2026г 4.36 РУБ/АКЦ отсечка - 30 июня",
+      "topic": "company_event",
+      "companies": [
+        {
+          "ticker": "ZAYM",
+          "company": "Займер",
+          "sector": "microfinance",
+          "evidence_quote": "❗️ 🇷🇺 #ZAYM #дивиденд акционеры ЗАЙМЕР одобрили дивиденды 1кв 2026г 4.36 РУБ/АКЦ отсечка - 30 июня",
+          "confidence": 0.92
+        }
+      ],
+      "instruments": [
+        "ZAYM"
+      ],
+      "impact": "positive",
+      "impact_score": 2,
+      "impact_horizon": "short_term",
+      "summary": "❗️ 🇷🇺 #ZAYM #дивиденд акционеры ЗАЙМЕР одобрили дивиденды 1кв 2026г 4.36 РУБ/АКЦ отсечка - 30 июня",
+      "rationale": "Позитивные маркеры перевешивают негативные.",
+      "evidence_quotes": [
+        "❗️ 🇷🇺 #ZAYM #дивиденд акционеры ЗАЙМЕР одобрили дивиденды 1кв 2026г 4.36 РУБ/АКЦ отсечка - 30 июня"
+      ],
+      "uncertainty_flags": [],
+      "urgency_score": 7,
+      "retrieved_context": [
+        "company_catalog:catalog_ZAYM: ZAYM Займер sector=microfinance country=Russia\naliases: ZAYM, ЗАЙМЕР, Займер\npositive triggers: дивиденд, одобрили дивиденды, отсечка\nnegative triggers: отменил дивиденды, снижение, убыток",
+        "company_catalog:catalog_FIXR: FIXR Fix Price sector=retail country=Russia\naliases: FIXR, Fix Price\npositive triggers: дивиденд, рост\nnegative triggers: снижение, санкции",
+        "market_rules:market_rules_2: `sector_trend`: отраслевой тренд без одной компании, например китайские авто, китайские ИИ-акции, оборонные стартапы.\n\n## Горизонт\n\n`intraday`: уровень индекса, движение цены, срочная эскалация.\n\n`short_term`: событие ближайших дней или недель, дивидендная отсечка, переговоры, календарь.\n\n`medium_term`: квартальный прогноз, ставка на конец года, отраслевой спрос.\n\n`long_term`: структурные изменения рынка, инвестиции фондов, многолетние ограничения.",
+        "market_rules:market_rules_1: Нейтрально или смешанно:\n- календарные сообщения без оценки влияния;\n- новости, где есть одновременно позитивный и негативный фактор;\n- макро/геополитика без явной привязки к публичной компании или инструменту.\n\n## Темы\n\n`company_event`: новости про конкретную компанию, тикер, buyback, дивиденды, рейтинг, выпуск продукта.\n\n`macro_rates`: ставки ЦБ/ФРС, инфляция, LPR, ОФЗ/RGBI, прогноз ставки.\n\n`geopolitics`: Иран, Ормуз, Украина, санкционная эскалация, угрозы военного характера.\n\n`commodities`: нефть, Ормуз как риск поставок нефти, газ/СПГ, уголь, сахар, зерно, золото, олово.\n\n`crypto`: BTC, SOL, DeFi, RWA, ETF, токенизация, крипторегулирование.\n\n`equity_flows`: притоки/оттоки в акции, индексы, прогнозы индексов.\n\n`regulation`: законопроекты, рейтинги стран, торговые ограничения, пошлины, регулирование ИИ.",
+        "market_rules:market_rules_0: # MarketTwits Event Radar knowledge base\n\nИсточник новостей: публичная web-страница Telegram-канала `https://t.me/s/markettwits`.\n\n## Правила тональности для компаний и инструментов\n\nПозитив для компании или инструмента:\n- рост цены, новый рекорд, ралли, сильный приток капитала;\n- buyback, утвержденные дивиденды, запуск нового продукта, партнерство;\n- повышение прогноза, высокий рейтинг, рост доли рынка или спроса;\n- регуляторная ясность для рынка, если текст прямо говорит о бычьем драйвере.\n\nНегатив для компании или инструмента:\n- взлом, крупные потери, рекордный отток средств, массовый вывод ликвидности;\n- санкции, торговые ограничения, пошлины, запреты экспорта или угрозы блокады;\n- повышение ставок или ожидание повышения ставок для облигаций и акций;\n- снижение прогноза ВВП/спроса, закрытие продукта, риск военной эскалации."
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "positive",
+          "confidence": 0.72,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "positive",
+          "confidence": 0.7,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "positive",
+          "confidence": 0.77,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 2
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 811,
+    "estimated_cost_usd": 0.000175
+  },
+  {
+    "run_id": "64b7579f-c9bc-4dae-a2c5-d1c0b7df1ed6",
+    "analysis": {
+      "post_id": "markettwits/374916",
+      "published_at": "2026-06-22T08:06:26Z",
+      "source_url": "https://t.me/markettwits/374916",
+      "text_quote": "⚠️ 🇺🇸 🇮🇹 #сша #италия В Италии опасаются санкций со стороны США после конфликта Трампа и Мелони — La Repubblica",
+      "topic": "geopolitics",
+      "companies": [],
+      "instruments": [],
+      "impact": "not_company_specific",
+      "impact_score": 0,
+      "impact_horizon": "unclear",
+      "summary": "⚠️ 🇺🇸 🇮🇹 #сша #италия В Италии опасаются санкций со стороны США после конфликта Трампа и Мелони — La Repubblica",
+      "rationale": "Геополитическая новость без прямого эмитента или рыночного инструмента.",
+      "evidence_quotes": [
+        "⚠️ 🇺🇸 🇮🇹 #сша #италия В Италии опасаются санкций со стороны США после конфликта Трампа и Мелони"
+      ],
+      "uncertainty_flags": [
+        "no_direct_company"
+      ],
+      "urgency_score": 6,
+      "retrieved_context": [
+        "company_catalog:catalog_SP500: SP500 S&P 500 sector=equity_index country=United States\naliases: SP500, S&P 500, акции США\npositive triggers: повысил прогноз, приток, ралли\nnegative triggers: повышение ставки, отрицательная корреляция, снижение"
+      ],
+      "persona_votes": [
+        {
+          "persona": "equity_analyst",
+          "impact": "not_company_specific",
+          "confidence": 0.49999999999999994,
+          "reason": "Смотрит на прямую связь новости с тикером или индексом."
+        },
+        {
+          "persona": "risk_manager",
+          "impact": "negative",
+          "confidence": 0.4799999999999999,
+          "reason": "Штрафует геополитику, ставки, санкции и ликвидностные риски."
+        },
+        {
+          "persona": "event_trader",
+          "impact": "neutral",
+          "confidence": 0.5499999999999999,
+          "reason": "Оценивает короткий рыночный импульс и срочность события."
+        }
+      ]
+    },
+    "judge": {
+      "ok": true,
+      "score": 1.0,
+      "issue": "",
+      "ghost_quotes": 0,
+      "ghost_numbers": 0,
+      "checked_quotes": 1
+    },
+    "steps": 7,
+    "tools_used": [
+      "retrieve_policy_context",
+      "find_company_mentions",
+      "classify_topic",
+      "extract_instruments",
+      "infer_impact",
+      "structured_offline_analysis",
+      "offline_judge"
+    ],
+    "estimated_tokens": 152,
+    "estimated_cost_usd": 8.3e-05
+  }
+]

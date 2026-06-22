@@ -1,0 +1,48 @@
+{
+  "posts_analyzed": 40,
+  "topic_counts": {
+    "geopolitics": 9,
+    "equity_flows": 6,
+    "company_event": 5,
+    "commodities": 4,
+    "crypto": 4,
+    "other": 4,
+    "sector_trend": 3,
+    "macro_rates": 3,
+    "regulation": 2
+  },
+  "impact_counts": {
+    "not_company_specific": 11,
+    "neutral": 9,
+    "positive": 9,
+    "negative": 8,
+    "mixed": 3
+  },
+  "top_companies": {
+    "IMOEX": 4,
+    "AVLT": 1,
+    "ROLO": 1,
+    "NIKKEI": 1,
+    "RGBI": 1,
+    "000660KR": 1,
+    "005930KR": 1,
+    "VTBR": 1,
+    "DOMRF": 1,
+    "ZAYM": 1
+  },
+  "ghost_quotes": 0,
+  "ghost_numbers": 0,
+  "judge_pass_rate": 1.0,
+  "avg_steps": 7.0,
+  "estimated_tokens": 19621,
+  "estimated_cost_usd": 0.005211,
+  "techniques_used": [
+    "seminar_1_headline_scoring_style_urgency_score",
+    "seminar_2_structured_pydantic_output_with_validators",
+    "seminar_3_information_extraction_and_map_reduce_summary",
+    "seminar_4_bm25_rag_over_company_rules",
+    "seminar_5_tool_agent_with_trace",
+    "seminar_6_llm_as_judge_and_multiagent_persona_votes"
+  ],
+  "sample_failures": []
+}

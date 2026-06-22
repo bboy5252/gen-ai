@@ -1,0 +1,164 @@
+[
+  {
+    "ticker": "000660KR",
+    "company": "SK Hynix",
+    "sector": "semiconductors",
+    "country": "South Korea",
+    "aliases": ["SK Hynix", "SK hynix", "000660KR", "Hynix"],
+    "positive_triggers": ["обогнал", "самой дорогой", "рекорд", "ралли", "спрос"],
+    "negative_triggers": ["санкции", "ограничения", "падение", "снижение"]
+  },
+  {
+    "ticker": "005930KR",
+    "company": "Samsung Electronics",
+    "sector": "semiconductors",
+    "country": "South Korea",
+    "aliases": ["Samsung Electronics", "Samsung"],
+    "positive_triggers": ["обогнал", "рост", "ралли"],
+    "negative_triggers": ["обогнал Samsung", "потерял лидерство", "снижение"]
+  },
+  {
+    "ticker": "SVCB",
+    "company": "Совкомбанк",
+    "sector": "banks",
+    "country": "Russia",
+    "aliases": ["SVCB", "Совкомбанк", "Совкомбанк"],
+    "positive_triggers": ["buyback", "выкуп", "рост", "+", "ралли"],
+    "negative_triggers": ["снижение", "санкции", "убыток"]
+  },
+  {
+    "ticker": "DOMRF",
+    "company": "ДОМ.РФ",
+    "sector": "real_estate_finance",
+    "country": "Russia",
+    "aliases": ["DOMRF", "ДОМРФ", "ДОМ.РФ"],
+    "positive_triggers": ["пять звёзд", "пять звезд", "рейтинг", "повысил"],
+    "negative_triggers": ["понизил", "отозвал", "негативный"]
+  },
+  {
+    "ticker": "ZAYM",
+    "company": "Займер",
+    "sector": "microfinance",
+    "country": "Russia",
+    "aliases": ["ZAYM", "ЗАЙМЕР", "Займер"],
+    "positive_triggers": ["дивиденд", "одобрили дивиденды", "отсечка"],
+    "negative_triggers": ["отменил дивиденды", "снижение", "убыток"]
+  },
+  {
+    "ticker": "VTBR",
+    "company": "ВТБ",
+    "sector": "banks",
+    "country": "Russia",
+    "aliases": ["VTBR", "ВТБ", "WB банк", "ВБ банк"],
+    "positive_triggers": ["запустил", "кредитования", "рост"],
+    "negative_triggers": ["санкции", "снижение", "убыток"]
+  },
+  {
+    "ticker": "UGLD",
+    "company": "ЮГК",
+    "sector": "gold_mining",
+    "country": "Russia",
+    "aliases": ["UGLD", "ЮГК"],
+    "positive_triggers": ["совет директоров", "золото", "рост"],
+    "negative_triggers": ["переоценено", "снижение", "интервенции"]
+  },
+  {
+    "ticker": "ROLO",
+    "company": "Русолово",
+    "sector": "metals",
+    "country": "Russia",
+    "aliases": ["ROLO", "Русолово"],
+    "positive_triggers": ["увеличит мощности", "полную мощность", "потребность"],
+    "negative_triggers": ["снижение", "задержка", "падение"]
+  },
+  {
+    "ticker": "SOL",
+    "company": "Solana",
+    "sector": "crypto",
+    "country": "Global",
+    "aliases": ["SOL", "Solana"],
+    "positive_triggers": ["партнерство", "тестирования", "расчетов", "инфраструктуры"],
+    "negative_triggers": ["взлом", "отток", "запрет"]
+  },
+  {
+    "ticker": "BTC",
+    "company": "Bitcoin",
+    "sector": "crypto",
+    "country": "Global",
+    "aliases": ["BTC", "Bitcoin", "биткоин", "спотовых BTC ETF", "BTC ETF"],
+    "positive_triggers": ["покупает", "резервах", "приток", "институционалов", "бычьим драйвером"],
+    "negative_triggers": ["отток", "взлом", "потери", "падение"]
+  },
+  {
+    "ticker": "AVLT",
+    "company": "Altura",
+    "sector": "crypto",
+    "country": "Global",
+    "aliases": ["AVLT", "Altura"],
+    "positive_triggers": ["рост", "запуск"],
+    "negative_triggers": ["закрывает", "вывод средств", "рекордного количества запросов"]
+  },
+  {
+    "ticker": "IMOEX",
+    "company": "Индекс Мосбиржи",
+    "sector": "equity_index",
+    "country": "Russia",
+    "aliases": ["IMOEX", "Индекс Мосбиржи", "Мосбиржа"],
+    "positive_triggers": ["> 2400", "выше 2400", "рост", "ралли"],
+    "negative_triggers": ["< 2400", "ниже 2400", "опускаться ниже"]
+  },
+  {
+    "ticker": "RGBI",
+    "company": "Индекс ОФЗ",
+    "sector": "bonds",
+    "country": "Russia",
+    "aliases": ["RGBI", "ИНДЕКС ОФЗ", "ОФЗ"],
+    "positive_triggers": ["снижение ставки", "рост", ">"],
+    "negative_triggers": ["< 117", "не опустит ключевую", "повышение ставки"]
+  },
+  {
+    "ticker": "NIKKEI",
+    "company": "Nikkei 225",
+    "sector": "equity_index",
+    "country": "Japan",
+    "aliases": ["NIKKEI", "Nikkei"],
+    "positive_triggers": ["рекорд", "рост"],
+    "negative_triggers": ["падение", "снижение"]
+  },
+  {
+    "ticker": "SP500",
+    "company": "S&P 500",
+    "sector": "equity_index",
+    "country": "United States",
+    "aliases": ["SP500", "S&P 500", "акции США"],
+    "positive_triggers": ["повысил прогноз", "приток", "ралли"],
+    "negative_triggers": ["повышение ставки", "отрицательная корреляция", "снижение"]
+  },
+  {
+    "ticker": "MOEX",
+    "company": "Московская биржа",
+    "sector": "exchange",
+    "country": "Russia",
+    "aliases": ["MOEX", "Мосбиржа"],
+    "positive_triggers": ["начинает расчет", "рост", "объем"],
+    "negative_triggers": ["санкции", "снижение"]
+  },
+  {
+    "ticker": "FIXR",
+    "company": "Fix Price",
+    "sector": "retail",
+    "country": "Russia",
+    "aliases": ["FIXR", "Fix Price"],
+    "positive_triggers": ["дивиденд", "рост"],
+    "negative_triggers": ["снижение", "санкции"]
+  },
+  {
+    "ticker": "IRKT",
+    "company": "Яковлев",
+    "sector": "aircraft",
+    "country": "Russia",
+    "aliases": ["IRKT", "Яковлев", "Иркут"],
+    "positive_triggers": ["поставки", "рост"],
+    "negative_triggers": ["задержка", "снижение"]
+  }
+]
